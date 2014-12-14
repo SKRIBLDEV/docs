@@ -51,9 +51,6 @@ Vermits het SKRIBL-team agile werkt, gaat dit testplan nog sterk veranderen door
 \bibliography{referenties}
 \endgroup
 
-%[I] Douglas als je een nieuwe versie schrijft kan je de referenties in de tekst zetten?
-%--> \cite{naam1:naam2} in de tekst zelf en dan maak je een note in referenties.bib
-%de refs worden dan automatisch opgelijst.
 \begin{itemize}
   \item SDD versie 1.0
   \item Internal manual \url{http://wilma.vub.ac.be/~se4_1415/internalManuals/test-framework.pdf}
@@ -122,20 +119,38 @@ File :
 \subsection{Clienttier}
 De clienttier zorgt voor een user interface en het opsturen van HTTP requests naar de server. 
 \subsubsection{Validation tests}
-Data die wordt opgestuurd bij een HTTP request moet aan sommige eisen voldoen.
-%aan welke eisen? meer uitleg hier.
+Data die wordt opgestuurd bij een HTTP request moet aan sommige eisen voldoen.Bij elke request zijn die eisen anders.
 \\
-Deze tests gebeuren op dezelfde manier als op de server tier. Het moet bij de twee tiers gebeuren voor security redenen.
+\\
+Voorbeeld : login request verwacht:
+\\
+Data = json dat username en password bevat
+\begin{verbatim}
+{
+"username" : "skribl",
+"password" : "Skribl123"
+}
+\end{verbatim}
+Header = moet als content type application/json hebben.
+\begin{verbatim}
+{
+"Content-Type" : "application/json"
+}
+\end{verbatim}
+
+Validatie moet op dezelfde manier als op de server gebeuren. Het moet bij de twee tiers gebeuren voor security redenen.
+\\
+Indien dit niet zou gebeuren zou injection in de database mogelijk zijn!
 %welke security redenen, welke risico's loopt men anders?
 \\
 \\
-File : %wat komt er hier?
+File : %pad naar de test
 
 \subsubsection{HTTP requests test}
 Probeert geldige HTTP requests te sturen naar de server en vergelijkt de verwachte response status met de verkregen status. 
 \\
 \\
-File : %wat komt er hier?
+File : %pad naar de test
 
 \section{Software risico gevallen}
 De SKRIBL web-application bestaat uit drie tiers. Indien een van de tiers niet goed werkt (test falen) kunnen de andere tiers niet goed werken. Een perfecte werking van de drie tiers is nodig voor het opstarten van de web-applicatie.
@@ -161,16 +176,21 @@ Een specification file bestaat uit een of meerdere oproepen van de describe func
 De tests in deze describe functie worden aangemaakt aan de hand van de it functie. De it functie verwacht ook een naam-string en een functie. Maar in deze %over welke functie heb je het hier?
 functie worden de tests beschreven.
 \newline
-Om tests te beschrijven gebruiken we matchers. Matchers kunnen elementen vergelijken, controleren of het element wel gedefinieerd is 
-%schrijf hier nog een paar voorbeelden, de assistenten hebben graag dat je dingen oplijst.
-en nog veel anderen! Het is ook mogelijk om zelf matchers te schrijven.
-\newline
+Om tests te beschrijven gebruiken we matchers. Matchers kunnen elementen vergelijken, controleren of het element wel gedefinieerd is en nog veel anderen! Het is ook mogelijk om zelf matchers te schrijven.
+Voorbeelden van matchers :
+\begin{itemize}
+  \item expect().toBe();
+  \item expect().toEqual();
+  \item expect().toMatch();
+  \item ...
+
+\end{itemize}
 Omdat we in Jasmine matchers kunnen schrijven wordt het mogelijk om alles in javascript te controleren.
 \subsubsection{Tests uitvoeren}
 Omdat Jasmine een standalone software is , is het uitvoeren van tests heel gemakkelijk. Wanneer een specification bestand geschreven is moet het pad naar deze alleen maar toegevoegd worden in een html bestand. Wanneer dit gedaan is dient het html bestand alleen maar geopend te worden in een webbrowser. In de webbrowser geeft Jasmine de geslaagde en gefaalde tests weer. Indien een test faalt wordt zijn describe naam en it naam getoond.
 
 \subsubsection{Extra}
-Een manual over Jasmine werd opgesteld door de test manager voor het SKRIBL-team. Deze staat in de referenties en legt het gebruik van Jasmine in detail uit. % zoals eerder vermeld, werk hier met \cite{} voor referenties
+Een manual over Jasmine werd opgesteld door de test manager voor het SKRIBL-team. Deze staat in de referenties en legt het gebruik van Jasmine in detail uit.
 
 \subsection{Postman}
 Postman laat toe om op een heel simpele manier HTTP requests samen te stellen en vervolgens op te sturen aan de hand van een GUI. Het is daarna het werk van de tester om te kijken of de teruggegeven status de verwachte is of niet. In principe zijn alle HTTP responses tussen 200 en 299 juist.
