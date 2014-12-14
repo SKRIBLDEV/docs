@@ -16,7 +16,7 @@
 
 \title{Software Project Management Plan}
 \author{} %leave empty
-\date{5 november 2014} %ok, manuele datum
+\date{15 december 2014} %ok, manuele datum
 
 \addtolength{\footskip}{1.3cm} % make more space for the footer
 \pagestyle{fancyplain} % use fancy for all pages except chapter start
@@ -54,20 +54,20 @@
 sectie 3.1
 %- "die waar"
 %- "Dit wordt verder besproken in? (zin niet afgewerkt)
-- erg veel tekst in verhalende vorm: het mag iets droger en meer 'to
-the point', het moet mogelijk zijn om snel informatie uit het document
-op te pikken
+%- erg veel tekst in verhalende vorm: het mag iets droger en meer 'to
+%the point', het moet mogelijk zijn om snel informatie uit het document
+%op te pikken
 
 sectie 3.2
-- "...in een apart document, het Risk List (RL) document.": het is
-beter om dit aan te vullen in het huidige document.
-- De risk list mist projectgebonden risico?s. Tracht ervoor te zorgen dat de voorgestelde oplossingen meetbaar zijn.
+%- "...in een apart document, het Risk List (RL) document.": het is
+%beter om dit aan te vullen in het huidige document.
+%- De risk list mist projectgebonden risico?s. Tracht ervoor te zorgen dat de voorgestelde oplossingen meetbaar zijn.
 
 sectie 3.3
-- De duurtijd van een vergadering is te groot. Een vergadering om na te gaan of een sprint al dan niet goed loopt, mag niet meer dan een half uur duren.
+%- De duurtijd van een vergadering is te groot. Een vergadering om na te gaan of een sprint al dan niet goed loopt, mag niet meer dan een half uur duren.
 
 sectie 4.1
-- Is enkel de QAM verantwoordelijk voor het opsporen van inconsistenties en defecten?
+%- Is enkel de QAM verantwoordelijk voor het opsporen van inconsistenties en defecten?
 - Hoe ga je als groep configuration management aanpakken?
 
 %sectie 5
@@ -84,7 +84,7 @@ Dit is een vrij uitgebreide eerste versie, met hier en daar nog (vaak zelf aange
 % nieuwe functie test manager toevoegen
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% INTRODUCTIE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 1.INTRODUCTIE
 
 \section{Introductie}
 
@@ -144,7 +144,7 @@ Dit Software Project Management Plan is opgesteld volgens de IEEE 1085.1-1987 st
 
  \clearpage
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% PROJECTORGANISATIE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 2.PROJECTORGANISATIE
 
 \section{Projectorganisatie}
 \subsection{Model van het softwareproces}
@@ -213,7 +213,7 @@ De algemene planning van het project is te vinden in tabel \ref{planning} en dez
 
 \subsection{Organisatie}
 
-De verschillende leden van de groep nemen elk de twee van de hieronder vermelde rollen op zich. Dit wil zeggen dat zij de eindverantwoordelijkheid dragen voor de vermelde aspecten van het ontwikkelingsproces. Daarnaast fungeert ieder lid ook voor twee rollen als back-up persoon om opvolging en continu\"{i}teit binnen het project te verzekeren, en om de hoofdverantwoordelijken bij te staan. Ten slotte is ieder lid ook developer en schrijft hij/zij dus ook de unit testen voor de onderdelen die men zelf ontwikkelt. 
+De verschillende leden van de groep nemen elk de twee (of een enkele keer drie) van de hieronder vermelde rollen op zich. Dit wil zeggen dat zij de eindverantwoordelijkheid dragen voor de vermelde aspecten van het ontwikkelingsproces. Daarnaast fungeert ieder lid ook voor twee of drie rollen als back-up persoon om opvolging en continu\"{i}teit binnen het project te verzekeren, en om de hoofdverantwoordelijken bij te staan. Ten slotte is ieder lid ook developer en schrijft hij/zij dus ook de unit testen voor de onderdelen die hij/zij zelf ontwikkelt. 
 
 \subsubsection*{Project Manager}
 \begin{itemize}
@@ -245,13 +245,16 @@ De verschillende leden van de groep nemen elk de twee van de hieronder vermelde 
 \end{itemize}
 
 
-\subsubsection*{Quality Assurance and Testing}
+\subsubsection*{Quality Assurance Manager}
 \begin{itemize}
-\item algemene toezicht op kwaliteit van de software
-\item co\"{o}rdinatie van testen en controles 
-\item onderhouden van STD
+\item algemene toezicht op kwaliteit van de code en de ontwikkelde software
 \end{itemize}
 
+\subsubsection*{Test Manager}
+\begin{itemize}
+\item verzamelen en inspecteren van de door de leden geschreven tests
+\item onderhouden van STD
+\end{itemize}
 
 \subsubsection*{Database Manager}
 \begin{itemize}
@@ -312,7 +315,9 @@ fdfdfds
       \hline
       Software Architect & Noah & Ivo  \\
       \hline
-      Quality Assurance & Noah &  Pieter \\
+      Quality Assurance Manager & Noah &  Pieter \\
+      \hline
+      Test Manager & Douglas &  Ivo \\
       \hline
        Database Manager & Ivo & Hannah  \\
       \hline
@@ -336,7 +341,7 @@ fdfdfds
 
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% MANAGEMENTPROCES
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 3.MANAGEMENTPROCES
 
 \section{Managementproces}
 
@@ -344,14 +349,7 @@ fdfdfds
 
 \subsection{Beperkingen, objectieven en prioriteiten}
 
-\noindent[{\it Dit onderdeel wordt in een volgende versie herschreven tot een beknopter geheel. }] 
-
-Aangezien het project uitgevoerd wordt door een groep studenten, zijn er naast de algemene ook nog enkele specifieke beperkingen waar rekening mee moet worden gehouden. Zo is er een periode van blok, examens en een lesvrije week waarin de leden van de groep niet worden gevraagd om bijdragen te leveren aan het project. De leden van de groep volgen ook verschillende studieprogramma's, waardoor de drukkere periodes niet voor iedereen dezelfde zijn; er wordt aan de leden van groep gevraagd hier duidelijk over te communiceren. Verder is er het specifieke probleem van gebrek aan ervaring. Dit wordt verder besproken in onderdeel \ref{subsec:risico}: risicomanagement.
-\\
-\\
-\noindent Aangenomen wordt dat het grootste risico schuilt in een te grote werklast, waardoor het ideale eindproduct en werkproces niet bereikt zullen worden en waardoor ook de groepsdynamiek zal verminderen. Om deze situatie te omzeilen zullen in de planningsfase van iedere sprint de doelen elke een eigen prioriteit krijgen. Op die manier kunnen eerst de ontwikkelingsdoelen met hogere prioriteit worden afgewerkt en op aangeven van de gehele groep kunnen daarna doelen met een lagere prioriteit worden aangepakt. Verder laat de laatst geplande sprint nog wat ruimte om uitgestelde maar prioritaire doelen te verwezenlijken (ten koste van extra features weliswaar). \\
-\\
-\noindent De baseline van het management proces is dus als volgt samen te vatten: eerst en vooral staat het verwezenlijken van prioritaire doelen en bijhorende hoge kwaliteit voorop; het streven naar resultaten met een lage prioriteit gebeurt na samenspraak met de groep en enkel als ieder lid de taak voor zichzelf haalbaar vindt. De project manager verbindt zich ertoe dit voor ieder lid afzonderlijk op te volgen. De Quality Assurance Manager waakt verder over de kwaliteit van de behaalde doelen. 
+\noindent De baseline van het management proces is als volgt samen te vatten: eerst en vooral staat het verwezenlijken van prioritaire doelen en bijhorende hoge kwaliteit voorop; het streven naar resultaten met een lage prioriteit gebeurt na samenspraak met de groep en enkel als ieder lid de taak voor zichzelf haalbaar vindt. De project manager verbindt zich ertoe dit voor ieder lid afzonderlijk op te volgen. De Quality Assurance Manager waakt verder over de kwaliteit van de behaalde doelen. 
 
 
 
@@ -367,8 +365,8 @@ Risico's zullen op volgende manieren gedetecteerd en opgelijst worden:
 \end{itemize}
 
 De risico's zullen opgevolgd worden door de PM. \newline
-\\
-\noindent[{\it Enkele risico's zijn reeds opgelijst in een extern RL document. Deze risico's zullen in een later stadium aan dit onderdeel toegevoegd worden, en vervolgens verder aangevuld worden.  }] 
+
+\input{./riskList.tex}
 
 
 %%%
@@ -377,13 +375,13 @@ De risico's zullen opgevolgd worden door de PM. \newline
 Per sprint worden standaard twee vergadermomenten voorzien waarbij het hele team aanwezig is: een openingsvergadering en een follow-up vergadering. Dit komt neer op drie tot vier sprintbijeenkomsten per maand. De openingsvergadering vindt plaats aan het begin van de sprintperiode. De follow-up vergadering vindt plaats tussen midden en eind van de sprintperiode, d.w.z. aan het eind van de uitvoeringsfase en in het begin van de refactor- en testfase.\\
 \\
 \noindent De openingsvergadering bestaat uit de volgende componenten: \\
-- deel 1 (ong. 60 min.):
+- deel 1 (ong. 45 min.):
 \begin{itemize}
 \item opening en overlopen agendapunten
 \item micropresentaties (belichten de aspecten van het ontwikkelingsproces waarvoor het betreffende groepslid verantwoordelijk is)
 \item variabele agendapunten en opmerkingen, zoals op te leveren documenten, afspraken e.d.
 \end{itemize}
-\noindent  -deel 2 (ong. 60 min):
+\noindent  -deel 2 (ong. 45 min):
 \begin{itemize}
 \item design en planning van de sprint
 \item taakverdelingen
@@ -391,15 +389,10 @@ Per sprint worden standaard twee vergadermomenten voorzien waarbij het hele team
 \end{itemize}
 
 \noindent De follow-up vergadering bestaat uit volgende componenten:\\
--deel 1 (ong. 60 min.):
+- (ong. 30 min.):
 \begin{itemize}
 \item opening en overlopen agendapunten
 \item micropresentaties en reeds uitgevoerde taken
-\item variabele agendapunten en opmerkingen, zoals op te leveren documenten, afspraken e.d.
-\end{itemize}
-\noindent  -deel 2 (ong. 60 min)
-\begin{itemize}
-\item reeds ontmoete problemen en hoe die aan te pakken
 \item aanpak van quality assurance en testing 
 \item overlopen van plan voor configuratie, integratie en eventueel oplevering
 \item verwachte problemen 
@@ -455,13 +448,19 @@ Het team vond het zinvol om buiten Trello een gerichte tool te gebruiken voor he
 
 \noindent Door gemeenschappelijk in de cloud te werken met alle services van Google Drive (Docs, Spreadsheets of Presentaties) kunnen documenten collectief en in real-time aangepast en beheerd worden. Op deze manier wordt duplicatie vermeden en heeft iedereen steevast de laatste versie van een werkdocument. Documenten waarvan de inhoud afgewerkt is, worden door de document master(s) voor oplevering van een consistente en academische lay-out voorzien door gebruik van Share\LaTeX.\\
 Als alternatief werd Evernote beschouwd, maar deze biedt niet dezelfde collectieve en real-time features als Google Drive. 
+ 
+ 
+ \subsubsection*{Automatische code review: CodeClimate}
 
+\begin{figure}[h!]
+\centering
+ \includegraphics[width=50mm]{codeClimate.jpg}
+\end{figure}
 
- \clearpage
+\noindent CodeClimate is een tool die, eens gekoppeld aan github, automatisch javascript code inspecteert en vervolgens rapporten genereert over de stijl en kwaliteit van deze code. CodeClimate biedt op die manier een objectieve analyse van de geschreven broncode. De teamleden kunnen de feedback van CodeClimate gebruiken om de kwaliteit van hun code te verbeteren, nog voor de quality assurance manager deze hoeft te inspecteren.  
+
  
- 
- 
- 
+  \clearpage
  
  
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% TECHNISCH PROCES
@@ -474,21 +473,17 @@ Voor de ontwikkeling van SKRIBL wordt enkel gebruik gemaakt van JavaScript, HTML
 \\
 De conventies voor documentatie en code commenting worden opgesteld door de configuration manager (CM) en de quality assurance manager (QAM). Hierbij wordt gebruikt gemaakt van JSDocs. \\
 \\
+De test manager (TM) verzamelt de unit testen geschreven door de afzonderlijke teamleden, en houdt het overzicht over het gehele testproces. Hierbij wordt gebruik gemaakt van het jasmine testing framework. Meer informatie hieromtrent is te vinden in het STD.
+\\
 De quality assurance manager zal verder defecten en inconsistenties opsporen om de kwaliteit van de ontwikkelde onderdelen te garanderen. Dit zal gebeuren door:
 \begin{itemize}
-\item de kwaliteit van de geschreven code te valideren (a.d.h.v. metrieken zoals de lengte van procedures, het aantal geneste if-lussen en loops, het gebruik van globale variabelen, de hoeveelheid (nuttige) commentaar e.d.)
+\item de kwaliteit van de geschreven op te volgen aan de hand van CodeClimate
 \item na te gaan of alle modules correct worden ge\"{i}mplementeerd zoals omschreven in het SDD
-\item het STD te onderhouden en erop toe te zien dat het testproces hierin omschreven correct wordt gehanteerd
 \item te controleren dat aan alle vooropgestelde requirements voldaan is (zoals opgelijst in het SRS)
-\item toe te zien op een correct taalgebruik en een consistente structuur bij documenten en presentaties
-\item \it{[verder aan te vullen]}
 \end{itemize}
-
-
-
-\noindent {\it[nog te beschrijven: systeem omgeving, inclusief hardware en operating system omgeving: wilma server, gebruikte database, webbrowser etc.]}
-
-
+Automatische code-inspectie wordt uitgevoerd door de CodeClimate tool. Een door CodeClimate gerapporteerde  A of B wordt door het team als voldoende beschouwd. Indien de code van lagere kwaliteit is (of wanneer de QAM andere significante problemen vaststelt) wordt de code bijgeschaafd door het desbetreffende teamlid, eventueel volgens de richtlijnen van de QAM.
+\\
+Meer informatie over de syseemomgeving, de gebruikte database e.d. is te vinden in het SDD.
 
 
 
@@ -525,9 +520,35 @@ De PM zal deze situatie opvolgen en trachten te remedi\"{e}ren. In samenspraak m
 
 \begin{figure}[h!]
 \centering
- \includegraphics[scale=0.4]{Gantt_S1_19nov.png}
- \caption{Gantt chart voor sprint 1, op datum 11/18/14 (18 november 2014). Links van het diagram een korte beschrijving van de taak en de eerste letter van de voornaam van het corresponderende teamlid. Figuur gecre\"{e}erd met OpenOffice Calc.}
+ \includegraphics[scale=0.4]{gantt_S1_19nov.png}
+ \caption{Gantt chart voor sprint 1, op datum 11/18/14 (18 november 2014), einde van de sprint. Links van het diagram een korte beschrijving van de taak en de eerste letter van de voornaam van het corresponderende teamlid. Figuur gecre\"{e}erd met OpenOffice Calc.}
  \label{gantt_S1}
+\end{figure}
+
+\clearpage
+\subsection{Sprint 2:  Publicatie uploaden}
+
+Figuur \ref{gantt_S2_20nov} geeft de planning voor de tweede sprint weer, inclusief remedi\"{e}ring voor de achterstand opgelopen tijdens sprint 1. Sprint 2 loopt van 20 november 2014 (notatie 11/20/14)  tot 15 december 2014 (notatie 12/15/14). Deze sprint heeft als mijlpaal 'mijlpaal 2: publicatie toevoegen' en implementeert volgende features:
+\begin{itemize}
+\item toevoegen van publicatie in PDF of Bibtex formaat + metadata extractie en manuele aanvulling
+\end{itemize}
+
+\noindent De bijhorende requirements zijn te vinden in het Software Requirements Specification (SRS) document. 
+
+\begin{figure}[h!]
+\centering
+ \includegraphics[scale=0.4]{Gantt_S2_20nov.jpg}
+ \caption{Gantt chart voor sprint 2, op datum 20 november 2014, begin van de sprint. De rode balkjes corresponderen met de weg te werken achterstand in sprint 1. Figuur gecre\"{e}erd met OpenOffice Calc.}
+ \label{gantt_S2_20nov}
+\end{figure}
+
+\noindent Aan het einde van de sprint 2, datum 20 november, is niet aan alle hoog en gemiddeld geprioriteerde requirements voor sprint 2 voldaan. Zoals te zien in figuur \ref{gantt_S2_15dec} is sprint 1 echter volledige afgerond en is de daarbij opgelopen achterstand grotendeels weggewerkt. 
+
+\begin{figure}[h!]
+\centering
+ \includegraphics[scale=0.4]{Gantt_S2_15dec.png}
+ \caption{Gantt chart voor sprint 2, op datum 15 december 2014, einde van de sprint. Figuur gecre\"{e}erd met OpenOffice Calc.}
+ \label{gantt_S2_15dec}
 \end{figure}
 
 
