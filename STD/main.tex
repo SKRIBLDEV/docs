@@ -92,17 +92,17 @@ De database houdt alle gegevens bij die te maken hebben met users, publicaties,.
 Tests dat nagaan of data wel op de juiste manier wordt toegevoegd in de database, en daadwerkelijk bewaard blijven.
 \\
 \\
-File : 
+%File : 
 \subsubsection{Data-opvraging tests}
 Tests die controleren of de gevraagde data teruggegeven wordt aan de server tier wanneer deze data opvraagt.
 \\
 \\
-File :
+%File :
 \subsubsection{Data-verwijdering tests}
 Controleren of data op de juiste manier verwijderd wordt. Het verwijderen van bijvoorbeeld een user, moet meerdere elementen in de database verwijderen, dit word gecontroleerd.
 \\
 \\
-File : 
+%File : 
 \subsection{Servertier tests}
 De servertier is een soort communicatie laag tussen de database en de user. De server moet HTTP requests behandelen en voor de validatie hiervan zorgen.
 
@@ -110,12 +110,12 @@ De servertier is een soort communicatie laag tussen de database en de user. De s
 Probeert juiste en foute HTTP requests te sturen naar de server en bekijkt het antwoord van de server.
 \\
 \\
-File : 
+%File : 
 \subsubsection{Validatie tests}
 Deze tests proberen door middel van HTTP requests na te gaan of het valideren van data juist gebeurt.
 \\
 \\
-File :
+%File :
 \subsection{Clienttier}
 De clienttier zorgt voor een user interface en het opsturen van HTTP requests naar de server. 
 \subsubsection{Validation tests}
@@ -143,13 +143,13 @@ Validatie moet op dezelfde manier als op de server gebeuren. Het moet bij de twe
 Indien dit niet zou gebeuren zou injection in de database mogelijk zijn!
 \\
 \\
-File : %pad naar de test
+%File : %pad naar de test
 
 \subsubsection{HTTP requests test}
 Probeert geldige HTTP requests te sturen naar de server en vergelijkt de verwachte response status met de verkregen status. 
 \\
 \\
-File : %pad naar de test
+%File : %pad naar de test
 
 \section{Software risico gevallen}
 De SKRIBL web-application bestaat uit drie tiers. Indien een van de tiers niet goed werkt (test falen) kunnen de andere tiers niet goed werken. Een perfecte werking van de drie tiers is nodig voor het opstarten van de web-applicatie.
