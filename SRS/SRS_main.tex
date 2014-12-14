@@ -73,7 +73,8 @@ Suggesties en opmerkingen voor toekomstige aanpassingen in dit document worden a
 \item NFR-S: Niet-Functionele Requirement, type Security
 \item NFR-R: Niet-Functionele Requirement, type Reliability
 \item NFR-P: Niet-Functionele Requirement, type Performance
-\item NG: Nieuwe Gebruiker
+\item G: aangemelde gebruiker
+\item B: bezoeker, niet-geauthenticeerde persoon 
 \end{itemize}
 
 
@@ -175,21 +176,20 @@ JavaScript, HTML5, CSS en bijbehorende open-source frameworks en bibliotheken zi
 [{\it nog te bepalen}]
 
 
-
-
 \clearpage
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% SYSTEEM REQUIREMENTS
 \section{Specifieke Requirements}
 \label{sec:systemRequirements}
 
+\noindent De functionele requirements zijn opgedeeld in drie types: gebruikers (FR-U), publicaties (FR-P) en data-mining (FR-D); de niet-functionele requirements zijn opgedeeld in de types reliability (NFR-R), performance (NFR-P) en security (NFR-S).  \\
+\\
+\noindent De hierop volgende secties beschrijven aan de hand van use cases de functionele requirements in detail. Hierbij zijn de prioriteiten niet vermeld, omdat aan sommige onderdelen of varianten van de beschreven scenario's andere prioriteiten toegekend werden. Op het bijgevoegde requirements dashboard kunnen de specifieke prioriteiten afgelezen worden. De prioriteiten worden aangegeven met kleuren en bijhorende lettters:  donkerblauw + H  = hoge prioriteit;  lichtblauw + M = gemiddelde prioriteit;  wit + L = lage prioriteit.
 
-\subsection{Functionele Requirements}
-\noindent De functionele requirements zijn opgedeeld in drie types: gebruikers (FR-U), publicaties (FR-P) en data-mining (FR-D). Verder worden ze gegroepeerd volgens feature. De prioriteiten worden aangegeven met kleuren: Rood = hoge prioriteit, Oranje = gemiddelde prioriteit, Groen = lage prioriteit. De specifieke requirements worden weergegeven op de volgende pagina's.
+\input{./use-cases.tex}
 
-\subsection{Niet-Functionele Requirements}
-\noindent De functionele requirements zijn opgedeeld in drie types: reliability (NFR-R), performance (NFR-P) en security (NFR-S). Ze  worden gegroepeerd volgens deze types. De prioriteiten worden aangegeven met kleuren: Rood = hoge prioriteit, Oranje = gemiddelde prioriteit, Groen = lage prioriteit. De specifieke requirements worden weergegeven op de volgende pagina's.
-
-\includepdf[pages={-}]{reqList_sprint1.pdf}
+\includepdf[pages={-}]{requirements_dashboard_15dec.pdf}
 
 
 
