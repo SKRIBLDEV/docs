@@ -1,0 +1,322 @@
+
+\subsection{Functionele Requirements: USER}
+\vspace{4 mm}
+
+
+%%%%%%%%%%%% REGISTRATIE
+\subsubsection{REGISTRATIE}
+\vspace{2 mm}
+
+\textbf{ID}: FR-U001
+\vspace{2 mm}
+
+\noindent \textbf{Betrokkenen}: bezoeker (B); systeem (S) 
+\vspace{2 mm}
+
+\noindent \textbf{Samenvatting}: B voert gewenste account-informatie in. Deze informatie wordt gevalideerd, en NG kan invoer aanpassen waar nodig. Indien alle informatie aan vereisten voldoet wordt een nieuw account geregistreerd. 
+\vspace{2 mm}
+
+\noindent \textbf{Pre-conditie}: B bevindt zich op de eerste pagina van de Skribl applicatie. 
+\vspace{2 mm}
+
+\noindent \textbf{Trigger}: B geeft aan zich te willen registreren (button)
+\vspace{4 mm}
+
+\hrule
+\vspace{2 mm}
+\noindent \textbf{Scenario}:
+\begin{enumerate}
+\item B krijgt de mogelijkheid om volgende (verplichte) velden aan te vullen:
+\begin{description}
+  \item[voornaam en achternaam]  \hfill \\
+  {\it moet voldoen aan vereisten voor algemene namen*}
+  \item[onderzoeksgroep, departement, faculteit en instelling] \hfill \\
+   {\it moet voldoen aan vereisten voor algemene namen*}
+  \item[algemene en specifieke onderzoeksdomeinen] \hfill \\
+  {\it moet voorkomen in een lijst met algemene en bijhorende specifieke onderzoeksdomeinen}
+  \item[username] \hfill \\
+    {\it moet uniek zijn; enkel letters, cijfers en underscores toegelaten}
+    \item[email] \hfill \\
+  {\it moet voldoen aan de standaardvorm voor een e-mailadres.}
+       \item[taalvoorkeur] \hfill \\
+   {\it NL of EN}
+       \item[wachtwoord] \hfill \\
+  {\it moet minstens 1 cijfer bevatten; minimum 6 en maximum 20 karakters lang}\\
+\end{description}
+  \noindent {\it Er mogen geen velden opengelaten worden. *een algemene naam kan accenten, koppeltekens en taal-gebonden speciale karakters bevatten, maar geen cijfers of andere speciale karakters.} 
+  
+ \item B kan deze informatie doorvoeren (button)  $\hookrightarrow$ A
+ \item S controleert en registreert nieuw account  $\hookrightarrow$ B
+ \item B krijgt melding van succesvolle registratie 
+\end{enumerate}
+\noindent \textbf{Alternatief verloop}:
+\begin{description}
+\item[ $\hookrightarrow$ A] De ingevoerde informatie (uniciteit username wordt niet beschouwd) voldoet niet aan de vereisten. B krijgt een melding en kan informatie aanpassen. $\hookrightarrow$ 1.
+\item[ $\hookrightarrow$ B] De ingevoerde username is niet uniek. B krijgt een melding en kan username aanpassen. $\hookrightarrow$ 1.
+\end{description}
+
+\vspace{2 mm}
+\hrule
+\vspace{4 mm}
+
+\noindent \textbf{Post-conditie}: B kan inloggen met eigen username en wachtwoord. \\
+
+
+
+
+%%%%%%%%%%%% LOGIN
+\subsubsection{LOGIN}
+\vspace{2 mm}
+
+\textbf{ID}: FR-U002
+\vspace{2 mm}
+
+\noindent \textbf{Betrokkenen}: bezoeker (B); systeem (S) 
+\vspace{2 mm}
+
+\noindent \textbf{Samenvatting}: B vraagt toegang tot de applicatie door invoer van username en wachtwoord. Enkel na invoer van een correcte combinatie wordt de toegang verleend. 
+\vspace{2 mm}
+
+\noindent \textbf{Pre-conditie}: B bevindt zich op de eerste pagina van de Skribl applicatie. 
+\vspace{2 mm}
+
+\noindent \textbf{Trigger}: B geeft aan zich te willen inloggen (button)
+
+\vspace{4 mm}
+\hrule
+\vspace{2 mm}
+\noindent \textbf{Scenario}:
+\begin{enumerate}
+\item B krijgt de mogelijkheid om username en wachtwoord in te vullen    
+ \item B kan deze informatie doorvoeren (button)
+  \item S voert authenticatie uit en verleent toegang voor correcte combinatie username en wachtwoord   $\hookrightarrow$ A
+\end{enumerate}
+\noindent \textbf{Alternatief verloop}:
+\begin{description}
+\item[ $\hookrightarrow$ A] De combinatie username / wachtwoord is niet correct. B krijgt een melding en kan informatie aanpassen. $\hookrightarrow$ 1.
+\end{description}
+
+\vspace{2 mm}
+\hrule
+\vspace{4 mm}
+
+\noindent \textbf{Post-conditie}: B is ingelogd en komt op persoonlijk dashboard terecht. \\
+
+
+
+%%%%%%%%%%%% LOGOUT
+\subsubsection{LOGOUT}
+\vspace{2 mm}
+
+\textbf{ID}: FR-U003
+\vspace{2 mm}
+
+\noindent \textbf{Betrokkenen}: aangemelde gebruiker (G); systeem (S) 
+\vspace{2 mm}
+
+\noindent \textbf{Samenvatting}: G kan op elk moment afmelden.  
+\vspace{2 mm}
+
+\noindent \textbf{Pre-conditie}: G is ingelogd. 
+\vspace{2 mm}
+
+\noindent \textbf{Trigger}: G geeft aan zich te willen uitloggen (button)
+
+\vspace{4 mm}
+\hrule
+\vspace{2 mm}
+\noindent \textbf{Scenario}:
+\begin{enumerate}
+  \item S sluit sessie af. 
+\end{enumerate}
+
+
+\vspace{2 mm}
+\hrule
+\vspace{4 mm}
+
+\noindent \textbf{Post-conditie}: G bevindt zich op de eerste pagina van de Skribl applicatie en is niet meer aangemeld. \\
+
+
+
+%%%%%% ACCOUNT VERWIJDEREN 
+\subsubsection{ACCOUNT VERWIJDEREN}
+\vspace{2 mm}
+
+\textbf{ID}: FR-U004
+\vspace{2 mm}
+
+\noindent \textbf{Betrokkenen}: aangemelde gebruiker (G); systeem (S) 
+\vspace{2 mm}
+
+\noindent \textbf{Samenvatting}: G kan account verwijderen.  
+\vspace{2 mm}
+
+\noindent \textbf{Pre-conditie}: G bevindt zich op dashboard.
+\vspace{2 mm}
+
+\noindent \textbf{Trigger}: G geeft aan account te willen verwijderen (button)
+
+\vspace{4 mm}
+\hrule
+\vspace{2 mm}
+\noindent \textbf{Scenario}:
+\begin{enumerate}
+  \item G krijgt vraag om beslissing te bevestigen 
+  \item S verwijdert account 
+  \item G krijgt melding van succesvolle verwijdering account
+\end{enumerate}
+
+
+\vspace{2 mm}
+\hrule
+\vspace{4 mm}
+
+\noindent \textbf{Post-conditie}: G bevindt zich op de eerste pagina van de Skribl applicatie, is niet meer ingelogd en kan voorgaande username en wachtwoord niet meer gebruiken om in te loggen. \\
+
+
+%%%%%% ACCOUNTGEGEVENS WIJZIGEN
+
+\subsubsection{ACCOUNTGEGEVENS WIJZIGEN}
+\vspace{2 mm}
+
+\textbf{ID}: FR-U005
+\vspace{2 mm}
+
+\noindent \textbf{Betrokkenen}: aangemelde gebruiker (G); systeem (S) 
+\vspace{2 mm}
+
+\noindent \textbf{Samenvatting}: G kan de gegevens van zijn/haar account aanpassen. 
+\vspace{2 mm}
+
+\noindent \textbf{Pre-conditie}: G bevindt zich op persoonlijk dashboard.
+\vspace{2 mm}
+
+\noindent \textbf{Trigger}: G geeft aan accountgegevens te willen wijzigen (button)
+
+\vspace{4 mm}
+\hrule
+\vspace{2 mm}
+\noindent \textbf{Scenario}:
+\noindent Dit scenario is analoog aan het scenario REGISTRATIE. De velden zijn in dit geval ingevuld met reeds aanwezige accountgegevens; de username van een gebruiker kan niet gewijzigd worden. 
+
+\vspace{2 mm}
+\hrule
+\vspace{4 mm}
+
+\noindent \textbf{Post-conditie}: G krijgt een melding van succesvolle aanpassing. \\
+
+
+
+%%%%%% TAALKEUZE
+
+\subsubsection{TAALKEUZE}
+\vspace{2 mm}
+
+\textbf{ID}: FR-U006
+\vspace{2 mm}
+
+\noindent \textbf{Betrokkenen}: bezoeker (B) of aangemelde gebruiker (G); systeem (S) 
+\vspace{2 mm}
+
+\noindent \textbf{Samenvatting}: De interface kan in twee talen, Engels en Nederlands, aangeboden worden. 
+\vspace{2 mm}
+
+\noindent \textbf{Pre-conditie}: Indien G, dan wordt de interface aangeboden volgens de taalvoorkeur van de gebruiker, meegegeven bij registratie.
+\vspace{2 mm}
+
+\noindent \textbf{Trigger}: G/B geeft aan de taal te willen wijzigen naar Engels of Nederlands (button)
+
+\vspace{4 mm}
+\hrule
+\vspace{2 mm}
+\noindent \textbf{Scenario}:
+\noindent S laadt een nieuwe interface waarin de taal aangepast is.
+\vspace{2 mm}
+\hrule
+\vspace{4 mm}
+
+\noindent \textbf{Post-conditie}: G/B ziet een interface in de door hem/haar gekozen taal. \\
+
+
+
+
+
+
+\clearpage
+
+
+%%%%%%%%%%%%%%%%PUBLICATIE%%%%%%%%%%%%%%%%%%%%
+
+
+\subsection{Functionele Requirements: PUBLICATIE}
+\vspace{4 mm}
+
+%%%%%%%%%%%% PUBLICATIE UPLOADEN 
+\subsubsection{PUBLICATIE UPLOADEN}
+\vspace{2 mm}
+
+\textbf{ID}: FR-P001
+\vspace{2 mm}
+
+\noindent \textbf{Betrokkenen}: aangemelde gebruiker (G); systeem (S) 
+\vspace{2 mm}
+
+\noindent \textbf{Samenvatting}: G kan een bestand uploaden in PDF- of Bibtex-formaat, waarna S metadata uit dit bestand extraheert; de gevonden metadata kan manueel aangevuld worden door de gebruiker. Het bestand en metadata worden opgeslagen door S. 
+\vspace{2 mm}
+
+\noindent \textbf{Pre-conditie}: G bevindt zich op persoonlijk dashboard.  
+\vspace{2 mm}
+
+\noindent \textbf{Trigger}: G geeft aan een publicatie te willen uploaden (button)
+\vspace{4 mm}
+
+\hrule
+\vspace{2 mm}
+\noindent \textbf{Scenario}:
+\begin{enumerate}
+\item G krijgt de mogelijkheid om bestand uit eigen filesystem up te loaden.
+\item S controleert of bestand PDF of Bibtex formaat heeft $\hookrightarrow$ A
+\item S extraheert metadata, G kan metadata verder aanvullen:
+\begin{description}
+  \item[titel (V)]  \hfill \\
+  {\it verplicht, moet voldoen aan vereisten voor algemene namen*}
+  \item[auteurs (V) ] \hfill \\
+   {\it verplicht, moet voldoen aan vereisten voor algemene namen*}
+     \item[onderwerpen / keywords] \hfill \\
+   {\it moet voldoen aan vereisten voor algemene namen*}
+  \item[onderzoeksdomein] \hfill \\
+  {\it moet voldoen aan vereisten voor algemene namen*}
+   \item[titel van journal of proceedings (V) ] \hfill \\
+   {\it verplicht, moet voldoen aan vereisten voor algemene namen*}
+      \item[jaar van publicatie ] \hfill \\
+   {\it moet een jaartal zijn}
+      \item[URL] \hfill \\
+   {\it moet voldoen aan de standaardvorm van een URL}
+  \end{description}
+  \noindent {\it *een algemene naam kan accenten, koppeltekens en taal-gebonden speciale karakters bevatten, maar geen cijfers of andere speciale karakters.} \\
+  \\
+  \noindent  [{\it De specificaties over het verzamelen van metadata zijn niet definitief. Deze zullen gewijzigd en aangevuld worden eens beslist is welke metadata een rol zullen spelen in het uitbouwen van het netwerk. }]
+ \item G kan deze informatie doorvoeren (button)  $\hookrightarrow$ B
+ \item S slaat publicatie op   
+ \item B krijgt melding van succesvol toevoegen publicatie 
+\end{enumerate}
+\noindent \textbf{Alternatief verloop}:
+\begin{description}
+\item[ $\hookrightarrow$ A] Het bestand heeft niet het juiste formaat. G krijgt een melding. $\hookrightarrow$ 1.
+\item[ $\hookrightarrow$ B] De ingevoerde metadata voldoet niet aan de vereisten. G krijgt een melding en kan aanpassingen doorvoeren. $\hookrightarrow$ 3.
+\end{description}
+
+\vspace{2 mm}
+\hrule
+\vspace{4 mm}
+
+
+\noindent \textbf{Post-conditie}: Een nieuw bestand met bijhorende metadata is opgeslagen in het systeem. \\
+
+\clearpage
+
+
+
+
+
