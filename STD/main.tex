@@ -50,7 +50,7 @@ Vermits het SKRIBL-team agile werkt, gaat dit testplan nog sterk veranderen door
 \renewcommand{\section}[2]{}% verwijdert titel sectie referenties
 \bibliography{referenties}
 \endgroup
-
+%kan je voor onderliggende items \cite{naam1:naam2} gebruiken? alles wordt dan automatisch opgelijst door bovenliggend gedeelte.
 \begin{itemize}
   \item SDD versie 1.0
   \item Internal manual \url{http://wilma.vub.ac.be/~se4_1415/internalManuals/test-framework.pdf}
@@ -141,7 +141,6 @@ Header = moet als content type application/json hebben.
 Validatie moet op dezelfde manier als op de server gebeuren. Het moet bij de twee tiers gebeuren voor security redenen.
 \\
 Indien dit niet zou gebeuren zou injection in de database mogelijk zijn!
-%welke security redenen, welke risico's loopt men anders?
 \\
 \\
 File : %pad naar de test
@@ -173,8 +172,7 @@ Om code te testen in Jasmine moet een specification file worden aangemaakt. Deze
 \newline
 Een specification file bestaat uit een of meerdere oproepen van de describe function. Describe komt overheen met een groep tests. Deze functie verwacht als argumenten een string en een functie die effectief de tests gaat implementeren.
 \newline
-De tests in deze describe functie worden aangemaakt aan de hand van de it functie. De it functie verwacht ook een naam-string en een functie. Maar in deze %over welke functie heb je het hier?
-functie worden de tests beschreven.
+De tests in deze describe functie worden aangemaakt aan de hand van de it functie. De it functie verwacht ook een naam-string en een functie, maar in deze functie worden de tests beschreven.
 \newline
 Om tests te beschrijven gebruiken we matchers. Matchers kunnen elementen vergelijken, controleren of het element wel gedefinieerd is en nog veel anderen! Het is ook mogelijk om zelf matchers te schrijven.
 Voorbeelden van matchers :
@@ -202,7 +200,7 @@ Wanneer een test item voor al zijn tests slaagt, kan de code weer aangepast word
 \section{Omgeving}
 Jasmine heeft geen bepaald environment nodig om tests te kunnen uitvoeren . Het enige dat gedaan moet worden is de library uitbreiden met de gewenste source en specification bestanden.
 \\
-Daarentegen heeft Postman Google Chrome nodig(het is een chrome extension). 
+Daarentegen heeft Postman Google Chrome nodig, aangezien het een chrome extension is. 
 
 \section{Verantwoordelijkheden}
 In het SKRIBL-team schrijft iedereen zijn eigen tests. Indien een lid denkt dat zijn code af is, omdat het aan al zijn tests voldoet, bekijkt de Test Manager de tests en voegt er eventueel enkelen bij. De tests worden dan opnieuw uitgevoerd en het bestand eventueel opnieuw aangepast tot het voldoet aan alle tests. 
