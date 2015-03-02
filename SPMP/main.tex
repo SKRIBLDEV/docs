@@ -493,7 +493,7 @@ Meer informatie over de syseemomgeving, de gebruikte database e.d. is te vinden 
 
 \noindent [{\it Dit onderdeel zal na de opening van iedere sprint verder aangevuld worden.}] \newline
 \\
-\noindent De werkpakketten en planningen voor iedere sprint zullen weergegeven worden in eenvoudige Gantt charts. De lengte van de balkjes op het diagram stemt hierbij overeen met de verwachte werklast voor elke opdracht. 1 eenheid op het diagram komt overeen met 1 dag, waarbij 1 dag beschouwd als de gemiddelde werkdag van een student. Aangenomen wordt dat er op deze dag ruwweg drie uur aan de opdracht kan gespendeerd worden. De verwachte werklast wordt bepaald op de openingsvergadering van de sprint door een eenvoudig systeem van stemming en gemiddeldes. \newline
+\noindent De werkpakketten en planningen voor iedere sprint zullen weergegeven worden in eenvoudige Gantt charts. De lengte van de balkjes op het diagram stemt hierbij overeen met de verwachte werklast voor elke opdracht. 1 eenheid op het diagram komt overeen met 1 dag, waarbij 1 dag beschouwd als de gemiddelde werkdag van een student. Aangenomen wordt dat er op deze dag ruwweg twee uur aan de opdracht kan gespendeerd worden. De verwachte werklast wordt bepaald op de openingsvergadering van de sprint door een eenvoudig systeem van stemming en gemiddeldes. \newline
 
 %
 \subsection{Sprint 1:  Inloggen en Registreren}
@@ -525,7 +525,7 @@ De PM zal deze situatie opvolgen en trachten te remedi\"{e}ren. In samenspraak m
  \label{gantt_S1}
 \end{figure}
 
-\clearpage
+
 \subsection{Sprint 2:  Publicatie uploaden}
 
 Figuur \ref{gantt_S2_20nov} geeft de planning voor de tweede sprint weer, inclusief remedi\"{e}ring voor de achterstand opgelopen tijdens sprint 1. Sprint 2 loopt van 20 november 2014 (notatie 11/20/14)  tot 15 december 2014 (notatie 12/15/14). Deze sprint heeft als mijlpaal 'mijlpaal 2: publicatie toevoegen' en implementeert volgende features:
@@ -551,14 +551,48 @@ Figuur \ref{gantt_S2_20nov} geeft de planning voor de tweede sprint weer, inclus
  \label{gantt_S2_15dec}
 \end{figure}
 
+\clearpage
+\subsection{Sprint 3:  Bibliotheek}
+
+Figuur \ref{gantt_S3_2maart} geeft de planning voor de implementatie van de derde sprint weer, inclusief remedi\"{e}ring voor de achterstand opgelopen tijdens sprint 2. Sprint 3 loopt van 9 februari 2015  tot 2 maart 2015, en heeft als mijlpaal 'mijlpaal 3: bibliotheek' (zie SRS). De werkpaketten, deels gebaseerd op deze Gantt chart, zijn weergegeven in \ref{tabelS3}. Figuur \ref{pie_S3} ten slotte geeft een samenvatting van de re\"{e}le werkuren voor sprint 3. De geplande werklast was (met opzet) te hoog; dit blijkt ook uit het feit dat de doelstellingen voor deze sprint slechts gedeeltelijk behaald zijn. Volgende planningen zullen opgesteld worden met als richtgetal 30u per persoon per sprint, of ongeveer 10u per persoon per week. 
+
+\begin{figure}[h!]
+\centering
+ \includegraphics[scale=0.4]{Gantt_S3_2maart.png}
+ \caption{Gantt chart voor sprint 3, op datum 02 maart 2015, einde van de sprint. Figuur gecre\"{e}erd met OpenOffice Calc.}
+ \label{gantt_S3_2maart}
+\end{figure}
 
 
+\begin{table}[!h] 
+  \begin{center}
+    \begin{tabular}{|p{4cm}|p{3cm}|p{3cm}|p{3cm}|} 
+      \hline
+       {\bf Type } &  {\bf Berekening duur} &  {\bf  Geplande duur} &   {\bf Re\"{e}le duur aan einde sprint} \\
+           \hline
+      Taken algemeen: planning, documenten, etc.& planning en analyse (10u)  + 4u per doc + 1u pp overig & 10+16+5 = 31u & $\pm 33$u  \\
+         \hline
+         Bijscholing \& tutorials & 2u pp & 10u & $\pm 5$ u \\
+           \hline
+         Vergadering & 2 maal 1u pp & 10u & $\pm 8$ u \\
+         \hline
+         Implementatie, zie fig. \ref{gantt_S3_2maart} & 2u per eenheid * aantal toegewezen teamleden & 133u & $\pm 100$u (implementatie onvolledig) \\
+   \hline
+       Totaal & &  $\pm 185$u,  37u pp & $\pm 150$u, 30u pp (via Toggl) \\
+   \hline
+    \end{tabular}
+  \end{center}
+  \caption{Geplande en re\"{e}le werkpaketten sprint 3.}
+  \label{tabelS3}
+ \end{table}
 
 
-
-
-
-
+\begin{figure}[h!]
+\centering
+ \includegraphics[scale=0.6]{Toggl_Pie_S3.png}
+ \caption{Pie chart met re\"{e}le werkpaketten voor sprint 3, op datum 02 maart 2015, einde van de sprint. Figuur gecre\"{e}erd via Toggl. }
+ \label{pie_S3}
+\end{figure}
 
 
 \end{document}

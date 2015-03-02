@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.10.3)  14 DEC 2014 22:15
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.10.3)  2 MAR 2015 17:30
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -506,7 +506,7 @@ e 8.
 <Small_Logo.png, id=18, 176.0979pt x 174.6525pt>
 File: Small_Logo.png Graphic file (type png)
  <use Small_Logo.png>
-Package pdftex.def Info: Small_Logo.png used on input line 36.
+Package pdftex.def Info: Small_Logo.png used on input line 43.
 (pdftex.def)             Requested size: 37.29333pt x 36.98866pt.
  [1 <./Small_Logo.png>]) (./main.toc)
 \tf@toc=\write3
@@ -546,29 +546,31 @@ Package pdftex.def Info: Small_Logo.png used on input line 108.
  [3]
 
 Package natbib Warning: Citation `Xtreport:organisatie' on page 4 undefined on 
-input line 113.
+input line 112.
 
 <kalender.png, id=36, 674.52pt x 546.04pt>
 File: kalender.png Graphic file (type png)
  <use kalender.png>
-Package pdftex.def Info: kalender.png used on input line 117.
+Package pdftex.def Info: kalender.png used on input line 116.
 (pdftex.def)             Requested size: 341.43306pt x 276.40207pt.
 
 
 Package natbib Warning: Citation `website:Cal-Poly' on page 4 undefined on inpu
-t line 124.
+t line 123.
 
+File: Small_Logo.png Graphic file (type png)
+<use Small_Logo.png>
+Package pdftex.def Info: Small_Logo.png used on input line 125.
+(pdftex.def)             Requested size: 37.29333pt x 36.98866pt.
+ [4 <./kalender.png>]
 No file main.bbl.
 File: Small_Logo.png Graphic file (type png)
 <use Small_Logo.png>
-Package pdftex.def Info: Small_Logo.png used on input line 136.
-(pdftex.def)             Requested size: 37.29333pt x 36.98866pt.
- [4 <./kalender.png>]
-File: Small_Logo.png Graphic file (type png)
- <use Small_Logo.png>
 Package pdftex.def Info: Small_Logo.png used on input line 145.
 (pdftex.def)             Requested size: 37.29333pt x 36.98866pt.
- [5]
+ [5
+
+]
 
 Package natbib Warning: Citation `website:agile-process' on page 6 undefined on
  input line 152.
@@ -751,11 +753,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 509--512
 
  []
 
-<gantt_S1_19nov.png, id=92, 1195.46625pt x 532.99126pt>
-File: gantt_S1_19nov.png Graphic file (type png)
+<Gantt_S1_19nov.png, id=92, 1195.46625pt x 532.99126pt>
+File: Gantt_S1_19nov.png Graphic file (type png)
 
-<use gantt_S1_19nov.png>
-Package pdftex.def Info: gantt_S1_19nov.png used on input line 523.
+<use Gantt_S1_19nov.png>
+Package pdftex.def Info: Gantt_S1_19nov.png used on input line 523.
 (pdftex.def)             Requested size: 478.17802pt x 213.19272pt.
 
 Overfull \hbox (48.1734pt too wide) in paragraph at lines 523--524
@@ -767,17 +769,12 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 File: Small_Logo.png Graphic file (type png)
 <use Small_Logo.png>
-Package pdftex.def Info: Small_Logo.png used on input line 528.
+Package pdftex.def Info: Small_Logo.png used on input line 534.
 (pdftex.def)             Requested size: 37.29333pt x 36.98866pt.
  [17
 
 ]
-File: Small_Logo.png Graphic file (type png)
- <use Small_Logo.png>
-Package pdftex.def Info: Small_Logo.png used on input line 528.
-(pdftex.def)             Requested size: 37.29333pt x 36.98866pt.
- [18 <./gantt_S1_19nov.png>]
-<Gantt_S2_20nov.jpg, id=100, 1117.17375pt x 518.93875pt>
+<Gantt_S2_20nov.jpg, id=96, 1117.17375pt x 518.93875pt>
 File: Gantt_S2_20nov.jpg Graphic file (type jpg)
 
 <use Gantt_S2_20nov.jpg>
@@ -788,7 +785,10 @@ Overfull \hbox (16.85696pt too wide) in paragraph at lines 540--541
  [][] 
  []
 
-<Gantt_S2_15dec.png, id=101, 1121.18875pt x 496.85625pt>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<Gantt_S2_15dec.png, id=97, 1121.18875pt x 496.85625pt>
 File: Gantt_S2_15dec.png Graphic file (type png)
 
 <use Gantt_S2_15dec.png>
@@ -802,6 +802,64 @@ Overfull \hbox (18.46294pt too wide) in paragraph at lines 549--550
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
+File: Small_Logo.png Graphic file (type png)
+<use Small_Logo.png>
+Package pdftex.def Info: Small_Logo.png used on input line 554.
+(pdftex.def)             Requested size: 37.29333pt x 36.98866pt.
+ [18 <./Gantt_S1_19nov.png>]
+File: Small_Logo.png Graphic file (type png)
+ <use Small_Logo.png>
+Package pdftex.def Info: Small_Logo.png used on input line 554.
+(pdftex.def)             Requested size: 37.29333pt x 36.98866pt.
+ [19 <./Gantt_S2_20nov.jpg> <./Gantt_S2_15dec.png>]
+<Gantt_S3_2maart.png, id=106, 1110.1475pt x 505.89pt>
+File: Gantt_S3_2maart.png Graphic file (type png)
+
+<use Gantt_S3_2maart.png>
+Package pdftex.def Info: Gantt_S3_2maart.png used on input line 561.
+(pdftex.def)             Requested size: 444.05113pt x 202.3524pt.
+
+Overfull \hbox (14.04651pt too wide) in paragraph at lines 561--562
+ [][] 
+ []
+
+
+Underfull \hbox (badness 1127) in paragraph at lines 571--572
+[]\T1/cmr/bx/n/10 Reële duur aan
+ []
+
+
+Underfull \hbox (badness 2521) in paragraph at lines 573--573
+[]\T1/cmr/m/n/10 Taken al-ge-meen: plan-
+ []
+
+
+Underfull \hbox (badness 1694) in paragraph at lines 579--579
+[]\T1/cmr/m/n/10 2u per een-heid *
+ []
+
+
+Underfull \hbox (badness 5175) in paragraph at lines 579--579
+\T1/cmr/m/n/10 aan-tal toe-ge-we-zen
+ []
+
+
+Underfull \hbox (badness 1668) in paragraph at lines 579--580
+[]$\OMS/cmsy/m/n/10 ^^F\OT1/cmr/m/n/10 100$\T1/cmr/m/n/10 u (im-ple-men-
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<Toggl_Pie_S3.png, id=107, 357.335pt x 432.61626pt>
+File: Toggl_Pie_S3.png Graphic file (type png)
+ <use Toggl_Pie_S3.png>
+Package pdftex.def Info: Toggl_Pie_S3.png used on input line 592.
+(pdftex.def)             Requested size: 214.40265pt x 259.57176pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
 
 Package natbib Warning: There were undefined citations.
 
@@ -809,47 +867,48 @@ Package natbib Warning: There were undefined citations.
 AED: lastpage setting LastPage
 File: Small_Logo.png Graphic file (type png)
 <use Small_Logo.png>
-Package pdftex.def Info: Small_Logo.png used on input line 564.
+Package pdftex.def Info: Small_Logo.png used on input line 598.
 (pdftex.def)             Requested size: 37.29333pt x 36.98866pt.
- [19
+ [20
 
- <./Gantt_S2_20nov.jpg>]
+ <./Gantt_S3_2maart.png>]
 File: Small_Logo.png Graphic file (type png)
  <use Small_Logo.png>
-Package pdftex.def Info: Small_Logo.png used on input line 564.
+Package pdftex.def Info: Small_Logo.png used on input line 598.
 (pdftex.def)             Requested size: 37.29333pt x 36.98866pt.
- [20 <./Gantt_S2_15dec.png>] (./main.aux) ) 
+ [21 <./Toggl_Pie_S3.png>] (./main.aux) ) 
 Here is how much of TeX's memory you used:
- 4131 strings out of 493117
- 53517 string characters out of 6135433
- 226671 words of memory out of 5000000
- 7499 multiletter control sequences out of 15000+600000
+ 4144 strings out of 493117
+ 53764 string characters out of 6135433
+ 225698 words of memory out of 5000000
+ 7510 multiletter control sequences out of 15000+600000
  17026 words of font info for 32 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  38i,13n,43p,1432b,380s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2014/texmf-dist/
-fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/local/texlive/2014/texmf-dist/fo
-nts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2014/texmf-dist/fon
-ts/type1/public/cm-super/sfbx0700.pfb></usr/local/texlive/2014/texmf-dist/fonts
-/type1/public/cm-super/sfbx1000.pfb></usr/local/texlive/2014/texmf-dist/fonts/t
-ype1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2014/texmf-dist/fonts/typ
-e1/public/cm-super/sfbx1440.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1
-/public/cm-super/sfbx2074.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/p
-ublic/cm-super/sfcc1200.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/pub
-lic/cm-super/sfcc1728.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/publi
-c/cm-super/sfrm0700.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/
-cm-super/sfrm0900.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/cm
--super/sfrm1000.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/cm-s
-uper/sfrm1200.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/cm-sup
-er/sfrm1440.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/cm-super
-/sfsl1000.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/cm-super/s
-fti0900.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/cm-super/sft
-i1000.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/cm-super/sfti1
-440.pfb>
-Output written on main.pdf (21 pages, 859006 bytes).
+{/usr/local/texlive/2014/texmf-dist/fo
+nts/enc/dvips/cm-super/cm-super-t1.enc}</usr/local/texlive/2014/texmf-dist/font
+s/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2014/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2014/texmf-dist/fonts/t
+ype1/public/cm-super/sfbx0700.pfb></usr/local/texlive/2014/texmf-dist/fonts/typ
+e1/public/cm-super/sfbx1000.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1
+/public/cm-super/sfbx1200.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/p
+ublic/cm-super/sfbx1440.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/pub
+lic/cm-super/sfbx2074.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/publi
+c/cm-super/sfcc1200.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/
+cm-super/sfcc1728.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/cm
+-super/sfrm0700.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/cm-s
+uper/sfrm0900.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/cm-sup
+er/sfrm1000.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/cm-super
+/sfrm1200.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/cm-super/s
+frm1440.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/cm-super/sfs
+l1000.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/cm-super/sfti0
+900.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/cm-super/sfti100
+0.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/cm-super/sfti1440.
+pfb>
+Output written on main.pdf (22 pages, 932159 bytes).
 PDF statistics:
- 165 PDF objects out of 1000 (max. 8388607)
- 103 compressed objects within 2 object streams
+ 176 PDF objects out of 1000 (max. 8388607)
+ 108 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 66 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 76 words of extra memory for PDF output out of 10000 (max. 10000000)
 
