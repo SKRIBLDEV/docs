@@ -241,6 +241,39 @@
 
 
 
+%%%%%% 
+
+\subsubsection{BASIS AUTEURSNETWERK}
+\vspace{2 mm}
+
+\textbf{ID}: FR-U007
+\vspace{2 mm}
+
+\noindent \textbf{Betrokkenen}: aangemelde gebruiker (G); systeem (S) 
+\vspace{2 mm}
+
+\noindent \textbf{Samenvatting}: Een gebruiker kan zijn/haar netwerk van co-auteurs raadplegen in een gevisualiseerde graaf. 
+\vspace{2 mm}
+
+\noindent \textbf{Pre-conditie}: Indien G, dan wordt de interface aangeboden volgens de taalvoorkeur van de gebruiker, meegegeven bij registratie.
+\vspace{2 mm}
+
+\noindent \textbf{Trigger}: G/B geeft aan de taal te willen wijzigen naar Engels of Nederlands (button)
+
+\vspace{4 mm}
+\hrule
+\vspace{2 mm}
+\noindent \textbf{Scenario}:
+\noindent S laadt een nieuwe interface waarin de taal aangepast is.
+\vspace{2 mm}
+\hrule
+\vspace{4 mm}
+
+\noindent \textbf{Post-conditie}: G/B ziet een interface in de door hem/haar gekozen taal. \\
+
+
+
+
 
 
 \clearpage
@@ -277,9 +310,10 @@
 \vspace{2 mm}
 \noindent \textbf{Scenario}:
 \begin{enumerate}
+\item G geeft de titel en het type van de publicatie in 
+\item S controleert of publicatie met die titel reeds aanwezig is.  $\hookrightarrow$ A
 \item G krijgt de mogelijkheid om bestand uit eigen filesystem toe te voegen.
-\item S controleert of bestand PDF formaat heeft $\hookrightarrow$ A
-\item G geeft de titel van de publicatie in en geeft aan de overige metadata door het systeem te willen laten opzoeken $\hookrightarrow$ B
+\item S controleert of bestand PDF formaat heeft $\hookrightarrow$ B
 \item S vult waar mogelijk volgende metadata aan:
 \begin{description}
   \item[titel (V)]  \hfill 
@@ -293,16 +327,17 @@
    \item[aantal citaties] \hfill 
     \item[URL] \hfill 
   \end{description}
-\item G kan deze metadata verder aanvullen of wijzigen 
+\item S controleert of de door scraping gevonden auteurs reeds aanwezig zijn in het systeem. 
+\item G kan deze metadata verder aanvullen of wijzigen, en kan oordelen of de in het systeem gevonden auteurs de gewenste auteurs zijn (adhv publicaties van de gevonden auteurs) 
  \item G kan deze informatie doorvoeren (button)  $\hookrightarrow$ C
  \item S slaat publicatie op   
  \item B krijgt melding van succesvol toevoegen publicatie 
 \end{enumerate}
 \noindent \textbf{Alternatief verloop}:
 \begin{description}
-\item[ $\hookrightarrow$ A] Het bestand heeft niet het juiste formaat. G krijgt een melding. $\hookrightarrow$ 1.
-\item[ $\hookrightarrow$ B] G wil metadata niet automatisch laten aanvullen $\hookrightarrow$ 5.
-\item[ $\hookrightarrow$ B] De ingevoerde metadata voldoet niet aan de validatie-vereisten. G krijgt een melding en kan aanpassingen doorvoeren. $\hookrightarrow$ 5.
+\item[ $\hookrightarrow$ A] Een publicatie met dezelfde titel is reeds aanwezig in het systeem. G oordeelt of het over dezelfde publicatie gaar, indien ja, dan wordt deze publicatie aan de bibliotheek van de gebruiker toegevoegd. 
+\item[ $\hookrightarrow$ B] Het bestand heeft niet het juiste formaat. G krijgt een melding. $\hookrightarrow$ 1.
+\item[ $\hookrightarrow$ C] De ingevoerde metadata voldoet niet aan de validatie-vereisten. G krijgt een melding en kan aanpassingen doorvoeren. $\hookrightarrow$ 5.
 \end{description}
 
 \vspace{2 mm}
@@ -310,7 +345,7 @@
 \vspace{4 mm}
 
 
-\noindent \textbf{Post-conditie}: Een nieuwe PDF met bijhorende metadata is opgeslagen in het systeem / de bibliotheek van de gebruiker. \\
+\noindent \textbf{Post-conditie}: Een nieuwe publicatie met bijhorende metadata is opgeslagen in  de bibliotheek van de gebruiker. \\
 
 
 

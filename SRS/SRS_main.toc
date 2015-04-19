@@ -23,6 +23,6 @@
 \contentsline {subsection}{\numberline {3.2}Functionele Requirements: PUBLICATIE}{11}
 \contentsline {subsubsection}{\numberline {3.2.1}PUBLICATIE UPLOADEN}{11}
 \contentsline {subsubsection}{\numberline {3.2.2}OPZOEKEN EN BEWAREN VAN PUBLICATIE}{12}
-\contentsline {subsubsection}{\numberline {3.2.3}BIBLIOTHEEK}{12}
+\contentsline {subsubsection}{\numberline {3.2.3}BIBLIOTHEEK}{13}
 \contentsline {subsection}{\numberline {3.3}Functionele Requirements: DATA-MINING}{14}
 \contentsline {subsubsection}{\numberline {3.3.1}GOOGLE SCHOLAR SCRAPING}{14}
