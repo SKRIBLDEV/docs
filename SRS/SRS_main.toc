@@ -20,9 +20,11 @@
 \contentsline {subsubsection}{\numberline {3.1.4}ACCOUNT VERWIJDEREN}{9}
 \contentsline {subsubsection}{\numberline {3.1.5}ACCOUNTGEGEVENS WIJZIGEN}{9}
 \contentsline {subsubsection}{\numberline {3.1.6}TAALKEUZE}{10}
-\contentsline {subsection}{\numberline {3.2}Functionele Requirements: PUBLICATIE}{11}
-\contentsline {subsubsection}{\numberline {3.2.1}PUBLICATIE UPLOADEN}{11}
-\contentsline {subsubsection}{\numberline {3.2.2}OPZOEKEN EN BEWAREN VAN PUBLICATIE}{12}
-\contentsline {subsubsection}{\numberline {3.2.3}BIBLIOTHEEK}{13}
-\contentsline {subsection}{\numberline {3.3}Functionele Requirements: DATA-MINING}{14}
-\contentsline {subsubsection}{\numberline {3.3.1}GOOGLE SCHOLAR SCRAPING}{14}
+\contentsline {subsubsection}{\numberline {3.1.7}BASIS AUTEURSNETWERK}{10}
+\contentsline {subsection}{\numberline {3.2}Functionele Requirements: PUBLICATIE}{12}
+\contentsline {subsubsection}{\numberline {3.2.1}PUBLICATIE UPLOADEN}{12}
+\contentsline {subsubsection}{\numberline {3.2.2}OPZOEKEN EN BEWAREN VAN PUBLICATIE}{13}
+\contentsline {subsubsection}{\numberline {3.2.3}BIBLIOTHEEK}{14}
+\contentsline {subsubsection}{\numberline {3.2.4}PDF-VIEWER}{14}
+\contentsline {subsection}{\numberline {3.3}Functionele Requirements: DATA-MINING}{16}
+\contentsline {subsubsection}{\numberline {3.3.1}GOOGLE SCHOLAR SCRAPING}{16}
