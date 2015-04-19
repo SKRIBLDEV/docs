@@ -41,10 +41,10 @@
 \section{Introductie}
 SKRIBL is een sociaal netwerk voor proffen en PHD studenten.
 \\
-Dit document is een test plan voor de SKRIBL web-application.  
-Het test plan beschrijft hoe de code getest moet worden zodat alle functionnaliteiten van Skribl perfect zouden werken.
+Dit document is een testplan voor de SKRIBL web-application.  
+Het testplan beschrijft hoe de code getest moet worden opdat alle functionaliteiten van Skribl perfect zouden werken.
 \\
-Vermits het SKRIBL-team agile werkt, gaat dit testplan nog sterk veranderen doorheen de iteraties. Elke test heeft een testversie omdat de tests met de iteraties mee moeten evolueren. Agile werken houdt ook in dat de vorige geslaagde tests, opnieuw getest  worden en indien nodig aangepast worden.
+Vermits het SKRIBL-team agile werkt, zal dit testplan nog sterk veranderen doorheen de iteraties. Elke test heeft een testversie omdat de tests met de iteraties mee moeten evolueren. Agile werken houdt ook in dat de vorige geslaagde tests opnieuw getest  worden en indien nodig aangepast worden.
 
 \section{Referenties}
 \begingroup
@@ -68,14 +68,14 @@ Vermits het SKRIBL-team agile werkt, gaat dit testplan nog sterk veranderen door
 \item[DOM]Document Object Model. Is een soort boom dat de content van een webpagine bevat.
 \item[GUI]Graphical User Interface.
 \item[API]Application Programming Interface.
-\item[MVC]Model View Controller. Is een software architecture patroon die software splits in drie delen: Model View en Controller. De controllers worden gebruikt om het model aan te passen, die op hun beurt de view aanpassen. 
+\item[MVC]Model View Controller. Dit is een software architectuur patroon dat de implementatie opsplitst in drie delen: Model, View en Controller. De controllers worden gebruikt om het model aan te passen, die op hun beurt de view aanpassen. 
 \end{description}
 
 \section{Domein}
-In het SDD, sectie 3.2, wordt de architectuur van de SKRIBL web-application beschreven. De sectie beschrijft de drie tiers dat de web-application gebruikt, namelijk de databasetier, servertier en clienttier. Deze drie tiers moeten tests implementeren, die in de sectie "Test items" worden beschreven.
+In het SDD, sectie 3.2, wordt de architectuur van de SKRIBL web-application beschreven. De sectie beschrijft de drie tiers die de webapplicatie gebruikt, namelijk de databasetier, servertier en clienttier. Voor deze drie tiers moeten tests worden ge\"implementeerd, en deze worden in de sectie "Test items" beschreven.
 
 \section{Test items}
-Alle ge\"implementeerde items \& features moeten getest worden. De tests kunnen in verschillende groepen tests verdeeld worden. Deze groepen worden verder uitgelegd.
+Alle ge\"implementeerde items \& features moeten getest worden. De tests kunnen in verschillende groepen onderverdeeld worden. Deze groepen worden verderop beschreven.
 
 \subsection{Databasetier tests}
 De database houdt alle gegevens bij die te maken hebben met users, publicaties,... In deze tier moet het toevoegen, opvragen en verwijderen van die gegevens getest worden. Het is ook belangrijk dat na het manipuleren van de database deze niet corrupt wordt.
@@ -83,7 +83,7 @@ De database houdt alle gegevens bij die te maken hebben met users, publicaties,.
 \\
 Alle tests bevinden zich in : $\backslash$server$\backslash$server$\backslash$modules$\backslash$database$\backslash$jasmine-tests$\backslash$...
 \subsubsection{Data-toevoeging tests}
-Tests die controleren of data op de juiste manier word toegevoegd en opgeslagen in de database.
+Tests die controleren of data op de juiste manier wordt toegevoegd en opgeslagen in de database.
 \begin{itemize}
 \item test adding user
 \item test adding journal 
@@ -94,7 +94,7 @@ Tests die controleren of data op de juiste manier word toegevoegd en opgeslagen 
 \end{itemize}
 File : databaseSetupSpecs.js
 \subsubsection{Data-opvraging tests}
-Tests die controleren of data op de juiste manier word opgehaald uit de database.
+Tests die controleren of data op de juiste manier wordt opgehaald uit de database.
 \begin{itemize}
 \item test opvragen gebruiker
 \item test opvragen pub data
@@ -108,7 +108,7 @@ Tests die controleren of data op de juiste manier word opgehaald uit de database
 \end{itemize}
 File : databaseRequestsSpecs.js
 \subsubsection{Data-verwijdering tests}
-Tests die controleren of data op de juiste manier verwijderd wordt. Het verwijderen van bijvoorbeeld een user, moet meerdere elementen in de database verwijderen, dit word gecontroleerd.
+Tests die controleren of data op de juiste manier verwijderd wordt. Het verwijderen van bijvoorbeeld een user moet meerdere elementen in de database verwijderen, ook dit wordt gecontroleerd. 
 \begin{itemize}
 \item test verwijder publicatie uit bibliotheek
 \item test verwijder bibliotheek van gebruiker
@@ -118,7 +118,7 @@ Tests die controleren of data op de juiste manier verwijderd wordt. Het verwijde
 \end{itemize}
 File : databaseDeletionSpecs.js
 \subsubsection{Data-persistentie tests}
-Tests dat nagaan of data wel daadwerkelijk bewaard blijft en de database niet corrupt is.
+Tests die nagaan of data wel daadwerkelijk bewaard blijft en de database niet corrupt is.
 \begin{itemize}
 \item test user data
 \item test author data
@@ -130,9 +130,8 @@ Tests dat nagaan of data wel daadwerkelijk bewaard blijft en de database niet co
 \item test keywords
 \end{itemize}
 File : databasePersistenceSpecs.js
-
 \subsection{Servertier tests}
-De servertier is een soort communicatie laag tussen de database en de user. De server moet al zijn HTTP requests testen.
+De servertier is een communicatielaag tussen de database en de user. Voor deze tier moeten alle HTTP requests getest worden.
 \\\\
 Alle tests bevinden zich in : $\backslash$server$\backslash$server$\backslash$routeTests$\backslash$...
 \subsubsection{Authors tests}
@@ -148,7 +147,7 @@ File : publications.json
 //TODO NOAH\\
 File : users.json
 \subsection{Clienttier}
-De clienttier zorgt voor een user interface en het opsturen van HTTP requests naar de server. Deze tier word getest aan de hand van de GUI. Om tijdverlies te voorkomen word de GUI automatisch getest zie sectie "Strategie".
+De clienttier zorgt voor een user interface en de communicatie met de server. Deze tier wordt getest aan de hand van de GUI. Om tijdsverlies te voorkomen wordt de GUI automatisch getest, zie sectie "Strategie".
 \subsubsection{User tests}
 \begin{itemize}
   \item Login test
@@ -169,8 +168,8 @@ De clienttier zorgt voor een user interface en het opsturen van HTTP requests na
   \item Publicaties toevoegen(via upload) test
 \end{itemize}
 \section{Software risico gevallen}
-De client die de SKRIBL web-application gebruikt komt alleen maar in aanraking met de clienttier. Zodat deze tier zonder probleem zou werken, moeten de servertier en database tier ook werken. Dit impliceert dat een fout in de server of database tier heel de web-application kan verzwakken. Natuurlijk zijn problemen in de web-application voorzien en kan SKRIBL met de meeste problemen leven. Maar om toch zo weinig mogelijk problemen te hebben is het testen  van ELKE tier zeer belangrijk. Het grootste risico van onze applicatie is dus het fijt dat de onderliggende tiers goed genoeg moeten werken zodat de client de application op een  zo goed mogelijke manier kan gebruiken.
-
+De client die de SKRIBL web-application gebruikt komt alleen maar in aanraking met de clienttier. Opdat deze tier zonder probleem zou werken, moeten de servertier en database tier ook werken. Dit impliceert dat een fout in de server of database tier heel de web-application kan verzwakken. Natuurlijk zijn problemen in de web-application voorzien en kan SKRIBL met de meeste problemen leven. Maar om toch zo weinig mogelijk problemen te hebben is het testen  van ELKE tier zeer belangrijk. Het grootste risico van onze applicatie is dus het feit dat de onderliggende tiers goed genoeg moeten werken zodat de client de application op een zo goed mogelijke manier kan gebruiken.
+%
 \section{Features}
 De features die getest worden zijn:
 \begin{itemize}
@@ -190,7 +189,7 @@ Sommige features die getest worden houden andere features in (die ook getest moe
 \item[Publicaties toevoegen(via upload)] = publicatie zoeken + scraping + informatie over publicaties aanpassen + publicatie toevoegen aan library
 \item[Libraries managen] = user libraries ophalen + publicaties van een library ophalen + publicatie toevoegen aan library + publicatie uit library verwijderen + library aanmaken + library verwijderen.
 \end{description}
-
+%
 \section{Strategie}
 Om de code te testen worden drie frameworks gebruikt: 
 \begin{description}
@@ -198,7 +197,7 @@ Om de code te testen worden drie frameworks gebruikt:
   \item[Postman] Een chrome extension dat HTTP requests kan versturen. 
   \item[Selenium] Een geautomatiseerde GUI tester.
 \end{description}
- 
+ %
 \subsection{Jasmine 2.0.3}
 Om code te testen in Jasmine moet een specification file worden aangemaakt. Deze specification file beschrijft de tests die dienen uitgevoerd te worden. 
 \newline
@@ -210,53 +209,53 @@ Voorbeelden van matchers :
   \item expect().toMatch();
   \item ...
 \end{itemize}
-
+%
 \subsubsection{Tests uitvoeren}
-Omdat Jasmine een standalone software is , is het uitvoeren van tests heel gemakkelijk. Wanneer een specification bestand geschreven is moet het pad naar deze alleen maar toegevoegd worden in een html bestand. Wanneer dit gedaan is dient het html bestand alleen maar geopend te worden in een webbrowser. In de webbrowser geeft Jasmine de geslaagde en gefaalde tests weer.
-
+Omdat Jasmine een standalone software is, is het uitvoeren van tests heel gemakkelijk. Wanneer een specification bestand geschreven is moet het pad naar dit bestand alleen maar toegevoegd worden in een html bestand. Wanneer dit gedaan is dient het html bestand alleen maar geopend te worden in een webbrowser. In de webbrowser geeft Jasmine de geslaagde en gefaalde tests weer.
+%
 \subsubsection{Extra}
 Een manual over Jasmine werd opgesteld door de test manager voor het SKRIBL-team. Deze staat in de referenties en legt het gebruik van Jasmine in detail uit.
-
+%
 \subsection{Postman}
 Postman laat toe om op een heel simpele manier HTTP requests samen te stellen en vervolgens op te sturen aan de hand van een GUI. Het is daarna het werk van de tester om te kijken of de teruggegeven status de verwachte is of niet. In principe zijn alle HTTP responses tussen 200 en 299 juist.
-
+%
 \subsubsection{Tests uitvoeren}
 Postman laat toe om de HTTP requests te schrijven en deze te bewaren. Het is hierna simpel om de HTTP requests (tests) later in te laden in postman om alle requests opnieuw te testen.
-
+%
 \subsection{Selenium}
-Selenium laat toe om GUI testing te reproduceren. Selenium kan op knoppen clicken, veldjes invullen enz. Ook laat het toe om delen van de GUI te vergelijken met bepaalde waarden. 
-
+Selenium laat toe om GUI testing te reproduceren. Selenium kan op knoppen klikken, veldjes invullen enz. Ook laat het toe om delen van de GUI te vergelijken met bepaalde waarden. 
+%
 \subsubsection{Tests uitvoeren}
-Het is mogelijk om tests te maken en deze een per een uit te voeren. Ook kunnen de tests opgeslagen worden en later weer geimporteerd worden en opnieuw uitgevoerd worden. 
-
+Het is mogelijk om tests te maken en deze een per een uit te voeren. Ook kunnen de tests opgeslagen worden en later weer ge\"importeerd worden en opnieuw uitgevoerd worden. 
+%
 \section{Omgeving}
-Jasmine heeft geen bepaald environment nodig om tests te kunnen uitvoeren . Het enige dat gedaan moet worden is de library uitbreiden met de gewenste source en specification bestanden.
+Jasmine heeft geen bepaalde omgeving nodig om tests te kunnen uitvoeren . Het enige wat gedaan moet worden is de library uitbreiden met de gewenste source en specification bestanden.
 \\
-Daarentegen heeft Postman Google Chrome nodig, en Selenium Mozilla Firefox, vermits het allebij extensions zijn.
-
+Daarentegen heeft Postman Google Chrome nodig, en Selenium Mozilla Firefox, vermits het allebei extensions zijn.
+%
 \section{Verantwoordelijkheden}
-In het SKRIBL-team worden meerdere programmeertalen en libraries gebruikt afhankelijk van de tier. Elk lid van het SKRIBL team werkt aan een bepaalde tier en kent de libraries en programmeertalen die gebruikt worden voor die tier. Ook kent elk lid natuurlijk de code van zijn tier maar niet alle code van elke tier. Voor al deze redenen schrijft elke team lid zijn eigen tests.\\
-Wanneer de code van een lid aan al zijn tests voldoet en alle gevraagde functionaliteiten zijn geprogrammeerd (en getest a.d.h.v zelf geschreven test) controleert de test manager alle tests. De test manager kan dan eventueel vragen om tests toe te voegen indien hij vind dat er voor sommige functionnaliteiten meer nodig zijn, of dieper in de code moeten testen , enz.
-
+In het SKRIBL-team worden meerdere programmeertalen en libraries gebruikt afhankelijk van de tier. Elk lid van het SKRIBL team werkt aan een bepaalde tier en kent de libraries en programmeertalen die gebruikt worden voor die tier. Ook kent elk lid natuurlijk de code van zijn tier maar niet alle code van elke tier. Om al deze redenen schrijft elke team lid zijn eigen tests.\\
+Wanneer de code van een lid aan al zijn tests voldoet en alle gevraagde functionaliteiten zijn geprogrammeerd (en getest a.d.h.v zelf geschreven test) controleert de test manager alle tests. De test manager kan dan eventueel vragen om tests toe te voegen indien hij vindt dat er voor sommige functionaliteiten meer nodig zijn, of dat er dieper in de code moet getest worden, enz.
+%
 \section{Goedkeuring}
 Wanneer de Test Manager alle tests heeft goedgekeurd zoals beschreven in sectie "Verantwoordelijkheden", moet de Quality Assurance Manager de code bekijken en deze wel of niet valideren. De eisen van de QA worden in volgende sectie besproken. Indien de Quality Assurance Manager de code niet valideert moet de programmeur zijn code aanpassen tot de code aan de eisen van de Test Manager en Quality Assurance Manager voldoet. 
 \\
 Wanneer code wordt gevalideerd kan deze gepushed worden naar de master branch van de SKRIBL repository.
-
+%
 \section{Instructies van de QA}
-De QA is verantwoordelijk voor de kwaliteit van afgeleverde code (documenten daarentegen worden nagekeken door de document master). Dit houdt in dat na het schrijven en testen van de code een extra validatiestap zal plaatsvinden waarbij er niet wordt gekeken naar de functionaliteit zelf (dit gebeurt namelijk bij het testen), maar wel naar de leesbaarheid, performantie en onderhoudbaarheid van de code zoals gedefinieerd door enkele standaard definities. 
+De QA is verantwoordelijk voor het bewaken van de kwaliteit van afgeleverde code (documenten daarentegen worden nagekeken door de document master). Dit houdt in dat na het schrijven en testen van de code een extra validatiestap zal plaatsvinden waarbij er niet wordt gekeken naar de functionaliteit zelf (dit gebeurt namelijk bij het testen), maar wel naar de leesbaarheid, performantie en onderhoudbaarheid van de code zoals gedefinieerd door enkele standaard definities. 
 \\\\
-Om dit proces bij te sturen, worden alle implementators onderworpen aan enkele richtlijnen. Dit omvat onder andere het hanteren van een zekere stijl en het vermijden van minder idiomatische kenmerken van JavaScript. Daarnaast worden enkele metrieken bijgehouden zoals:\\
+Om dit proces te sturen werden enkele richtlijnen opgesteld. Deze omvatten onder andere het hanteren van een zekere stijl en het vermijden van minder idiomatische kenmerken van JavaScript. Daarnaast worden enkele metrieken bijgehouden zoals:\\
 \begin{itemize}
 \item LOC per klasse/functie/module
 \item nuttige hoeveelheid commentaren (hiervoor wordt tevens gebruik gemaakt van de JSDoc-standaard, cf. SPMP)
 \item aantal geneste if/for/…-lussen
 \item ...
 \end{itemize}
-Hiervoor wordt intern gebruik gemaakt van CodeClimate, een tool die in staat is om JavaScript code te analyseren en vervolgens enkele vaak voorkomende pitfalls (zoals duplicatie) er uit te halen. Hoewel deze score niet representatief is voor de uiteindelijke codekwaliteit, is het een handige indicator om op een snel tempo de meeste prominente stijlfouten er uit te halen. Elk groepslid wordt dan ook verondersteld om zijn/haar rapport van CodeClimate te analyseren en vervolgens bij te werken waar nodig.
+Hiervoor wordt intern gebruik gemaakt van CodeClimate, een tool die in staat is om JavaScript code te analyseren en vervolgens enkele vaak voorkomende pitfalls (zoals duplicatie) er uit te halen. Hoewel deze score niet representatief is voor de uiteindelijke codekwaliteit, is het een handige indicator om in een snel tempo de meeste prominente stijlfouten er uit te halen. Elk groepslid wordt dan ook verondersteld om zijn/haar rapport van CodeClimate te analyseren en vervolgens bij te werken waar nodig.
 \\\\
-Ten slotte zal de QA aan de hand van een steekproef bepaalde delen van de code zelf bekijken en de nodige feedback waar nodig. Opnieuw wordt hierbij vooral gekeken naar de codestijl en wordt bij het tegengekomen van performantieproblemen de desbetreffende code onderworpen aan profiling (hetzij door de QA, hetzij door implementator zelf). De bedoeling is dat de persoon in kwestie uit deze richtlijnen en commentaren dan de nodige principes kan halen om zijn/haar hele codebase bij te werken. Van zodra dit is gebeurd, kan de QA indien nodig dan nog overgaan tot een finale analyse van alle op te leveren code, waarbij opnieuw een gelijkaardige werkwijze en criteria worden gehanteerd.
-
+Ten slotte zal de QA aan de hand van een steekproef bepaalde delen van de code zelf bekijken en de nodige feedback waar nodig. Opnieuw wordt hierbij vooral gekeken naar de codestijl en wordt bij het tegengekomen van performantieproblemen de desbetreffende code onderworpen aan profiling (hetzij door de QA, hetzij door developer zelf). De bedoeling is dat de persoon in kwestie uit deze richtlijnen en commentaren dan de nodige principes kan halen om zijn/haar hele codebase bij te werken. Van zodra dit is gebeurd, kan de QA indien nodig dan nog overgaan tot een finale analyse van alle op te leveren code, waarbij opnieuw een gelijkaardige werkwijze en criteria worden gehanteerd.
+%
 \clearpage
-
+%
 \end{document}
