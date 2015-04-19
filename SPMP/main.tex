@@ -3,14 +3,22 @@
 \usepackage{natbib}
 \usepackage{graphicx}
 \usepackage{lastpage}
-\usepackage{xcolor}
+\usepackage[table]{xcolor}
 \usepackage{lipsum}
 \usepackage[T1]{fontenc}
 \usepackage{fancyhdr}
-\usepackage{geometry}
 \usepackage{url}
 \usepackage[dutch]{babel}
 \usepackage{footnote}
+
+
+%packackes for the table
+\usepackage{tabularx}
+\usepackage{enumitem}
+\setlist{nolistsep}
+\definecolor{green}{HTML}{000066}
+\definecolor{myGreen}{HTML}{000066}
+
 
 
 \bibliographystyle{abbrv} %abbrvnat geeft problemen
@@ -26,6 +34,8 @@
 \rfoot{\thepage}
 \renewcommand{\headrulewidth}{0.3pt} % remove rule below header
 \renewcommand{\footrulewidth}{0.3pt} % remove rule below header
+
+
 
 \begin{document}
 
@@ -80,12 +90,15 @@ Dit is een vrij uitgebreide eerste versie, met hier en daar nog (vaak zelf aange
 
 
 
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%    NOTES TO SELF  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % nieuwe functie test manager toevoegen
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 1.INTRODUCTIE
+
 
 \section{Introductie}
 
@@ -426,18 +439,6 @@ Doorlopende en overzichtelijke communicatie wordt verzekerd door het gebruik van
 \noindent Als alternatief werd Kanbanize besproken, maar vanwege de sterke integratie met Slack werd toch voor Trello geopteerd.
 
 
-\subsubsection*{Opvolging agile development: Blossom}
-
-\begin{figure}[h!]
-\centering
- \includegraphics[width=50mm]{blossom.png}
-\end{figure}
-
-\noindent  Blossom is een project management tool, specifiek ontwikkeld voor agile software processen. Met deze applicatie is het mogelijk lijsten met te ontwikkelen features op te stellen, aan deze features ontwikkelaars en deadlines toe te wijzen, en vervolgens de status van het ontwikkelingsproces aan te passen en op te volgen. Bovendien geeft Blossom ook per feature performantiestatistieken (cycle time performance analytics) weer. \\
-\\
-Blossom is een betalende applicatie. Na overleg met een van de founders van Blossom werd echter aan de leden van SKRIBL  voor academische doeleinden het gratis gebruik ervan toegestaan tot het einde van het academiejaar.  \\
-Het team vond het zinvol om buiten Trello een gerichte tool te gebruiken voor het agile development proces. Voor Blossom is er een integratie aanwezig met GitHub en Slack, waardoor deze management tool de voorkeur van het team wegdroeg. 
-
 \clearpage
 
 \subsubsection*{Beheren van documenten: Google Drive \& Share\LaTeX}
@@ -461,7 +462,7 @@ Als alternatief werd Evernote beschouwd, maar deze biedt niet dezelfde collectie
 \noindent CodeClimate is een tool die, eens gekoppeld aan github, automatisch javascript code inspecteert en vervolgens rapporten genereert over de stijl en kwaliteit van deze code. CodeClimate biedt op die manier een objectieve analyse van de geschreven broncode. De teamleden kunnen de feedback van CodeClimate gebruiken om de kwaliteit van hun code te verbeteren, nog voor de Quality Assurance Manager deze hoeft te inspecteren.  
 
  
-  \clearpage
+\clearpage
  
  
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% TECHNISCH PROCES
@@ -526,7 +527,6 @@ De PM zal deze situatie opvolgen en trachten te remedi\"{e}ren. In samenspraak m
  \label{gantt_S1}
 \end{figure}
 
-
 \subsection{Sprint 2:  Publicatie uploaden}
 
 Figuur \ref{gantt_S2_20nov} geeft de planning voor de tweede sprint weer, inclusief remedi\"{e}ring voor de achterstand opgelopen tijdens sprint 1. Sprint 2 loopt van 20 november 2014 (notatie 11/20/14)  tot 15 december 2014 (notatie 12/15/14). Deze sprint heeft als mijlpaal 'mijlpaal 2: publicatie toevoegen' en implementeert volgende features:
@@ -564,7 +564,6 @@ Figuur \ref{gantt_S3_2maart} geeft de planning voor de implementatie van de derd
  \label{gantt_S3_2maart}
 \end{figure}
 
-
 \begin{table}[!h] 
   \begin{center}
     \begin{tabular}{|p{4cm}|p{3cm}|p{3cm}|p{3cm}|} 
@@ -587,13 +586,456 @@ Figuur \ref{gantt_S3_2maart} geeft de planning voor de implementatie van de derd
   \label{tabelS3}
  \end{table}
 
-
 \begin{figure}[h!]
 \centering
  \includegraphics[scale=0.6]{Toggl_Pie_S3.png}
  \caption{Pie chart met re\"{e}le werkpaketten voor sprint 3, op datum 02 maart 2015, einde van de sprint. Figuur gecre\"{e}erd via Toggl. }
  \label{pie_S3}
 \end{figure}
+
+
+\clearpage
+\subsection{Sprint 4+5:  Remedi\"ering en basis auteursnetwerk}
+Na het be\"eindigen van sprint 3 bleek er een grote achterstand opgelopen te zijn bij het ontwikkelen van de SKRIBL front-end. Het team heeft daarop besloten eerst te focussen op het afwerken van deels ge\"implementeerde features. Daarnaast werd de mogelijkheid gezien om aan een basisimplementatie van het auteursnetwerk te beginnen; maar het doel van beide sprints was bovenal remedi\"ering en het uiteindelijke opleveren van een coherent geheel. Om die redenen werd deze iteratie niet gepland met behulp van de gebruikelijke Gantt chart, maar werd er een alternatief, concreet actieplan opgesteld: 
+\vspace{3 mm}
+\begin{itemize}
+	\item Ivo, als verantwoordelijke voor de database, zorgt ervoor dat aan het eind van de derde iteratie \textit{database transacties} volledig ge\"implementeert zijn
+	\item een deel van het back-end team, met name Noah en Ivo, \textit{verdiepen in sprint 4 de bibliotheek functionaliteiten} met zoekfunctionaliteit, het opzoeken van reeds bestaande auteurs bij het toevoegen van een publicatie e.d.. In sprint 5 ontwikkelen 	zij de mogelijkheid om de data voor een graaf te genereren. 
+	\item Hannah, die voorheen de applicatielogica op de back-end implementeerde, schoolt zich bij in angular.js en D3.js om een onafhankelijke front-end implementatie en \textit{visualisatie van het auteursnetwerk} te maken en zo de taak van het front-end team te verlichten. Ze stelt ook een \textit{nieuwe structurering} van de front-end code, een zogenaamd skeleton, die kan gebruikt worden in volgende iteratie om de front-end code verder te modulariseren en het samenwerken te vergemakkelijken.  Het verkleinen van het back-end team is mogelijk omdat de implementatie van de server API reeds ver gevorderd is, en dus kan de verantwoordelijke hiervoor, Noah, het applicatielogica deel voor zich nemen. 
+	\item in sprint 4 werkt het oorspronkelijke front-end team de \textit{eerder vooropgestelde functionaliteiten} af. In sprint 5 verdiepen zij deze met de aanvulling reeds ontwikkeld op de back-end in sprint 4. 
+\end{itemize}
+\vspace{3 mm}
+\noindent Op volgende pagina's wordt een gedetailleerd overzicht gegeven van de geplande en door toggl gemeten werklast voor deze iteratie, per persoon en per categorie. De totale door toggl gemeten werktijd voor deze iteratie bedroeg \textbf{356 uren, of gemiddeld 71 uur per persoon}. Voor bepaalde teamleden was de werklast (relatief) kleiner, omdat zij tijdens de vorige iteraties een basis hebben opgebouwd waarop vlot verder te werken was. Deze iteratie had relatief gezien een zeer hoge werklast wat betreft de database; hoewel hier nauwelijks aan te ontkomen valt, zal de PM proberen de werklast van de database manager voor de volgende iteratie te verlichten. In figuur \ref{toggl_iteratie3} ten slotte is een globaal overzicht weergegeven aan de hand van de toggl rapport functionaliteit. 
+
+
+
+\begin{center}
+\begin{tabularx}{\textwidth}[t]{XX}
+\arrayrulecolor{green}\hline
+
+
+%%%%%%Ivo
+\vspace{.1 mm}
+\textbf{\textcolor{myGreen}{\large{Ivo}}} \vspace{.1 mm} & \\
+\hline
+\vspace{1 mm}
+Research, documenten, algemeen & 
+\begin{minipage}[t]{\linewidth}%
+\vspace{1 mm}
+\begin{itemize}
+\item documentatie transacties : 2u
+\item voorbereiding presentatie : 3u
+\item \textbf{geschat totaal: 5u}
+\item \textbf{toggl totaal: 6u}
+\end{itemize} 
+\vspace{1 mm}
+\end{minipage}\\
+
+\arrayrulecolor{black}\hline
+
+\vspace{1 mm}
+Tutorials en bijscholing & 
+\begin{minipage}[t]{\linewidth}%
+\vspace{1 mm}
+\begin{itemize}
+\item \textbf{geschat totaal: 0u}
+\item \textbf{toggl totaal: 0u}
+\end{itemize} 
+\vspace{1 mm}
+\end{minipage}\\
+
+\arrayrulecolor{black}\hline
+
+
+\vspace{1 mm}
+Implementatie & 
+\begin{minipage}[t]{\linewidth}%
+\vspace{1 mm}
+\begin{itemize}
+\item Database transacties: 30u
+\item Verdiepen bestaande functionaliteiten: 15 u
+\item Graaf functionaliteit : 10 u
+\item Testdata toevoegen: 5 u
+\item \textbf{geschat totaal: 60u}
+\item \textbf{toggl totaal: 87u30}
+\end{itemize} 
+\vspace{1 mm}
+\end{minipage}\\
+
+
+\arrayrulecolor{black}\hline
+
+\vspace{2 mm}
+Vergadering & 
+\begin{minipage}[t]{\linewidth}%
+\vspace{2 mm}
+\begin{itemize}
+\item Vergadering: 5u
+\item \textbf{totaal: 5u}
+\vspace{2 mm}
+\end{itemize} 
+\end{minipage}\\
+
+\arrayrulecolor{black}\hline
+
+\vspace{2 mm}
+\textbf{TOTAAL} & 
+\begin{minipage}[t]{\linewidth}%
+\vspace{2 mm}
+\begin{itemize}
+\item \textbf{geschat totaal: 70u}
+\item \textbf{toggl totaal: 99u00}
+\vspace{2 mm}
+\end{itemize} 
+\end{minipage}\\
+
+
+%%%%%%%%%%%Noah 
+
+\arrayrulecolor{green}\hline
+\vspace{.1 mm}
+\textbf{\textcolor{myGreen}{\large{Noah}}} \vspace{.1 mm} & \\
+\hline
+\vspace{1 mm}
+Research, documenten, algemeen & 
+\begin{minipage}[t]{\linewidth}%
+\vspace{1 mm}
+\begin{itemize}
+\item SDD: 8 u
+\item verslagen vergaderingen opstellen: 1u 
+\item \textbf{geschat totaal: 9u}
+\item \textbf{toggl totaal: 14u45}
+\end{itemize} 
+\vspace{1 mm}
+\end{minipage}\\
+
+\arrayrulecolor{black}\hline
+
+\vspace{1 mm}
+Tutorials en bijscholing & 
+\begin{minipage}[t]{\linewidth}%
+\vspace{1 mm}
+\begin{itemize}
+\item \textbf{geschat totaal: 0u}
+\item \textbf{toggl totaal: 0u}
+\end{itemize} 
+\vspace{1 mm}
+\end{minipage}\\
+
+\arrayrulecolor{black}\hline
+
+
+\vspace{1 mm}
+Implementatie & 
+\begin{minipage}[t]{\linewidth}%
+\vspace{1 mm}
+\begin{itemize}
+\item API en back-end ontwerp: 5u
+\item verdiepen functionaliteiten: 15u
+\item Graaf functionaliteit: 10u 
+\item \textbf{geschat totaal: 30u}
+\item \textbf{toggl totaal: 35u45}
+\end{itemize} 
+\vspace{1 mm}
+\end{minipage}\\
+
+
+\arrayrulecolor{black}\hline
+
+\vspace{2 mm}
+Vergadering & 
+\begin{minipage}[t]{\linewidth}%
+\vspace{2 mm}
+\begin{itemize}
+\item Vergadering: 5u
+\item \textbf{geschat totaal: 5u}
+\item \textbf{toggl totaal: 5u}
+\vspace{2 mm}
+\end{itemize} 
+\end{minipage}\\
+
+\arrayrulecolor{black}\hline
+
+\vspace{2 mm}
+\textbf{TOTAAL} & 
+\begin{minipage}[t]{\linewidth}%
+\vspace{2 mm}
+\begin{itemize}
+\item \textbf{geschat totaal: 44u}
+\item \textbf{toggl totaal: 56u30}
+\vspace{2 mm}
+\end{itemize} 
+\end{minipage}\\
+
+\end{tabularx}
+\end{center}
+
+
+%%%%%%%%%%%Hannah
+
+\begin{center}
+\begin{tabularx}{\textwidth}[t]{XX}
+\arrayrulecolor{green}\hline
+
+\arrayrulecolor{green}\hline
+\vspace{.1 mm}
+\textbf{\textcolor{myGreen}{\large{Hannah}}} \vspace{.1 mm} & \\
+\hline
+\vspace{1 mm}
+Research, documenten, algemeen & 
+\begin{minipage}[t]{\linewidth}%
+\vspace{1 mm}
+\begin{itemize}
+\item analyse van voorbeeldprojecten en requirements : 3 u
+\item opvolging algemeen : 5 u
+\item SRS: 3 u
+\item SPMP: 3 u
+\item \textbf{geschat totaal: 14u}
+\item \textbf{toggl totaal: 19u30}
+\end{itemize} 
+\vspace{1 mm}
+\end{minipage}\\
+
+\arrayrulecolor{black}\hline
+
+\vspace{1 mm}
+Tutorials en bijscholing & 
+\begin{minipage}[t]{\linewidth}%
+\vspace{1 mm}
+\begin{itemize}
+\item angular.js en basis html : 5 u
+\item \textbf{geschat totaal: 5u}
+\item \textbf{toggl totaal: 3u30}
+\end{itemize} 
+\vspace{1 mm}
+\end{minipage}\\
+
+\arrayrulecolor{black}\hline
+
+
+\vspace{1 mm}
+Implementatie & 
+\begin{minipage}[t]{\linewidth}%
+\vspace{1 mm}
+\begin{itemize}
+\item verdiepen functionaliteiten: 2u
+\item graaf visualisatie: 20u
+\item voorbereiding herstructurering front code: 15u 
+\item \textbf{geschat totaal: 37u}
+\item \textbf{toggl totaal: 44u}
+\end{itemize} 
+\vspace{1 mm}
+\end{minipage}\\
+
+
+\arrayrulecolor{black}\hline
+
+\vspace{2 mm}
+Vergadering & 
+\begin{minipage}[t]{\linewidth}%
+\vspace{2 mm}
+\begin{itemize}
+\item Vergadering: 5u
+\item \textbf{geschat totaal: 5u}
+\item \textbf{toggl totaal: 5u}
+\vspace{2 mm}
+\end{itemize} 
+\end{minipage}\\
+
+\arrayrulecolor{black}\hline
+
+\vspace{2 mm}
+\textbf{TOTAAL} & 
+\begin{minipage}[t]{\linewidth}%
+\vspace{2 mm}
+\begin{itemize}
+\item \textbf{geschat totaal: 61u}
+\item \textbf{toggl totaal: 72u}
+\vspace{2 mm}
+\end{itemize} 
+\end{minipage}\\
+
+
+%%%%%%%%%%%Douglas
+
+
+
+\arrayrulecolor{green}\hline
+\vspace{.1 mm}
+\textbf{\textcolor{myGreen}{\large{Douglas}}} \vspace{.1 mm} & \\
+\hline
+\vspace{1 mm}
+Research, documenten, algemeen & 
+\begin{minipage}[t]{\linewidth}%
+\vspace{1 mm}
+\begin{itemize}
+\item verniewd STD : 10 u
+\item \textbf{geschat totaal: 10u}
+\item \textbf{toggl totaal: 9u}
+\end{itemize} 
+\vspace{1 mm}
+\end{minipage}\\
+
+\arrayrulecolor{black}\hline
+
+\vspace{1 mm}
+Tutorials en bijscholing & 
+\begin{minipage}[t]{\linewidth}%
+\vspace{1 mm}
+\begin{itemize}
+\item materialize + sass  : 1u30
+\item \textbf{geschat totaal: 2u}
+\item \textbf{toggl totaal: 1u30}
+\end{itemize} 
+\vspace{1 mm}
+\end{minipage}\\
+
+\arrayrulecolor{black}\hline
+
+
+\vspace{1 mm}
+Implementatie & 
+\begin{minipage}[t]{\linewidth}%
+\vspace{1 mm}
+\begin{itemize}
+\item afwerken controllers : 15 u
+\item implementeren nieuwe controllers : 15u
+\item \textbf{geschat totaal: 30u}
+\item \textbf{toggl totaal: 44u00}
+\end{itemize} 
+\vspace{1 mm}
+\end{minipage}\\
+
+
+\arrayrulecolor{black}\hline
+
+\vspace{2 mm}
+Vergadering & 
+\begin{minipage}[t]{\linewidth}%
+\vspace{2 mm}
+\begin{itemize}
+\item Vergadering: 5u
+\item \textbf{geschat totaal: 5u}
+\item \textbf{toggl totaal: 5u}
+\vspace{2 mm}
+\end{itemize} 
+\end{minipage}\\
+
+\arrayrulecolor{black}\hline
+
+\vspace{2 mm}
+\textbf{TOTAAL} & 
+\begin{minipage}[t]{\linewidth}%
+\vspace{2 mm}
+\begin{itemize}
+\item \textbf{geschat totaal: 47u}
+\item \textbf{toggl totaal: 60u30}
+\vspace{2 mm}
+\end{itemize} 
+\end{minipage}\\
+\end{tabularx}
+\end{center}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Pieter
+
+\begin{center}
+\begin{tabularx}{\textwidth}[t]{XX}
+\arrayrulecolor{green}\hline
+
+\arrayrulecolor{green}\hline
+\vspace{.1 mm}
+\textbf{\textcolor{myGreen}{\large{Pieter}}} \vspace{.1 mm} & \\
+\hline
+\vspace{1 mm}
+Research, documenten, algemeen & 
+\begin{minipage}[t]{\linewidth}%
+\vspace{1 mm}
+\begin{itemize}
+\item voorbereiden presentatie : 2u
+\item \textbf{geschat totaal: 2u}
+\item \textbf{toggl totaal: 1u}
+\end{itemize} 
+\vspace{1 mm}
+\end{minipage}\\
+
+\arrayrulecolor{black}\hline
+
+\vspace{1 mm}
+Tutorials en bijscholing & 
+\begin{minipage}[t]{\linewidth}%
+\vspace{1 mm}
+\begin{itemize}
+\item \textbf{geschat totaal: 0u}
+\item \textbf{toggl totaal: 0u}
+\end{itemize} 
+\vspace{1 mm}
+\end{minipage}\\
+
+\arrayrulecolor{black}\hline
+
+
+\vspace{1 mm}
+Implementatie & 
+\begin{minipage}[t]{\linewidth}%
+\vspace{1 mm}
+\begin{itemize}
+\item afwerken GUI: 15u
+\item GUI verdiepend: 25u
+\item \textbf{geschat totaal: 40u}
+\item \textbf{toggl totaal: 64u}
+\end{itemize} 
+\vspace{1 mm}
+\end{minipage}\\
+
+
+\arrayrulecolor{black}\hline
+
+\vspace{2 mm}
+Vergadering & 
+\begin{minipage}[t]{\linewidth}%
+\vspace{2 mm}
+\begin{itemize}
+\item Vergadering: 5u
+\item \textbf{geschat totaal: 5u}
+\item \textbf{toggl totaal: 5u}
+\vspace{2 mm}
+\end{itemize} 
+\end{minipage}\\
+
+\arrayrulecolor{black}\hline
+
+\vspace{2 mm}
+\textbf{TOTAAL} & 
+\begin{minipage}[t]{\linewidth}%
+\vspace{2 mm}
+\begin{itemize}
+\item \textbf{geschat totaal: 47u}
+\item \textbf{toggl totaal: 67u}
+\vspace{2 mm}
+\end{itemize} 
+\end{minipage}\\
+
+\arrayrulecolor{black}\hline
+
+\end{tabularx}
+\end{center}
+
+\vspace{4 mm}
+\noindent \large{GESCHAT TEAM TOTAAL: \textbf{269 u}}\\
+\large{TOGGL TEAM TOTAAL:  \textbf{365 u}}\\
+
+
+\begin{figure}[h!]
+\centering
+ \includegraphics[width=160mm]{Toggl_screenshot_iteratie3.pdf}
+ \label{toggl_iteratie3}
+ \caption{overzicht iteratie 3, met behulp van Toggl report}
+\end{figure}
+
+
+
+
 
 
 \end{document}
