@@ -20,7 +20,7 @@
 
 \title{Software Design Document}
 \author{} %leave empty
-\date{2 maart 2015} %ok, manuele datum
+\date{19 april 2015} %ok, manuele datum
 
 \addtolength{\footskip}{1.3cm} % make more space for the footer
 \pagestyle{fancyplain} % use fancy for all pages except chapter start
@@ -93,6 +93,7 @@ De opmaak van dit document is gebaseerd op de IEEE 1016-1998 standaard voor SDD'
 \item[REST] Representational State Transfer
 \item[HTML] Hypertext Markup Language
 \item[HTTP] Hypertext Transfer Protocol
+\item[URL] Uniform Resource Locator
 \item[DOM] Document Object Model
 \item[SSL] Secure Sockets Layer
 \item[CSS] Cascading Style Sheets
@@ -329,11 +330,19 @@ Het resulterende object kan dan gebruikt worden om gemakkelijk gegevens van de g
 \paragraph{Opmerking}
 Veel van de ge\"exporteerde methodes in deze module zijn asynchroon en verwachten dus een callback bij oproep. Dit patroon zal ook in andere modules (zoals dat van de database) voorkomen en is inherent aan web-applicaties in NodeJS. Bij het laden van de gebruiker uit de database via \textit{loadUser(db, name, callback)} zal zo bijvoorbeeld niet meteen een nieuw gebruikersobject worden aangemaakt, maar zal de meegeleverde callback worden opgeroepen met de gebruikersinfo als deze is geladen. 
 
-\subsection{Scraping}
+\subsection{Publication}
 
-Een aparte module is op de back-end voorzien voor het aanvullen van metadata. Concreet wordt verwacht dat de gebruiker een metadata-object voorziet met daarin minstens de titel van de publicatie. Aan de hand van die gegevens zal deze module dan extra informatie opzoeken om de metadata verder aan te vullen met bijkomende attributen. \\
+Een aparte module is op de back-end voorzien om meer informatie op te halen van publicaties, gebaseerd op externe bronnen (meer bepaald Google Scholar). Hiervoor wordt gebruik gemaakt van een techniek die \textit{web scraping} heet. Daarbij wordt aan de hand van de juiste HTTP-request en URL de resulterende HTML gebruikt om informatie van het web te halen indien er geen API beschikbaar is. Voor de scraping zelf wordt gebruik gemaakt van de library Cheerio~\cite{website:cheerio}. \\
 
-Hiervoor wordt gebruik gemaakt van een techniek die \textit{web scraping} heet. Daarbij wordt aan de hand van de juiste HTTP-request en URL de resulterende HTML gebruikt om informatie van het web te halen indien er geen API beschikbaar is. Concreet wordt er gekeken naar de resultaten van een query bij Google Scholar. Voor de scraping wordt gebruik gemaakt van de library Cheerio~\cite{website:cheerio}.
+Zo biedt SKRIBL de mogelijkheid om metadata van een publicatie te laten aanvullen met deze informatie van Google Scholar. Concreet wordt voor deze extractie verwacht dat de gebruiker een metadata-object voorziet met daarin minstens de titel van de publicatie. Aan de hand van die gegevens zal deze module dan extra informatie opzoeken om de metadata verder aan te vullen met bijkomende attributen. \\
+
+Daarnaast wordt de scraping ook gebruikt om zoekresultaten te verzamelen, gebruik makende van een bepaalde keyphrase. Opnieuw wordt hiervoor beroep gedaan op de zoekfunctionaliteit van Google Scholar en worden de hoogst gerankte resultaten voor de zoekterm teruggegeven.
+
+\subsection{Graph}
+
+Om meteen een overzicht te hebben van de relaties tussen verschillende auteurs, kan de gebruiker de co-auteurrelaties (en hun bijhorende publicaties) laten visualiseren in een graph. Aangezien de gebruikte database, OrientDB, (onder andere) een graph-database is, kan men relatief eenvoudig deze overlopen om dergelijk graph te construeren. \\
+
+Deze module zorgt voor de omzetting van de gegevens uit de database (na een traversal) naar een formaat met dat op de front-end kan worden gevisualiseerd. Zo vindt men hier een functie \textit{parseAuthorGraph(data)} terug, die deze informatie zal omzetten naar een JSON-representatie met vertices \& edges.
 
 \subsection{Database}
 
@@ -391,18 +400,45 @@ Van zodra alle informatie is ingevuld, zal de client een identificatiestring ter
 
 \subsection{Publicaties toevoegen}
 
-Een nieuwe publicatie toevoegen gebeurt door een combinatie van de HTTP PUT en POST commando's. Eerst en vooral dient men de publicatie zelf te uploaden met HTTP PUT. De server zal aan de hand van dit bestand een nieuwe publicatie aanmaken in de database met een bepaald id, dat aan de client wordt teruggegeven. \\
+Een nieuwe publicatie toevoegen gebeurt door een combinatie van de HTTP PUT, GET en POST commando's. Eerst en vooral dient men de publicatie zelf te uploaden met HTTP PUT. Dit kan zowel met een URL als via een traditionele upload. De server zal aan de hand van dit bestand dan een nieuwe publicatie aanmaken in de database met een bepaald id, dat aan de client wordt teruggegeven. \\
 
-Met dit id kan de de gebruiker vervolgens de metadata voor die publicatie aanvullen. Hiervoor dient men deze gegevens mee te geven in JSON-formaat met een POST-request. Bovendien kan de server zelf ook extra informatie opzoeken door gebruik te maken web-scraping~\ref{scraping} op Google Scholar indien de gebruiker de extractie-optie aanvikt. De aangevulde metadata zal dan uiteindelijk worden opgeslagen in de database en worden teruggegeven aan de client. \\
+Bij SKRIBL hebben we ervoor gekozen om vervolgens automatisch metadata te laten aanvullen aan de hand van een GET-request met dit id (en query-parameter `extract'). Dit is niet verplicht (third-party developers kunnen deze stap en de bijhorende request overslaan), maar de keuze om sowieso metadata te extraheren via scraping bespaart over het algemeen veel typwerk en zorgt dus voor een betere gebruikerservaring. \\
 
-Hieronder volgt opnieuw een sequentiediagram die dit proces illustreert. Om het overzichtelijk te houden, werden de scenario's waarin er foutmeldingen worden gegenereerd niet gemodelleerd in dit diagram.
+Vervolgens kan de gebruiker deze voorgestelde metadata bekijken en aanpassen indien nodig. Van zodra alle wijzigingen zijn aangebracht, kan de JSON met de ingevulde gegevens worden doorgestuurd aan de hand van een POST-request. \\
+
+Hieronder volgt een sequentiediagram die dit proces illustreert. Om het overzicht te bewaren, werden mogelijke foutmeldingen niet gemodelleerd:
 
 \begin{figure}[!h]
 \centering
- \includegraphics[width=145mm]{adding-publications.png}
+ \includegraphics[width=165mm]{upload-sequence.png}
  \caption{Vereenvoudigd sequentiediagram bij het toevoegen van publicaties}
  \label{upload-sequence}
 \end{figure}
+
+Daarnaast dient men bij een upload ook nog volgende stappen uit te voeren:
+
+\begin{itemize}
+
+\item Voor het uploaden dient men te na te kijken of er nog geen publicatie bestaat met dezelfde titel \& type om duplicaten te vermijden. Dit kan aan de hand van de zoekfunctionaliteiten in de server API (cf. GET /publications \& POST /publications). Indien de publicatie al bestaat, kan de gebruiker hem gewoon toevoegen aan een van zijn bibliotheken in plaats van hem opnieuw te uploaden.
+
+\item Hetzelfde geldt ook voor auteurs: om publicaties te linken aan bestaande auteurs kan men via de zoekfunctie op naam (cf. GET /authors) gekende auteurs en enkele van hun publicaties opvragen. In het geval dat de auteur een SKRIBL-gebruiker is, kan zelf zijn/haar hele profiel eerst worden geraadpleegd. Indien uiteindelijk wordt besloten dat het om dezelfde auteur gaat, dient men zijn/haar id (uit de zoekresultaten) mee te geven bij de POST request.
+
+\end{itemize}
+
+\subsection{Zoeken naar publicaties}
+
+Dit scenario illustreert hoe men ook meteen op zoek kan gaan naar reeds bestaande publicaties. De search aan de hand van een keyphrase (cf. GET /publications) wordt hier besproken, op een gelijkaardige manier zou men ook de geadvanceerdere versie (cf. POST /publications) kunnen gebruiken. \\
+
+Bij het zoeken worden zowel interne als externe resultaten teruggegeven. Interne resultaten krijgen een titel, type, id en lijst van auteurs mee om meteen een korte samenvatting te geven van elke publicatie. Aan de hand van het id kan men dan meer informatie opvragen of de publicatie toevoegen aan een van zijn/haar bibliotheken. \\
+
+\begin{figure}[!h]
+\centering
+ \includegraphics[width=140mm]{search-sequence.png}
+ \caption{Vereenvoudigd sequentiediagram bij het zoeken naar publicaties}
+ \label{upload-sequence}
+\end{figure}
+
+Externe resultaten van Google Scholar dragen op een gelijkaardige manier al meteen redelijk wat metadata mee en bevatten ook een download-link (indien beschikbaar) naar de publicatie in kwestie. Deze kan men dan ook meteen gebruiken om de publicatie toe te voegen aan het systeem en vervolgens aan een van zijn/haar bibliotheken.
 
 \subsection{Bibliotheek weergeven}
 
@@ -410,17 +446,16 @@ Een gebruiker kan publicaties groeperen in verschillende bibliotheken. Standaard
 
 Een bibliotheek kan worden geladen door gebruik te maken van een GET-request. Dit zal een array met ids teruggeven van alle publicaties in die bibliotheek. Vervolgens kan een lijst met uitgebreide info van elke publicatie worden weergegeven door de metadata op te halen aan de hand van hun ids (cf. API in sectie ~\ref{api}).
 
-Aangezien de metadata momenteel niet zo uitgebreid is en de lijst de meeste info inline kan bevatten, is deze methode niet zo ineffici\"ent. Indien het overzicht enkel de titels zou bevatten en de volledige metadata veel uitgebreider zou zijn, kan men naast de ids in deze request ook al meteen de titels meegeven om zo extra communicatie tussen client \& server te vermijden. \\
+Aangezien de metadata momenteel niet zo uitgebreid is en de lijst de meeste info inline kan bevatten, is deze methode niet zo ineffici\"ent. Indien het overzicht enkel de titels zou bevatten en de volledige metadata veel uitgebreider zou zijn, kan men naast de ids in deze request ook al meteen de titels meegeven om zo extra communicatie tussen client \& server te vermijden. \
 
 Onderstaand sequentiediagram illustreert dit proces. Daarnaast toont het ook aan hoe een gebruiker een publicatie uit de lijst kan downloaden.
 
 \begin{figure}[!h]
 \centering
- \includegraphics[width=145mm]{library-sequence.png}
+ \includegraphics[width=142mm]{library-sequence.png}
  \caption{Vereenvoudigd sequentiediagram bij het laden van een bibliotheek}
  \label{library-sequence}
 \end{figure}
-
 
 \clearpage
 
@@ -490,16 +525,18 @@ Voor publicaties zijn er ook enkele routes voorzien om bijvoorbeeld nieuwe publi
 
 \begin{description}
 
-\item[PUT /publications] Hiermee kan men een nieuwe publicatie uploaden in het systeem. Het volstaat om enkel het bestand in kwestie mee te geven, later kan metadata verder worden aangevuld. De server zal bij deze request een uniek id van de publicatie teruggeven. Aan de hand van de identificatiestring zal de uploader automatisch worden ge\"identificeerd.
+\item[PUT /publications] Hiermee kan men een nieuwe publicatie uploaden in het systeem. Het bestand kan zowel worden aangeleverd via een URL als met een traditionele upload. De server zal bij deze request een uniek id van de publicatie teruggeven. Aan de hand van de identificatiestring zal de uploader automatisch worden ge\"identificeerd.
 
-\item[GET /publications/<pub-id>] Haalt de metadata publicatie van de server met een opgegeven id. Aan de hand van een query parameter `download' in de URL kan men deze request ook gebruiken om het bestand zelf te downloaden.
+\item[GET /publications/<pub-id>] Haalt de metadata van een publicatie op met een meegegeven id. Daarnaast kan men in deze route ook extra metadata opvragen van deze publicatie gebruik makende van de query parameter `extract'. In dit geval zal de oorspronkelijke metadata, aangevuld met informatie van Google Scholar worden teruggegeven. Aan de hand van een extra query parameter `download' in de URL kan men deze request ook gebruiken om het bestand zelf te downloaden. 
 
-\item[POST /publications/<pub-id>] Hiermee kan men de metadata van publicaties updaten, deze dient meegeleverd te worden in JSON-formaat. Het is ook mogelijk om de server extra informatie te laten opzoeken via Google Scholar. Hiervoor dient men de query parameter `extract' te gebruiken. Voor deze operatie dient men zich tevens te authenticeren als oorspronkelijke uploader van de publicatie.
+\item[POST /publications/<pub-id>] Hiermee kan men de metadata van publicaties updaten, deze dient meegeleverd te worden in JSON-formaat. Voor deze operatie dient men zich tevens te authenticeren als oorspronkelijke uploader van de publicatie.
 
 \item[DELETE /publications/<pub-id>] Deze methode zal een publicatie van de server verwijderen. Ook hier dient men zich correct te authenticeren.
 
-\item[GET /publications] Hierbij wordt verwacht dat men een aparte query-string meegeeft om op zoek te gaan naar een bepaalde publicatie. Het resultaat is dan een JSON-array van publicatie-id's die voldoen aan de criteria. \\
-bijvoorbeeld: /publications?author=hjespers of /publications?topic=Physics\&year=2014
+\item[GET /publications] Hierbij wordt verwacht dat men een aparte query-string meegeeft om op zoek te gaan naar een bepaalde publicatie. Het resultaat is dan een JSON-array van publicaties die werden gevonden aan de hand van deze keyphrase. Externe zoekresultaten van Google Scholar kunnen ook worden opgezocht met de query-parameter `external'. Zij zullen tevens een url meedragen, zodat de bijhorende publicatie meteen kan worden bekeken of toegevoegd aan SKRIBL.
+\textit{bijvoorbeeld: /publications?q=multicore\&external=true}
+
+\item[POST /publications] Gelijkaardig aan de vorige, kan men deze request ook gebruiken om publicaties te zoeken. Het verschil is dat deze versie geadvanceerder is en meer gerichte resultaten kan teruggeven. Hiervoor dient men dan in de body van de request een specifiekere beschrijving van de zoekcriteria mee te geven als JSON.
 
 \end{description}
 
@@ -509,11 +546,31 @@ Een gebruiker kan volgende requests gebruiken om bibliotheken van publicaties te
 
 \begin{description}
 
-\item[GET /user/<username>/library/<library-name>] Hiermee worden de ids van alle publicaties in deze bibliotheek teruggegeven.
+\item[GET /user/<username>/library] Hiermee worden alle bibliotheken van een gebruiker teruggeven met hun naam.
 
-\item[PUT /user/<username>/library/<library-name>] De publicatie waarvan de id wordt meegegeven in de body van de request zal worden toegevoegd aan deze bibliotheek.
+\item[PUT /user/<username>/library/<library-name>] Om een nieuwe library met een bepaalde naam aan te maken.
 
-\textit{[Deze sectie zal in de volgende iteratie meer HTTP-methods ondersteunen om bijvoorbeeld nieuwe custom bibliotheken van publicaties aan te maken]}
+\item[DELETE /user/<username>/library/<library-name>] Om een bestaande library met een bepaalde naam te verwijderen.
+
+\item[GET /user/<username>/library/<library-name>] Hiermee kan men alle publicaties in een bepaalde library opvragen.
+
+\item[PUT /user/<username>/library/<library-name>/<publication-id>] Om een publicatie met een bepaald id toe te voegen aan een library met een bepaalde naam.
+
+\item[DELETE /user/<username>/library/<library-name>/<publication-id>] Om een publicatie met een bepaald id te verwijderen uit een library met een bepaalde naam.
+
+\end{description}
+
+\subsection{Auteurs}
+
+Extra routes zijn ook voorzien om meer informatie op te vragen omtrent auteurs. Zo kan men bijvoorbeeld een graph opladen om alle coAuteur-relaties van een bepaalde auteur te visualiseren. Ook kan men zoeken op naam en voornaam naar een specifieke auteur met gelijkaardige namen.
+
+\begin{description}
+
+\item[GET /authors] Hiermee kan men op zoek gaan naar auteurs die ongeveer matchen met een bepaalde naam \& voornaam. Deze kunnen respectievelijk worden meegegeven in query-parameters `lastname' \& `firstname'. Het resultaat is dan een JSON array van overeenkomende auteurs met hun id's, volledige namen en enkele van hun publicaties.
+
+\item[GET /authors/<author-id>/publications] Met deze request worden alle publicaties van een auteur met een bepaald id opgelijst in een JSON-array.
+
+\item[GET /authors/<author-id>/graph] Deze request wordt gebruikt om alle co-auteur relaties (en bijhorende publicaties) van een auteur met een bepaald id te visualiseren in een graph. Het resultaat is een JSON die deze graaf encodeert aan de hand van haar vertices \& edges en gevisualiseerd kan worden op de front-end.
 
 \end{description}
 
