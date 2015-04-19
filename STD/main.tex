@@ -135,16 +135,17 @@ De servertier is een communicatielaag tussen de database en de user. Voor deze t
 \\\\
 Alle tests bevinden zich in : $\backslash$server$\backslash$server$\backslash$routeTests$\backslash$...
 \subsubsection{Authors tests}
-//TODO NOAH\\
+De tests omtrent auteurs dienen enerzijds om te zoeken naar auteurs op naam en voornaam, anderzijds om ook extra informatie van een bepaalde auteur op te laden. Zo wordt bijvoorbeeld de visualisatie van de co-auteurrelaties in een graph hier ook getest\\\\
 File : authors.json
-\subsubsection{Libraries tests}
-//TODO NOAH\\
+\subsubsection{Library tests}
+Hierin vindt men testscenario's terug om bibliotheken te beheren. Dit omvat zowel het aanmaken, laden en verwijderen van de bibliotheken als het toevoegen (en verwijderen) van publicaties in deze bibliotheken.\\\\
 File : libraries.json
 \subsubsection{Publications tests}
-//TODO NOAH\\
+Publicaties vormen een cruciaal onderdeel van de webapplicatie en dus ook van de server API. Eerst en vooral wordt hier het uploaden, aanpassen, downloaden en verwijderen van een publicatie (en haar metadata) nagekeken. Verder worden ook meer geadvanceerde functionaliteiten zoals het extraheren van metadata en het zoeken naar publicaties (zowel intern als extern) hier getest.\\\\
 File : publications.json
 \subsubsection{Users Test}
-//TODO NOAH\\
+De belangrijkste tests omtrent gebruikers omvatten het inloggen en registreren.
+Daarnaast wordt ook het laden en verwijderen van een gebruiker getest.\\\\
 File : users.json
 \subsection{Clienttier}
 De clienttier zorgt voor een user interface en de communicatie met de server. Deze tier wordt getest aan de hand van de GUI. Om tijdsverlies te voorkomen wordt de GUI automatisch getest, zie sectie "Strategie".
