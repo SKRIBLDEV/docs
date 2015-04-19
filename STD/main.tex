@@ -18,7 +18,7 @@
 
 \title{Software Test Plan}
 \author{} %leave empty
-\date{2 maart 2015} %ok, manuele datum
+\date{20 april 2015} %ok, manuele datum
 
 \addtolength{\footskip}{1.3cm} % make more space for the footer
 \pagestyle{fancyplain} % use fancy for all pages except chapter start
@@ -169,7 +169,7 @@ De clienttier zorgt voor een user interface en de communicatie met de server. De
   \item Publicaties toevoegen(via upload) test
 \end{itemize}
 \section{Software risico gevallen}
-De client die de SKRIBL web-application gebruikt komt alleen maar in aanraking met de clienttier. Opdat deze tier zonder probleem zou werken, moeten de servertier en database tier ook werken. Dit impliceert dat een fout in de server of database tier heel de web-application kan verzwakken. Natuurlijk zijn problemen in de web-application voorzien en kan SKRIBL met de meeste problemen leven. Maar om toch zo weinig mogelijk problemen te hebben is het testen  van ELKE tier zeer belangrijk. Het grootste risico van onze applicatie is dus het feit dat de onderliggende tiers goed genoeg moeten werken zodat de client de application op een zo goed mogelijke manier kan gebruiken.
+De client die de SKRIBL web-application gebruikt komt alleen maar in aanraking met de clienttier. Opdat deze tier zonder probleem zou werken, moeten de servertier en database tier ook werken. Dit impliceert dat een fout in de server of database tier heel de web-application kan verzwakken. Natuurlijk zijn problemen in de web-application voorzien en kan SKRIBL met de meeste problemen leven, als bijvoorbeeld een http request faalt zal heel de application niet crashen. Maar om toch zo weinig mogelijk problemen te hebben is het testen  van ELKE tier zeer belangrijk. Het grootste risico van onze applicatie is dus het feit dat de onderliggende tiers goed genoeg moeten werken zodat de client de application op een zo goed mogelijke manier kan gebruiken.
 %
 \section{Features}
 De features die getest worden zijn:
