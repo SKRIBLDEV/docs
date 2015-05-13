@@ -20,7 +20,7 @@
 
 \title{Software Design Document}
 \author{} %leave empty
-\date{19 april 2015} %ok, manuele datum
+\date{14 mei 2015} %ok, manuele datum
 
 \addtolength{\footskip}{1.3cm} % make more space for the footer
 \pagestyle{fancyplain} % use fancy for all pages except chapter start
@@ -210,7 +210,7 @@ Een gedetailleerde beschrijving van het ontwerp van deze database volgt in de vo
 
 De organisatie van data is cruciaal bij het ontwerp van SKRIBL. Een effici\"ente en persistente datastructuur is nodig om alle relaties tussen de verschillende entiteiten (gebruikers, publicaties, onderzoeksdomeinen, ...) in de applicatie te kunnen modelleren. \\
 
-Om die reden werd gekozen om gebruik te maken van een graph-database. Een graf is veruit de meest natuurlijke representatie van het model en maakt het later ook gemakkelijk om verbanden in de applicatie te verwerken en te visualiseren. 
+Om die reden werd gekozen om gebruik te maken van een graph-database. Een graf is veruit de meest natuurlijke representatie van het model en maakte het later ook gemakkelijker om verbanden in de applicatie te verwerken en te visualiseren. 
 
 Concreet werd er gekozen voor OrientDB omdat deze bovenop haar NoSQL-database ook een abstractie aanbiedt die specifiek is ontworpen om graph-databases in elkaar te steken. Daarnaast is het ook een performante DBMS met een gebruiksvriendelijke API. \\
 
@@ -227,7 +227,7 @@ Dit is een overzicht van het algehele model van de database, de entiteiten met e
 
 \subsection{Gebruikers \& affiliatie}
 
-De database is zodanig gemodelleerd dat we in staat zijn van de affiliatie van personen bij te houden en in latere iteraties te gebruiken om mensen in eenzelfde departement of faculteit met elkaar in contact te kunnen brengen. Verder zou dit van pas kunnen komen bij het genereren van lees-suggesties. De key voor een "'Institution"', "'Faculty"', "'Department"' of "'Vakgroep"' bestaat uit het eigen attribuut naam en de entiteit waarmee ze is verbonden als \textit{weak entity set}.\\
+De database is zodanig gemodelleerd dat we in staat zijn van de affiliatie van personen bij te houden en later te gebruiken om mensen in eenzelfde departement of faculteit met elkaar in contact te kunnen brengen. Verder zou dit van pas kunnen komen bij het genereren van lees-suggesties. De key voor een "'Institution"', "'Faculty"', "'Department"' of "'Vakgroep"' bestaat uit het eigen attribuut naam en de entiteit waarmee ze is verbonden als \textit{weak entity set}.\\
 
 \begin{figure}[!h]
 \centering
@@ -236,10 +236,8 @@ De database is zodanig gemodelleerd dat we in staat zijn van de affiliatie van p
  \label{User-model}
 \end{figure}
 
-Tussen een user een een publicatie wordt er een relatie "'suggestion"' bijgehouden. Deze zal worden gebruikt om later nieuwe suggesties aan de client te kunnen aanbieden. Het score attribuut van deze relatie geeft een (geschatte) affiniteitswaarde aan van de gebruiker voor deze publicatie.
-
 %already long enough ;)
-%Dit diagram geeft een gedetailleerde kijk op de "'User"' entiteit. deze entiteit stelt de gebruiker voor en heeft 2 unieke keys: zijn "'username"' en de "'firstName"', "'lastName"' combo die ge\"erfd wordt van "'Persons"'. Aan de hand van verzamelde informatie zal het systeem een "'suggestion"' relatie maken tussen "'User"' en "'Publications"', dit is de enige directe relatie tussen deze twee entiteiten, verdere interactie gebeurt via de "'Library"'. "'suggestions"' zal gebruikt worden om later publicaties voor te stellen aan de gebruiker. \\
+Dit diagram geeft een gedetailleerde kijk op de "'User"' entiteit. deze entiteit stelt de gebruiker voor en heeft 2 unieke keys: zijn "'username"' en de "'firstName"', "'lastName"' combo die ge\"erfd wordt van "'Persons"'. De User heeft geen directe relatie met een publicatie, interactie gebeurt via de "'Library"'.
 
 \subsection{Publicaties}
 
@@ -252,7 +250,7 @@ Tussen een user een een publicatie wordt er een relatie "'suggestion"' bijgehoud
 
 De "'Publication"' entiteit is uitgebreid in deze iteratie met meer attributen. Als key zal er een id worden gebruikt. Het eigenlijke publicatie bestand bevindt zich ook in de database zelf als BLOB, en wordt in dit diagram voorgesteld met het "'data"' attribuut.
 
-In latere iteraties zal "'Publications"' uitgebreid worden met subklassen om bijvoorbeeld het verschil tussen een "'journal"' en een "'proceeding"' correct te kunnen modelleren.
+"'Publications"' is verder uitgebreid met de subklassen "'journal"' en  "'proceeding"', om de verschillen correct te kunnen modelleren.
 
 \subsection{Bibliotheken}
 
@@ -277,11 +275,6 @@ Een gebruiker zal altijd drie vaste bibliotheken hebben:
 \end{description}
 
 Libraries vormen een zwakke entiteit en hebben als key een naam en de gebruikersnaam van de eigenaar. Bijgevolg kan een gebruiker dus niet meerdere bibliotheken met dezelfde naam aanmaken. \\
-
-In latere iteraties zal deze entiteit uitgebreid worden met extra informatie over de publicaties die het bijhoudt, zoals bijvoorbeeld de meest gelezen publicatie of de populairste. Op die manier kan er bijvoorbeeld een ranking worden gemaakt in de bibliotheek. \\
-
-\textit{[In de komende iteraties zullen deze diagrammen uitgebreid worden in meer subsecties om een grotere functionaliteit te ondersteunen. 
-]}
 
 \clearpage
 
@@ -344,17 +337,27 @@ Om meteen een overzicht te hebben van de relaties tussen verschillende auteurs, 
 
 Deze module zorgt voor de omzetting van de gegevens uit de database (na een traversal) naar een formaat met dat op de front-end kan worden gevisualiseerd. Zo vindt men hier een functie \textit{parseAuthorGraph(data)} terug, die deze informatie zal omzetten naar een JSON-representatie met vertices \& edges.
 
+\subsection{Recommender}
+
+Om gemakkelijk nieuwe publicaties te ontdekken, laat SKRIBL gebruikers toe om aangerade publicaties op te vragen, gebaseerd op gepersonaliseerde voorkeuren van de gebruiker. Om deze voorkeuren aan te leren, wordt gebruik gemaakt van een Naive Bayesian Classifier. Deze zal onder andere de titel, abstract \& keywords van een publicatie analyseren voor de classificatie. \\
+
+Concreet kan een gebruiker, gebruik makende van de functie \textit{rate}, een publicatie ofwel een positieve of negatieve score toekennen. Dit zal bijvoorbeeld gebeuren wanneer hij/zij op de (dis)like-knop klikt, alsook wanneer de publicatie wordt toegevoegd aan de Favorites-library. Op die manier kan de classifier per gebruiker worden getrained om later voorspellingen te maken over de beoordeling van ongeziene publicaties.
+
+Wanneer dan vervolgens de recommendations worden opgevraagd met de gelijknamige functie, zal er eerst beroep worden gedaan op de database. Vermits deze georganiseerd is als graph, is het mogelijk om alle publicaties die (graphsgewijs) dicht bij de gebruiker liggen op te vragen, rekening houdend met hun impact/aantal views. Vervolgens wordt de classifier dan gebruikt om in deze set van publicaties de beoordeling van de gebruiker te voorspellen. Publicaties die dan negatief geclassificeerd worden, worden verwijderd uit de lijst. \\
+
+Ten slotte kan men in deze module ook nog een cache terugvinden. Deze wordt gebruikt om performantie te verbeteren bij het herhaaldelijk inladen en wegschrijven van de classifier. Concreet wordt er gewerkt met een \textit{Least-recently used} (LRU) cache die wijzigingen meteen doorvoert in de database \textit{(write-through)}.
+
 \subsection{Database}
 
 In deze module vindt men een abstractie voor alle communicatie met de database. Het implementeert een bepaalde interface die onder andere door de Server- en UserInfo-modules wordt verwacht. Concreet is het Database-object verantwoordelijk voor het opzetten van een databaseverbinding en het uitvoeren van de nodige queries voor de interactie met het model. Zo worden er methodes aangeboden die onder andere nieuwe gebruikers toevoegen, gegevens van bestaande gebruikers opvragen of een nieuwe publicatie opslaan.\\
 
 Om de code hiervoor te organiseren, zijn er voor elke entiteit aparte modules gemaakt die aan de database kunnen worden toegevoegd en die verantwoordelijk zijn voor een bepaald deel van haar functionaliteit. Op die manier wordt vermeden dat deze klasse onoverzichtelijk veel code op zich moet nemen en kan men gemakkelijk een bepaald deel van de databaselogica terugvinden. \\
 
-Ten slotte bevat de database ook redelijk wat private methodes; deze zijn nodig om alle gegevens correct op te slaan volgens het (E)ER-diagram uit ~\ref{ER-model}. Zo worden in de database ook al alle lagen van de affiliation (researchGroup, department, faculty, institution) correct bijgehouden. Op dezelfde manier worden ook researchDomains gemodelleerd op de database als aparte entiteiten.\\
+Ten slotte bevat de database ook redelijk wat private methodes; deze zijn nodig om alle gegevens correct op te slaan volgens het (E)ER-diagram uit figuur~\ref{ER-model}. Zo worden in de database ook al alle lagen van de affiliation (researchGroup, department, faculty, institution) correct bijgehouden. Op dezelfde manier worden ook researchDomains gemodelleerd op de database als aparte entiteiten.\\
 
 De communicatie met de server waarop de database zich bevindt, gebeurt aan de hand van een binary protocol dat OrientDB aanbiedt. Hiervoor wordt gebruik gemaakt van de open-source library Oriento, zodat de queries gewoon kunnen worden uitgevoerd vanuit JS. \\
 
-\textit{[In deze iteratie zijn transacties op de database nog niet ge\"implementeerd, dit wegens een update van Oriento, de gebruikte API van de database. Als gevolg bestaat het risico dat na een crash of bij het aangeven van incorrecte informatie aan de database module de database corrupt wordt. In de volgende iteratie zal de gebruikte versie van Oriento ge\"update worden en zullen transacties worden ondersteund.]}
+Database transacties zijn ge\"implementeerd en zorgen ervoor dat kans op corruptie van de database tot een minimum wordt beperkt en de data van de gebruikers verder wordt beschermd. Het is dan ook cruciaal dat men voor dit soort van applicatie, zowel tijdens development als bij de oplevering, op een consistente database kan rekenen.
 
 \clearpage
 
@@ -455,6 +458,23 @@ Onderstaand sequentiediagram illustreert dit proces. Daarnaast toont het ook aan
  \includegraphics[width=142mm]{library-sequence.png}
  \caption{Vereenvoudigd sequentiediagram bij het laden van een bibliotheek}
  \label{library-sequence}
+\end{figure}
+
+\subsection{Publicaties aanraden}
+
+SKRIBL laat ook toe om aan gebruikers nieuwe publicaties aan te raden op basis van eerder vastgelegde voorkeuren. Zoals reeds vermeld, wordt hiervoor gebruik gemaakt van een Naive Bayesian Classifier die probeert te voorspellen of een publicatie al dan niet interessant is voor de gebruiker.
+
+Deze voorkeuren worden vastgelegd op twee verschillende manieren. Eenerzijds kan de client een bepaalde request gebruiken om een rating aan een publicatie mee te geven. Anderzijds zal een publicatie automatisch als een positief voorbeeld worden geregistreerd indien deze wordt toegevoegd aan zijn/haar Favorites-library. \\
+
+Het idee achter het bijhouden van classifiers werd al besproken in de vorige sectie~\ref{sec:components}. Om nu zelf nieuwe publicaties te ontdekken wordt gebruik gemaakt van de graph-structuur in de database. Deze zal, vertrekkend vanuit de gebruikers-node, alle publicaties op een bepaalde afstand in de graph aanduiden als mogelijke kandidaten voor de aan te raden publicaties. Hierdoor zullen automatisch alle publicaties bereikbaar vanuit de gebruiker zijn bibliotheken (waaronder dus ook de favorieten) en onderzoeksdomeinen in aanmerking komen. De resultaten worden dan gesorteerd op hun impact (gebaseerd op het aantal views).
+
+Vervolgens worden de geselecteerde publicaties gefilterd door de classifier. Deze zal proberen om oninteressante publicaties voor de gebruiker er meteen uit te halen door onder andere de tekst van de titel, abstract en keywords te analyseren. Zo wordt bijvoorbeeld vermeden dat een publicatie die reeds werd afgekeurd door de gebruiker (of een gelijkaardige publicatie) opnieuw opduikt in de lijst met recommendations.
+
+\begin{figure}[!h]
+\centering
+ \includegraphics[width=145mm]{recommendations.png}
+ \caption{Vereenvoudigd sequentiediagram bij het aanraden van een bibliotheek}
+ \label{recommendation-sequence}
 \end{figure}
 
 \clearpage
@@ -571,6 +591,18 @@ Extra routes zijn ook voorzien om meer informatie op te vragen omtrent auteurs. 
 \item[GET /authors/<author-id>/publications] Met deze request worden alle publicaties van een auteur met een bepaald id opgelijst in een JSON-array.
 
 \item[GET /authors/<author-id>/graph] Deze request wordt gebruikt om alle co-auteur relaties (en bijhorende publicaties) van een auteur met een bepaald id te visualiseren in een graph. Het resultaat is een JSON die deze graaf encodeert aan de hand van haar vertices \& edges en gevisualiseerd kan worden op de front-end.
+
+\end{description}
+
+\subsection{Ratings \& recommendations}
+
+Ten slotte kan SKRIBL ook per gebruiker voorkeuren aanleren om later nieuwe publicaties aan te raden. Hiervoor moet de gebruiker laten weten of een publicatie al dan niet in de smaak valt. Dit laat toe om dan later een voorspelling te maken voor ongeziene publicaties. Concreet is er dan ook een request voorzien om nieuwe publicaties te ontdekken, gebaseerd op de classificaties afgeleid uit voorgaande beoordelingen.
+
+\begin{description}
+
+\item[GET /user/<username>/recommendations] Hiermee wordt een lijst teruggegeven van publicaties die de gebruiker zouden kunnen interesseren. Om deze lijst op te vragen is basic-authentication vereist. Een parameter 'depth' kan worden meegegeven in de URL om het bereik van de zoekopdracht te beperken.
+
+\item[POST /user/<username>/publication/<pub-id>] Met deze request kan men dan weer laten weten of een publicatie al dan niet de gebruiker aanspreekt. Indien dit het geval is, dient de gebruiker een query-parameter 'like' toe te voegen aan de URL met als waarde 'true'. Zoniet, kan men hetzelfde doen, maar dan met waarde 'false'. Opnieuw dient men zich voor deze request te authenticeren met de credentials van de gebruiker.
 
 \end{description}
 
