@@ -131,42 +131,78 @@ Tests die nagaan of data wel daadwerkelijk bewaard blijft en de database niet co
 \end{itemize}
 File : databasePersistenceSpecs.js
 \subsection{Servertier tests}
-De servertier is een communicatielaag tussen de database en de user. Voor deze tier moeten alle HTTP requests getest worden.
+De servertier is een communicatielaag tussen de database en de user. Voor deze tier moeten alle HTTP requests getest worden. Ook dient het scrapen en de regex expressies die toegepast worden op de userinput getest te worden. 
 \\\\
-Alle tests bevinden zich in : $\backslash$server$\backslash$server$\backslash$routeTests$\backslash$...
-\subsubsection{Authors tests}
+Alle HTTP tests bevinden zich in : $\backslash$server$\backslash$server$\backslash$routeTests$\backslash$...\\
+Scraping en userinput tests bevinden zich in : $\backslash$server$\backslash$server$\backslash$modules$\backslash$tests$\backslash$...
+\subsubsection{Authors tests, HTTP}
 De tests omtrent auteurs dienen enerzijds om te zoeken naar auteurs op naam en voornaam, anderzijds om ook extra informatie van een bepaalde auteur op te laden. Zo wordt bijvoorbeeld de visualisatie van de co-auteurrelaties in een graph hier ook getest\\\\
 File : authors.json
-\subsubsection{Library tests}
+\subsubsection{Library tests, HTTP}
 Hierin vindt men testscenario's terug om bibliotheken te beheren. Dit omvat zowel het aanmaken, laden en verwijderen van de bibliotheken als het toevoegen (en verwijderen) van publicaties in deze bibliotheken.\\\\
 File : libraries.json
-\subsubsection{Publications tests}
+\subsubsection{Publications tests, HTTP}
 Publicaties vormen een cruciaal onderdeel van de webapplicatie en dus ook van de server API. Eerst en vooral wordt hier het uploaden, aanpassen, downloaden en verwijderen van een publicatie (en haar metadata) nagekeken. Verder worden ook meer geadvanceerde functionaliteiten zoals het extraheren van metadata en het zoeken naar publicaties (zowel intern als extern) hier getest.\\\\
 File : publications.json
-\subsubsection{Users Test}
+\subsubsection{Users test, HTTP}
 De belangrijkste tests omtrent gebruikers omvatten het inloggen en registreren.
 Daarnaast wordt ook het laden en verwijderen van een gebruiker getest.\\\\
 File : users.json
+\subsubsection{Scarping tests}
+Tests dat nagaan of scraping op de juiste manier werkt.\\\\
+File : scrapingSpec.js
+\subsubsection{Userinput tests}
+Tests dat nagaan of regex expressies die op userinput worden toegepast juist werken. \\\\
+File: userSpec.js + validationSpec.js
 \subsection{Clienttier}
-De clienttier zorgt voor een user interface en de communicatie met de server. Deze tier wordt getest aan de hand van de GUI. Om tijdsverlies te voorkomen wordt de GUI automatisch getest, zie sectie "Strategie".
+De clienttier zorgt voor een user interface en de communicatie met de server. Deze tier wordt getest aan de hand van de GUI.\\
+Om tijdsverlies te voorkomen wordt de GUI zoveel mogelijk automatisch getest. Sommige delen zijn niet automatisch testbaar en dienen manueel getest te worden. Natuurlijk moet de tester tijdens het automatisch testen nog steeds bekijken of alles op de juiste manier verloopt. Informatie over het automatisch testen van de GUI is beschikbaar in sectie "Strategie".\\
+\begin{description}
+\item[OPGEPAST] automatische GUI testing betekent NIET dat de tester niet aanwezig moet zijn om na te kijken dat alles op een juiste manier verloopt. Automatisch GUI testing is niet even precies als unit testing.\\
+Bijvoorbeeld: een GUI test kan slagen maar visueel problemen veroorzaken die de tester wel ziet en de automatische GUI tester niet.
+\end{description}
+
+\begin{description}
+\item[A] Automatische GUI testing
+\item[M] Manuele GUI testing
+\end{description}
 \subsubsection{User tests}
 \begin{itemize}
-  \item Login test
-  \item Logout test 
-  \item Register test
-  \item Delete user test
+  \item Login test A
+  \item Logout test A
+  \item Register test A
+  \item Delete user test A
 \end{itemize}
 \subsubsection{Library managment tests}
 \begin{itemize}
-  \item Publicatie toevoegen via search test
-  \item Libraries management test
-  \item Downloaden van publicaties test
-  \item Informatie over publicaties aanpassen test
-  \item Informatie over publicaties opvragen test
+  \item Publicatie toevoegen via search test A
+  \item Libraries management test A
+  \item Downloaden van publicaties test M
+  \item Informatie over publicaties aanpassen test M
+  \item Informatie over publicaties opvragen test A
 \end{itemize}
 \subsubsection{Upload test}
 \begin{itemize}
-  \item Publicaties toevoegen(via upload) test
+  \item Publicaties toevoegen(via upload) test A
+\end{itemize}
+\subsubsection{Search Tests}
+\begin{itemize}
+\item Search test A
+\item Advanced search test A
+\end{itemize}
+\subsubsection{Network}
+\begin{itemize}
+\item Show network A
+\item Load other user network M
+\end{itemize}
+\subsubsection{Preview}
+\begin{itemize}
+\item Show preview A
+\item Control preview M
+\end{itemize}
+\subsubsection{Recommender}
+\begin{itemize}
+\item Recommender systeem M
 \end{itemize}
 \section{Software risico gevallen}
 De client die de SKRIBL web-application gebruikt komt alleen maar in aanraking met de clienttier. Opdat deze tier zonder probleem zou werken, moeten de servertier en database tier ook werken. Dit impliceert dat een fout in de server of database tier heel de web-application kan verzwakken. Natuurlijk zijn problemen in de web-application voorzien en kan SKRIBL met de meeste problemen leven, als bijvoorbeeld een http request faalt zal heel de application niet crashen. Maar om toch zo weinig mogelijk problemen te hebben is het testen  van ELKE tier zeer belangrijk. Het grootste risico van onze applicatie is dus het feit dat de onderliggende tiers goed genoeg moeten werken zodat de client de application op een zo goed mogelijke manier kan gebruiken.
@@ -184,6 +220,9 @@ De features die getest worden zijn:
   \item Downloaden van publicaties
   \item Informatie over publicaties aanpassen
   \item Informatie over publicaties opvragen
+  \item Auteur Network
+  \item Recommender systeem
+  \item Pdf Viewer
 \end{itemize}
 Sommige features die getest worden houden andere features in (die ook getest moeten worden) en worden hier onder beschreven.\\
 \begin{description}

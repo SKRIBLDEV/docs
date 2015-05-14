@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.4.15)  19 APR 2015 15:24
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.4.15)  14 MAY 2015 18:18
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -512,9 +512,15 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 File: Small_Logo.png Graphic file (type png)
 
 <use Small_Logo.png>
-Package pdftex.def Info: Small_Logo.png used on input line 28.
+Package pdftex.def Info: Small_Logo.png used on input line 32.
 (pdftex.def)             Requested size: 37.29333pt x 36.98866pt.
- [1 <./Small_Logo.png>]) (./main.toc)
+ [1 <./Small_Logo.png>]) (./main.toc
+File: Small_Logo.png Graphic file (type png)
+ <use Small_Logo.png>
+Package pdftex.def Info: Small_Logo.png used on input line 40.
+(pdftex.def)             Requested size: 37.29333pt x 36.98866pt.
+
+[2])
 \tf@toc=\write3
 \openout3 = `main.toc'.
 
@@ -522,8 +528,7 @@ File: Small_Logo.png Graphic file (type png)
  <use Small_Logo.png>
 Package pdftex.def Info: Small_Logo.png used on input line 38.
 (pdftex.def)             Requested size: 37.29333pt x 36.98866pt.
-
-[2]
+ [3]
 No file main.bbl.
 LaTeX Font Info:    Try loading font information for OMS+cmr on input line 56.
 (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
@@ -550,92 +555,112 @@ File: Small_Logo.png Graphic file (type png)
 <use Small_Logo.png>
 Package pdftex.def Info: Small_Logo.png used on input line 85.
 (pdftex.def)             Requested size: 37.29333pt x 36.98866pt.
- [3]
+ [4]
 File: Small_Logo.png Graphic file (type png)
  <use Small_Logo.png>
 Package pdftex.def Info: Small_Logo.png used on input line 113.
 (pdftex.def)             Requested size: 37.29333pt x 36.98866pt.
- [4]
-Underfull \hbox (badness 10000) in paragraph at lines 134--137
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 138--140
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 141--143
-
- []
-
-File: Small_Logo.png Graphic file (type png)
-<use Small_Logo.png>
-Package pdftex.def Info: Small_Logo.png used on input line 143.
-(pdftex.def)             Requested size: 37.29333pt x 36.98866pt.
  [5]
-Underfull \hbox (badness 10000) in paragraph at lines 144--146
+Underfull \hbox (badness 10000) in paragraph at lines 134--138
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 147--150
+Underfull \hbox (badness 10000) in paragraph at lines 139--141
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 142--144
 
  []
 
 File: Small_Logo.png Graphic file (type png)
 <use Small_Logo.png>
-Package pdftex.def Info: Small_Logo.png used on input line 170.
+Package pdftex.def Info: Small_Logo.png used on input line 144.
 (pdftex.def)             Requested size: 37.29333pt x 36.98866pt.
  [6]
-Underfull \hbox (badness 10000) in paragraph at lines 188--189
+Underfull \hbox (badness 10000) in paragraph at lines 145--147
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 148--151
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 152--154
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 155--157
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 158--160
 
  []
 
 File: Small_Logo.png Graphic file (type png)
 <use Small_Logo.png>
-Package pdftex.def Info: Small_Logo.png used on input line 197.
+Package pdftex.def Info: Small_Logo.png used on input line 163.
 (pdftex.def)             Requested size: 37.29333pt x 36.98866pt.
  [7]
 File: Small_Logo.png Graphic file (type png)
  <use Small_Logo.png>
-Package pdftex.def Info: Small_Logo.png used on input line 229.
+Package pdftex.def Info: Small_Logo.png used on input line 210.
 (pdftex.def)             Requested size: 37.29333pt x 36.98866pt.
  [8]
-Underfull \hbox (badness 10000) in paragraph at lines 247--250
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 247--250
+Underfull \hbox (badness 10000) in paragraph at lines 227--228
 
  []
 
 File: Small_Logo.png Graphic file (type png)
 <use Small_Logo.png>
-Package pdftex.def Info: Small_Logo.png used on input line 250.
+Package pdftex.def Info: Small_Logo.png used on input line 231.
 (pdftex.def)             Requested size: 37.29333pt x 36.98866pt.
  [9]
-Underfull \hbox (badness 10000) in paragraph at lines 256--260
+File: Small_Logo.png Graphic file (type png)
+ <use Small_Logo.png>
+Package pdftex.def Info: Small_Logo.png used on input line 265.
+(pdftex.def)             Requested size: 37.29333pt x 36.98866pt.
+ [10]
+Underfull \hbox (badness 10000) in paragraph at lines 286--289
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 286--289
 
  []
 
 File: Small_Logo.png Graphic file (type png)
 <use Small_Logo.png>
-Package pdftex.def Info: Small_Logo.png used on input line 260.
+Package pdftex.def Info: Small_Logo.png used on input line 289.
 (pdftex.def)             Requested size: 37.29333pt x 36.98866pt.
- [10] 
+ [11]
+Underfull \hbox (badness 10000) in paragraph at lines 295--299
+
+ []
+
+File: Small_Logo.png Graphic file (type png)
+<use Small_Logo.png>
+Package pdftex.def Info: Small_Logo.png used on input line 299.
+(pdftex.def)             Requested size: 37.29333pt x 36.98866pt.
+ [12] 
 AED: lastpage setting LastPage
 (./main.aux) ) 
 Here is how much of TeX's memory you used:
  4131 strings out of 494424
  53113 string characters out of 6165346
- 219872 words of memory out of 5000000
+ 220872 words of memory out of 5000000
  7290 multiletter control sequences out of 15000+600000
  17774 words of font info for 37 fonts, out of 8000000 for 9000
  372 hyphenation exceptions out of 8191
- 38i,14n,43p,765b,400s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 38i,14n,43p,765b,414s stack positions out of 5000i,500n,10000p,200000b,80000s
  </home/doug/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1200.600p
 k> </home/doug/.texmf-var/fonts/pk/ljfour/jknappen/ec/ectt1000.600pk> </home/do
 ug/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecsl1000.600pk> </home/doug/.texmf-va
@@ -649,10 +674,10 @@ ts/pk/ljfour/jknappen/ec/ecrm1440.600pk> </home/doug/.texmf-var/fonts/pk/ljfour
 /jknappen/ec/ecbx2074.600pk> </home/doug/.texmf-var/fonts/pk/ljfour/jknappen/ec
 /eccc1200.600pk> </home/doug/.texmf-var/fonts/pk/ljfour/jknappen/ec/eccc1728.60
 0pk></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on main.pdf (11 pages, 260580 bytes).
+Output written on main.pdf (13 pages, 263786 bytes).
 PDF statistics:
- 506 PDF objects out of 1000 (max. 8388607)
- 88 compressed objects within 1 object stream
+ 516 PDF objects out of 1000 (max. 8388607)
+ 93 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  16 words of extra memory for PDF output out of 10000 (max. 10000000)
 
