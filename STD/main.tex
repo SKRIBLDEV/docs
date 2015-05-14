@@ -18,7 +18,7 @@
 
 \title{Software Test Plan}
 \author{} %leave empty
-\date{20 april 2015} %ok, manuele datum
+\date{15 mei 2015} %ok, manuele datum
 
 \addtolength{\footskip}{1.3cm} % make more space for the footer
 \pagestyle{fancyplain} % use fancy for all pages except chapter start
@@ -69,6 +69,7 @@ Vermits het SKRIBL-team agile werkt, zal dit testplan nog sterk veranderen doorh
 \item[GUI]Graphical User Interface.
 \item[API]Application Programming Interface.
 \item[MVC]Model View Controller. Dit is een software architectuur patroon dat de implementatie opsplitst in drie delen: Model, View en Controller. De controllers worden gebruikt om het model aan te passen, die op hun beurt de view aanpassen. 
+\item[LOC] Lines Of Code
 \end{description}
 
 \section{Domein}
@@ -148,8 +149,8 @@ File : publications.json
 De belangrijkste tests omtrent gebruikers omvatten het inloggen en registreren.
 Daarnaast wordt ook het laden en verwijderen van een gebruiker getest.\\\\
 File : users.json
-\subsubsection{Scarping tests}
-Tests dat nagaan of scraping op de juiste manier werkt.\\\\
+\subsubsection{Scraping tests}
+Tests die nagaan of scraping op de juiste manier werkt.\\\\
 File : scrapingSpec.js
 \subsubsection{Userinput tests}
 Tests dat nagaan of regex expressies die op userinput worden toegepast juist werken. \\\\
@@ -162,42 +163,56 @@ Om tijdsverlies te voorkomen wordt de GUI zoveel mogelijk automatisch getest. So
 Bijvoorbeeld: een GUI test kan slagen maar visueel problemen veroorzaken die de tester wel ziet en de automatische GUI tester niet.
 \end{description}
 
+Alle GUI tests bevinden zich in : $\backslash$Client$\backslash$GUITests$\backslash$...\\
+
 \begin{description}
 \item[A] Automatische GUI testing
 \item[M] Manuele GUI testing
 \end{description}
 \subsubsection{User tests}
 \begin{itemize}
-  \item Login test A
-  \item Logout test A
-  \item Register test A
-  \item Delete user test A
+  \item Login test A\\\\
+  File: loginTest
+  \item Logout test A\\\\
+  File: logoutTest
+  \item Register test A\\\\
+  File: registerTest
+  \item Delete user test A\\\\
+  File: loginAndDeleteUserTest
 \end{itemize}
 \subsubsection{Library managment tests}
 \begin{itemize}
-  \item Publicatie toevoegen via search test A
-  \item Libraries management test A
+  \item Publicatie toevoegen via search test A\\\\
+  File: addPublicationViaSearchTest
+  \item Libraries management test A\\\\
+  File: addTestLibTest + addToFavoritesTest + changeLibraryTest + deleteTestLibTest
   \item Downloaden van publicaties test M
   \item Informatie over publicaties aanpassen test M
-  \item Informatie over publicaties opvragen test A
+  \item Informatie over publicaties opvragen test A\\\\
+  File: showMetaDataTest
 \end{itemize}
 \subsubsection{Upload test}
 \begin{itemize}
-  \item Publicaties toevoegen(via upload) test A
+  \item Publicaties toevoegen(via upload) test A\\\\
+  File: uploadFileTest
 \end{itemize}
 \subsubsection{Search Tests}
 \begin{itemize}
-\item Search test A
-\item Advanced search test A
+\item Search test A\\\\
+File: searchTest
+\item Advanced search test A\\\\
+File: advancedSearchTest
 \end{itemize}
 \subsubsection{Network}
 \begin{itemize}
-\item Show network A
+\item Show network A\\\\
+File: showNetworkTest
 \item Load other user network M
 \end{itemize}
 \subsubsection{Preview}
 \begin{itemize}
-\item Show preview A
+\item Show preview A\\\\
+File: preview wordt getest na een upload (uploadFileTest)
 \item Control preview M
 \end{itemize}
 \subsubsection{Recommender}
