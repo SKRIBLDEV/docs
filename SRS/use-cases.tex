@@ -243,16 +243,16 @@
 
 %%%%%% 
 
-\subsubsection{BASIS AUTEURSNETWERK}
+\subsubsection{AUTEURSNETWERK}
 \vspace{2 mm}
 
-\textbf{ID}: FR-U007
+\textbf{ID}: FR-U007(+)
 \vspace{2 mm}
 
 \noindent \textbf{Betrokkenen}: aangemelde gebruiker (G); systeem (S) 
 \vspace{2 mm}
 
-\noindent \textbf{Samenvatting}: Een gebruiker kan zijn/haar netwerk van co-auteurs raadplegen in een gevisualiseerde graaf. 
+\noindent \textbf{Samenvatting}: Een gebruiker kan netwerken van co-auteurs raadplegen in een interactieve graaf. 
 \vspace{2 mm}
 
 \noindent \textbf{Pre-conditie}: G is aangemeld en bevindt zich op het dashboard.
@@ -266,7 +266,9 @@
 \noindent \textbf{Scenario}:
 \begin{enumerate}
 \item S genereert een graaf van co-auteurs aan de hand van informatie in de database
-\item G kan deze graaf raadplegen en krijgt na het klikken op een node in de graaf basisinformatie over de aangeklikte auteur te zien \textit{[welke info precies wordt weergegeven wordt in volgende iteratie vastgelegd, na overleg aangaande de geplande feature 'userprofile']} 
+\item Aan de hand van kleurcodes en visuele elementen worden in de graaf Skribl gebruikers van andere auteurs onderscheiden, en kan de relatieve impact van auteurs (i.e., tov de huidige gebruiker) ge\"inspecteerd worden. 
+\item G krijgt na het klikken op een node in de graaf basisinformatie over de aangeklikte auteur te zien. G kan vervolgens ook zijn/haar netwerk laten genereren.
+\item G krijgt na het klikken op een link een lijst van publicaties te zien, horende bij de link die twee auteurs verbindt. G kan (de metadata van) deze publicaties bekijken, en deze eventueel toevoegen aan zijn/haar bibliotheken. 
 \end{enumerate}
 \vspace{2 mm}
 \hrule
@@ -517,6 +519,37 @@
 
 
 \noindent \textbf{Post-conditie}: / \\
+
+
+
+\subsubsection{SUGGESTIES}
+\vspace{2 mm}
+
+\textbf{ID}: FR-D002
+\vspace{2 mm}
+
+\noindent \textbf{Betrokkenen}: systeem (S), Gebruiker (G)
+\vspace{2 mm}
+
+\noindent \textbf{Samenvatting}: G kan een eenvoudige rating aan publicaties toekennen. S kan vervolgens op basis van deze gegevens nieuwe publicaties aan G voorstellen. 
+\vspace{2 mm}
+
+\noindent \textbf{Pre-conditie}: /
+\vspace{2 mm}
+
+\noindent \textbf{Trigger}: Gebruiker opent 'recommendations' view.
+\vspace{4 mm}
+
+\hrule
+\vspace{2 mm}
+\noindent \textbf{Scenario}:
+\begin{enumerate}
+\item G ziet een lijst van voorgestelde publicaties.
+\item G kan deze publicaties bekijken, toevoegen aan zijn/haar bibliotheken, alsook een 'like' of 'dislike' aan deze publicaties toekennen. 
+\item S kan aan de hand van de rating en de bijhorende metadata van de publicatie nieuwe publicaties voorstellen aan de gebruiker. 
+\end{enumerate}
+\noindent \textbf{Post-conditie}: / \\
+
 
 
 \clearpage

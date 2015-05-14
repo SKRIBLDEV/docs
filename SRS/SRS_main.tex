@@ -58,8 +58,6 @@ Het doel van dit softwareproject is het ontwikkelen van SKRIBL, een webapplicati
 
 %%%
 \subsection{Gebruikte conventies en afkortingen}
-Suggesties en opmerkingen voor toekomstige aanpassingen in dit document worden aangeduid met vierkante haakjes en een cursief lettertype: [{\it voorbeeld suggestie}]. \newline
-\\
 \noindent Volgende afkortingen worden in dit SRS gebruikt:
 \begin{itemize}
 \item SRS: Software Requirements Specification (document)
@@ -90,10 +88,7 @@ Suggesties en opmerkingen voor toekomstige aanpassingen in dit document worden a
 \section{Algemene Beschrijving}
 
 \subsection{Perspectief van het product}
-De ontwikkelde webapplicatie is een op zichzelf staand softwareproduct. Het maakt geen deel uit van andere softwareproducten maar steunt voor een deel van zijn content (i.e., aangeleverde publicaties) op het contacteren van andere websites met gelijkaardige functionaliteiten. \newline
-\\
-%----comment----%
-\noindent [{\it Volgens de IEEE standaard moeten in dit onderdeel verder nog de interfaces (System interfaces; User interfaces; Hardware interfaces; Software interfaces;Communications interfaces) beschreven worden. Indien van toepassing zullen deze onderdelen, in samenspraak met de Software Architect en Configuration Manager, in latere versies aangevuld worden.}]
+De ontwikkelde webapplicatie is een op zichzelf staand softwareproduct. Het maakt geen deel uit van andere softwareproducten maar steunt voor een deel van zijn content (i.e., aangeleverde publicaties) op het contacteren van andere websites met gelijkaardige functionaliteiten. De aanwezig interfaces worden in detail besproken in het SDD. 
 
 \subsection{Functies van het product}
 \label{subsec:userRequirements}
@@ -116,12 +111,6 @@ Hieronder volgt een gestructureerde oplijsting van de functionele vereisten zoal
         \item aanleggen en beheren van portfolio eigen publicaties
         \item persoonlijke score via portfolio
 	\item toevoegen en beheren van lijst publicaties van derden ("favorieten")
-	\item publicaties opslaan op eigen computer, buiten applicatie
-	\item top drie relevantste publicaties binnen onderzoeksdomein 
-	\item suggesties van relevante papers en feed-back/voorkeuren 
-	\item opzoeken en toevoegen van publicaties, gevonden in systeem en/of internet, via invulformulier of reeds toegevoegde publicaties
-	\item annoteren van publicaties, toevoegen van bijlagen 
-	\item publicaties linken op manieren die systeem niet standaard voorziet
 	\item raadplegen, genereren en exporteren (PDF) van persoonlijk statistieken en bijhorende grafieken
 	\item visualisatie van en interactie met sociaal netwerk in een graaf
 	\item mobiele interface
@@ -135,6 +124,9 @@ Hieronder volgt een gestructureerde oplijsting van de functionele vereisten zoal
     \item weergave van publicaties 
     \item downloaden van het internet
     \item opslaan op computer vd gebruiker (buiten applicatie)
+    \item opzoeken en toevoegen van publicaties, gevonden in systeem en/of internet, via invulformulier of reeds toegevoegde publicaties
+	\item annoteren van publicaties, toevoegen van bijlagen 
+	\item publicaties linken op manieren die systeem niet standaard voorziet
     \end{itemize}
      %%
     %DATAMINING %
@@ -147,8 +139,8 @@ Hieronder volgt een gestructureerde oplijsting van de functionele vereisten zoal
    		 \item kwaliteit op basis van de classificatie van conferences en journals
     		\item impact van de eigen publicatie (aantal citaties)
     	\end{itemize}
-    \item relevantie van publicatie voor gebruiker berekenen in functie van onderzoeksdomein 
-    \item relevantie van publicatie voor gebruiker berekenen op basis van co-auteurs, keywords, ... en dynamische voorkeuren gebruiker 
+	\item top drie relevantste publicaties binnen onderzoeksdomein 
+	\item suggesties van relevante papers en feed-back/voorkeuren 
     \item statistieken voor gebruiker berekenen adhv volgende metrieken (zie ook persoonlijke score)
       	\begin{itemize}
     		\item publicaties per jaar
@@ -172,7 +164,7 @@ JavaScript, HTML5, CSS en bijbehorende open-source frameworks en bibliotheken zi
 
 \subsection{Gebruikshandleidingen}
 
-[{\it nog te bepalen}]
+Gebruikshandleidingen of tutorials werden niet ontwikkeld. 
 
 
 \clearpage
@@ -187,6 +179,8 @@ JavaScript, HTML5, CSS en bijbehorende open-source frameworks en bibliotheken zi
 \noindent De hierop volgende secties beschrijven aan de hand van use cases de functionele requirements in detail. Hierbij zijn de prioriteiten niet vermeld, omdat aan sommige onderdelen of varianten van de beschreven scenario's andere prioriteiten toegekend werden. Op het bijgevoegde requirements dashboard kunnen de specifieke prioriteiten afgelezen worden. De prioriteiten worden aangegeven met kleuren en bijhorende lettters:  donkerblauw + H  = hoge prioriteit;  lichtblauw + M = gemiddelde prioriteit;  wit + L = lage prioriteit.
 
 \input{./use-cases.tex}
+
+\subsection{Niet-Functionele Requirements}
 
 \includepdf[pages={-}]{requirements_dashboard_19april.pdf}
 
