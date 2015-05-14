@@ -47,54 +47,8 @@
 \newpage
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%    FEED-BACK  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newcommand{\comment}[1]{}
 
 
-% --------> reeds aangepast
-
-\comment{
-%sectie 1.1
-%- Citaties (ook verderop in document) komen na het laatste woord, voor de punt. In Latex:
-
-   %      einde van de zin~\cite{xyz}.
-
-%sectie 2.2
-%- "Structuur van de Organisatie": het ene impliceert het andere
-
-sectie 3.1
-%- "die waar"
-%- "Dit wordt verder besproken in? (zin niet afgewerkt)
-%- erg veel tekst in verhalende vorm: het mag iets droger en meer 'to
-%the point', het moet mogelijk zijn om snel informatie uit het document
-%op te pikken
-
-sectie 3.2
-%- "...in een apart document, het Risk List (RL) document.": het is
-%beter om dit aan te vullen in het huidige document.
-%- De risk list mist projectgebonden risico?s. Tracht ervoor te zorgen dat de voorgestelde oplossingen meetbaar zijn.
-
-sectie 3.3
-%- De duurtijd van een vergadering is te groot. Een vergadering om na te gaan of een sprint al dan niet goed loopt, mag niet meer dan een half uur duren.
-
-sectie 4.1
-%- Is enkel de QAM verantwoordelijk voor het opsporen van inconsistenties en defecten?
-- Hoe ga je als groep configuration management aanpakken?
-
-%sectie 5
-%- Is het niet mogelijk om de eerste sprint reeds te beschrijven? 
-
-Algemeen:
-Dit is een vrij uitgebreide eerste versie, met hier en daar nog (vaak zelf aangegeven) punten waar aanvulling noodzakelijk is. Eem werkplan ontbreekt. Probeer zo veel mogelijk aan te vullen voor volgende opleveringen. 
-}
-
-
-
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%    NOTES TO SELF  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-% nieuwe functie test manager toevoegen
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 1.INTRODUCTIE
@@ -189,7 +143,7 @@ Gebruikers kunnen publicaties linken op manieren die de applicatie niet standaar
 De gebruiker kan grafieken laten genereren en exporteren.
 
 \subsubsection*{Mijlpaal 7: mobiele interface en extra features}
-Naast de standaard webinterface is er ook een interface voor mobiel gebruik. Bij deze interface wordt er rekening gehouden met de specifieke mogelijkheden en beperkingen van mobiele apparaten. In een later stadium van het project zal er worden beslist welke extra functionaliteit aan deze interface zal worden toegevoegd. \newline
+Naast de standaard webinterface is er ook een interface voor mobiel gebruik. Bij deze interface wordt er rekening gehouden met de specifieke mogelijkheden en beperkingen van mobiele apparaten. \newline
 \\
 
 \begin{figure}[h!]
@@ -213,8 +167,7 @@ Naast de standaard webinterface is er ook een interface voor mobiel gebruik. Bij
 	\bf{3} & 4 & \bf{04/03/15} & 25/03/15 & 4: metadata & nee \\
 	& 5 & 26/03/15 & \bf{20/04/15} & 5: netwerk & \bf{ja} \\
 	\hline
-	\bf{4} & 6 & \bf{21/04/15} & 17/05/15 & 6: interactie \& visualisatie & nee 	\\
-	& 7 & 18/05/15 & \bf{15/06/15} & 7: mobiel & \bf{ja} 	\\
+	\bf{4} & 6 & \bf{21/04/15} & \bf{15/05/15} & 6: interactie, mobiel & \bf{ja} 	\\
 	\hline
 \end{tabular}
  \end{center}
@@ -222,7 +175,7 @@ Naast de standaard webinterface is er ook een interface voor mobiel gebruik. Bij
  \label{planning}
  \end{table}
  
-De algemene planning van het project is te vinden in tabel \ref{planning} en deze planning is ook weergegeven in figuur \ref{GanttChart}. Bij deze planning worden de vooropgestelde scenario's niet chronologisch uitgewerkt. In plaats daarvan zijn scenario's of delen van scenario's gegroepeerd volgens te bereiken mijlpalen, en dit op zo'n manier dat alle scenario's aan het einde van het project ge\"{i}mplementeerd zullen zijn.
+De algemene planning van het project is te vinden in tabel \ref{planning} en deze planning is ook weergegeven in figuur \ref{GanttChart}. Bij deze planning worden de vooropgestelde scenario's niet chronologisch uitgewerkt. In plaats daarvan zijn scenario's of delen van scenario's gegroepeerd volgens te bereiken mijlpalen.
  
 
 \subsection{Organisatie}
@@ -389,7 +342,7 @@ De risico's zullen opgevolgd worden door de PM. \newline
 Per sprint worden standaard twee vergadermomenten voorzien waarbij het hele team aanwezig is: een openingsvergadering en een follow-up vergadering. Dit komt neer op drie tot vier sprintbijeenkomsten per maand. De openingsvergadering vindt plaats aan het begin van de sprintperiode. De follow-up vergadering vindt plaats tussen midden en eind van de sprintperiode, d.w.z. aan het eind van de uitvoeringsfase en in het begin van de refactor- en testfase.\\
 \\
 \noindent De openingsvergadering bestaat uit de volgende componenten: \\
-- deel 1 (ong. 60 min.):
+- (ong. 60 min.):
 \begin{itemize}
 \item opening en overlopen agendapunten
 \item micropresentaties (belichten de aspecten van het ontwikkelingsproces waarvoor het betreffende groepslid verantwoordelijk is)
@@ -1028,6 +981,455 @@ Vergadering &
  \label{toggl_iteratie3}
  \caption{overzicht iteratie 3, met behulp van Toggl report}
 \end{figure}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% sprint 6 - laatste iteratie 
+
+
+\clearpage
+\subsection{Sprint 6:  interactieve graaf en suggesties}
+In de laatste sprint werd een recommender systeem ge\"implementeerd en werd het auteursnetwerk interactief gemaakt; daarnaast werd er gefocust op het nakijken en testen van alle reeds ontwikkelde features. Deze sprint liep van 20/04 tot 15/05. In figuur \ref{gantt_S6} is de planning voor deze sprint weergegeven door middel van een gantt chart. Bij deze sprint hoefde er geen achterstand ingehaald te worden, noch zijn er geplande features die onafgewerkt bleven. 
+
+\begin{figure}[h!]
+\centering
+ \includegraphics[width=150mm]{Gantt_S6_15mei.png}
+ \label{gantt_S6}
+ \caption{Gantt chart sprint 6, datum 15 mei. }
+\end{figure}
+
+\noindent Op volgende pagina's wordt opnieuw een gedetailleerd overzicht gegeven van de geplande en door toggl gemeten werklast voor deze iteratie, per persoon en per categorie. De totale door toggl gemeten werktijd voor deze iteratie bedroeg \textbf{170 uren, of gemiddeld 34 uur per persoon}. De database manager heeft hierbij het minste aantal uren gewerkt. Gezien vorige iteratie voor hem bijzonder zwaar was werd zijn werkpakket voor deze sprint verlicht.
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%tabel uren sprint 6
+
+
+
+\begin{center}
+\begin{tabularx}{\textwidth}[t]{XX}
+\arrayrulecolor{green}\hline
+
+
+%%%%%%Ivo
+\vspace{.1 mm}
+\textbf{\textcolor{myGreen}{\large{Ivo}}} \vspace{.1 mm} & \\
+\hline
+\vspace{1 mm}
+Research, documenten, algemeen & 
+\begin{minipage}[t]{\linewidth}%
+\vspace{1 mm}
+\begin{itemize}
+\item overlopen documenten : 2u
+\item \textbf{geschat totaal: 2u}
+\item \textbf{toggl totaal: 2u}
+\end{itemize} 
+\vspace{1 mm}
+\end{minipage}\\
+
+\arrayrulecolor{black}\hline
+
+\vspace{1 mm}
+Tutorials en bijscholing & 
+\begin{minipage}[t]{\linewidth}%
+\vspace{1 mm}
+\begin{itemize}
+\item \textbf{geschat totaal: 0u}
+\item \textbf{toggl totaal: 0u}
+\end{itemize} 
+\vspace{1 mm}
+\end{minipage}\\
+
+\arrayrulecolor{black}\hline
+
+
+\vspace{1 mm}
+Implementatie & 
+\begin{minipage}[t]{\linewidth}%
+\vspace{1 mm}
+\begin{itemize}
+\item implementatie recommender in database: 5u
+\item code review:  8u
+\item \textbf{geschat totaal: 13u}
+\item \textbf{toggl totaal: 10u}
+\end{itemize} 
+\vspace{1 mm}
+\end{minipage}\\
+
+
+\arrayrulecolor{black}\hline
+
+\vspace{2 mm}
+Vergadering & 
+\begin{minipage}[t]{\linewidth}%
+\vspace{2 mm}
+\begin{itemize}
+\item Vergadering: 1u
+\item \textbf{totaal: 1u}
+\vspace{2 mm}
+\end{itemize} 
+\end{minipage}\\
+
+\arrayrulecolor{black}\hline
+
+\vspace{2 mm}
+\textbf{TOTAAL} & 
+\begin{minipage}[t]{\linewidth}%
+\vspace{2 mm}
+\begin{itemize}
+\item \textbf{geschat totaal: 16u}
+\item \textbf{toggl totaal: 14u}
+\vspace{2 mm}
+\end{itemize} 
+\end{minipage}\\
+
+
+%%%%%%%%%%%Noah 
+
+\arrayrulecolor{green}\hline
+\vspace{.1 mm}
+\textbf{\textcolor{myGreen}{\large{Noah}}} \vspace{.1 mm} & \\
+\hline
+\vspace{1 mm}
+Research, documenten, algemeen & 
+\begin{minipage}[t]{\linewidth}%
+\vspace{1 mm}
+\begin{itemize}
+\item SDD: 5 u
+\item \textbf{geschat totaal: 5u}
+\item \textbf{toggl totaal: 4u}
+\end{itemize} 
+\vspace{1 mm}
+\end{minipage}\\
+
+\arrayrulecolor{black}\hline
+
+\vspace{1 mm}
+Tutorials en bijscholing & 
+\begin{minipage}[t]{\linewidth}%
+\vspace{1 mm}
+\begin{itemize}
+\item \textbf{geschat totaal: 0u}
+\item \textbf{toggl totaal: 0u}
+\end{itemize} 
+\vspace{1 mm}
+\end{minipage}\\
+
+\arrayrulecolor{black}\hline
+
+
+\vspace{1 mm}
+Implementatie & 
+\begin{minipage}[t]{\linewidth}%
+\vspace{1 mm}
+\begin{itemize}
+\item API en back-end ontwerp: 5u
+\item implementatie recommender : 15u 
+\item \textbf{geschat totaal: 20u}
+\item \textbf{toggl totaal: 36u}
+\end{itemize} 
+\vspace{1 mm}
+\end{minipage}\\
+
+
+\arrayrulecolor{black}\hline
+
+\vspace{2 mm}
+Vergadering & 
+\begin{minipage}[t]{\linewidth}%
+\vspace{2 mm}
+\begin{itemize}
+\item Vergadering: 1u
+\item \textbf{geschat totaal: 1u}
+\item \textbf{toggl totaal: 1u}
+\vspace{2 mm}
+\end{itemize} 
+\end{minipage}\\
+
+\arrayrulecolor{black}\hline
+
+\vspace{2 mm}
+\textbf{TOTAAL} & 
+\begin{minipage}[t]{\linewidth}%
+\vspace{2 mm}
+\begin{itemize}
+\item \textbf{geschat totaal: 26u}
+\item \textbf{toggl totaal: 42u}
+\vspace{2 mm}
+\end{itemize} 
+\end{minipage}\\
+
+\end{tabularx}
+\end{center}
+
+
+%%%%%%%%%%%Hannah
+
+\begin{center}
+\begin{tabularx}{\textwidth}[t]{XX}
+\arrayrulecolor{green}\hline
+
+\arrayrulecolor{green}\hline
+\vspace{.1 mm}
+\textbf{\textcolor{myGreen}{\large{Hannah}}} \vspace{.1 mm} & \\
+\hline
+\vspace{1 mm}
+Research, documenten, algemeen & 
+\begin{minipage}[t]{\linewidth}%
+\vspace{1 mm}
+\begin{itemize}
+\item planning en opvolging algemeen : 3 u
+\item SRS en SPMP: 5 u
+\item \textbf{geschat totaal: 8u}
+\item \textbf{toggl totaal: 9u30}
+\end{itemize} 
+\vspace{1 mm}
+\end{minipage}\\
+
+\arrayrulecolor{black}\hline
+
+\vspace{1 mm}
+Tutorials en bijscholing & 
+\begin{minipage}[t]{\linewidth}%
+\vspace{1 mm}
+\begin{itemize}
+\item \textbf{geschat totaal: 0u}
+\item \textbf{toggl totaal: 0u}
+\end{itemize} 
+\vspace{1 mm}
+\end{minipage}\\
+
+\arrayrulecolor{black}\hline
+
+
+\vspace{1 mm}
+Implementatie & 
+\begin{minipage}[t]{\linewidth}%
+\vspace{1 mm}
+\begin{itemize}
+\item afwerken advanced search: 5u
+\item interactieve graaf : 10u 
+\item front end bug fixing : 10 u
+\item \textbf{geschat totaal: 25u}
+\item \textbf{toggl totaal: 43u}
+\end{itemize} 
+\vspace{1 mm}
+\end{minipage}\\
+
+
+\arrayrulecolor{black}\hline
+
+\vspace{2 mm}
+Vergadering & 
+\begin{minipage}[t]{\linewidth}%
+\vspace{2 mm}
+\begin{itemize}
+\item Vergadering: 1u
+\item \textbf{geschat totaal: 1u}
+\item \textbf{toggl totaal: 1u}
+\vspace{2 mm}
+\end{itemize} 
+\end{minipage}\\
+
+\arrayrulecolor{black}\hline
+
+\vspace{2 mm}
+\textbf{TOTAAL} & 
+\begin{minipage}[t]{\linewidth}%
+\vspace{2 mm}
+\begin{itemize}
+\item \textbf{geschat totaal: 34u}
+\item \textbf{toggl totaal: 54u}
+\vspace{2 mm}
+\end{itemize} 
+\end{minipage}\\
+
+
+%%%%%%%%%%%Douglas
+
+
+
+\arrayrulecolor{green}\hline
+\vspace{.1 mm}
+\textbf{\textcolor{myGreen}{\large{Douglas}}} \vspace{.1 mm} & \\
+\hline
+\vspace{1 mm}
+Research, documenten, algemeen & 
+\begin{minipage}[t]{\linewidth}%
+\vspace{1 mm}
+\begin{itemize}
+\item  STD : 4 u
+\item \textbf{geschat totaal: 4u}
+\item \textbf{toggl totaal: 6u}
+\end{itemize} 
+\vspace{1 mm}
+\end{minipage}\\
+
+\arrayrulecolor{black}\hline
+
+\vspace{1 mm}
+Tutorials en bijscholing & 
+\begin{minipage}[t]{\linewidth}%
+\vspace{1 mm}
+\begin{itemize}
+\item \textbf{geschat totaal: 0u}
+\item \textbf{toggl totaal: 0u}
+\end{itemize} 
+\vspace{1 mm}
+\end{minipage}\\
+
+\arrayrulecolor{black}\hline
+
+
+\vspace{1 mm}
+Implementatie & 
+\begin{minipage}[t]{\linewidth}%
+\vspace{1 mm}
+\begin{itemize}
+\item testing: 15u
+\item \textbf{geschat totaal: 15u}
+\item \textbf{toggl totaal: 16u}
+\end{itemize} 
+\vspace{1 mm}
+\end{minipage}\\
+
+
+\arrayrulecolor{black}\hline
+
+\vspace{2 mm}
+Vergadering & 
+\begin{minipage}[t]{\linewidth}%
+\vspace{2 mm}
+\begin{itemize}
+\item Vergadering: 1u
+\item \textbf{geschat totaal: 1u}
+\item \textbf{toggl totaal: 1u}
+\vspace{2 mm}
+\end{itemize} 
+\end{minipage}\\
+
+\arrayrulecolor{black}\hline
+
+\vspace{2 mm}
+\textbf{TOTAAL} & 
+\begin{minipage}[t]{\linewidth}%
+\vspace{2 mm}
+\begin{itemize}
+\item \textbf{geschat totaal: 20u}
+\item \textbf{toggl totaal: 22u00}
+\vspace{2 mm}
+\end{itemize} 
+\end{minipage}\\
+\end{tabularx}
+\end{center}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Pieter
+
+\begin{center}
+\begin{tabularx}{\textwidth}[t]{XX}
+\arrayrulecolor{green}\hline
+
+\arrayrulecolor{green}\hline
+\vspace{.1 mm}
+\textbf{\textcolor{myGreen}{\large{Pieter}}} \vspace{.1 mm} & \\
+\hline
+\vspace{1 mm}
+Research, documenten, algemeen & 
+\begin{minipage}[t]{\linewidth}%
+\vspace{1 mm}
+\begin{itemize}
+\item \textbf{geschat totaal: 0u}
+\item \textbf{toggl totaal: 0u}
+\end{itemize} 
+\vspace{1 mm}
+\end{minipage}\\
+
+\arrayrulecolor{black}\hline
+
+\vspace{1 mm}
+Tutorials en bijscholing & 
+\begin{minipage}[t]{\linewidth}%
+\vspace{1 mm}
+\begin{itemize}
+\item \textbf{geschat totaal: 0u}
+\item \textbf{toggl totaal: 0u}
+\end{itemize} 
+\vspace{1 mm}
+\end{minipage}\\
+
+\arrayrulecolor{black}\hline
+
+
+\vspace{1 mm}
+Implementatie & 
+\begin{minipage}[t]{\linewidth}%
+\vspace{1 mm}
+\begin{itemize}
+\item recommender: 10u
+\item front-end bug fixing: 15u
+\item \textbf{geschat totaal: 25u}
+\item \textbf{toggl totaal: 42u}
+\end{itemize} 
+\vspace{1 mm}
+\end{minipage}\\
+
+
+\arrayrulecolor{black}\hline
+
+\vspace{2 mm}
+Vergadering & 
+\begin{minipage}[t]{\linewidth}%
+\vspace{2 mm}
+\begin{itemize}
+\item Vergadering: 1u
+\item \textbf{geschat totaal: 1u}
+\item \textbf{toggl totaal: 1u}
+\vspace{2 mm}
+\end{itemize} 
+\end{minipage}\\
+
+\arrayrulecolor{black}\hline
+
+\vspace{2 mm}
+\textbf{TOTAAL} & 
+\begin{minipage}[t]{\linewidth}%
+\vspace{2 mm}
+\begin{itemize}
+\item \textbf{geschat totaal: 26u}
+\item \textbf{toggl totaal: 43u}
+\vspace{2 mm}
+\end{itemize} 
+\end{minipage}\\
+
+\arrayrulecolor{black}\hline
+
+\end{tabularx}
+\end{center}
+
+\vspace{4 mm}
+\noindent \large{GESCHAT TEAM TOTAAL: \textbf{128 u}}\\
+\large{TOGGL TEAM TOTAAL:  \textbf{170 u}}\\
+
+
+
+\subsection{Overzicht tweede semester}
+
+In figuur \ref{fig:overzicht} wordt een overzicht gegeven van het aantal gewerkte uren in het tweede semester. De cijfers voor het eerste semester kunnen niet (objectief) worden weergegeven, gezien er toen nog geen gebruik werd gemaakt van een time tracking tool. De verhoudingen en de aard van de gewerkte uren verschilt tussen deze twee periodes: in het eerste semester werd er meer tijd besteed aan planning, software design, algemene vergaderingen en het schrijven van documenten; in het tweede semester verschoof de focus meer naar implementatie en testing. Het totaal aan gewerkte uren in het tweede semester bedraagt \bf{690u}, of \bf{138} uur gemiddeld per persoon. 
+
+\begin{figure}[h!]
+\centering
+ \includegraphics[scale=0.4]{toggl_tweede_semester.pdf}
+ \caption{Overzicht werkpakket vanaf tweede semester, door middel van Toggl time tracking. }
+ \label{fig:overzicht}
+\end{figure}
+
+
+
+
+
+
+
+
 
 
 

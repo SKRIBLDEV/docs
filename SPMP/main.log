@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.10.3)  19 APR 2015 21:38
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.10.3)  14 MAY 2015 19:07
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -496,13 +496,13 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 10.
 
-Overfull \hbox (81.53333pt too wide) in paragraph at lines 8--50
+Overfull \hbox (81.53333pt too wide) in paragraph at lines 8--57
  [] 
  []
 
 File: Small_Logo.png Graphic file (type png)
 <use Small_Logo.png>
-Package pdftex.def Info: Small_Logo.png used on input line 53.
+Package pdftex.def Info: Small_Logo.png used on input line 60.
 (pdftex.def)             Requested size: 37.29333pt x 36.98866pt.
  [1]) (./main.toc)
 \tf@toc=\write3
@@ -515,136 +515,135 @@ Package pdftex.def Info: Small_Logo.png used on input line 47.
  [2]
 
 Package natbib Warning: Citation `website:skribl' on page 3 undefined on input 
-line 110.
+line 64.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 106--111
+Underfull \hbox (badness 10000) in paragraph at lines 60--65
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 106--111
+Underfull \hbox (badness 10000) in paragraph at lines 60--65
 
  []
 
 File: Small_Logo.png Graphic file (type png)
 <use Small_Logo.png>
-Package pdftex.def Info: Small_Logo.png used on input line 118.
+Package pdftex.def Info: Small_Logo.png used on input line 72.
 (pdftex.def)             Requested size: 37.29333pt x 36.98866pt.
  [3]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 118.
-
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 72.
 
 (/usr/local/texlive/2014/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 118.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 72.
 
 
 Package natbib Warning: Citation `Xtreport:organisatie' on page 4 undefined on 
-input line 126.
+input line 80.
 
 <kalender.png, id=41, 674.52pt x 546.04pt>
 File: kalender.png Graphic file (type png)
  <use kalender.png>
-Package pdftex.def Info: kalender.png used on input line 130.
+Package pdftex.def Info: kalender.png used on input line 84.
 (pdftex.def)             Requested size: 341.43306pt x 276.40207pt.
 
 
 Package natbib Warning: Citation `website:Cal-Poly' on page 4 undefined on inpu
-t line 137.
+t line 91.
 
 File: Small_Logo.png Graphic file (type png)
 <use Small_Logo.png>
-Package pdftex.def Info: Small_Logo.png used on input line 138.
+Package pdftex.def Info: Small_Logo.png used on input line 92.
 (pdftex.def)             Requested size: 37.29333pt x 36.98866pt.
  [4 <./kalender.png>]
 File: Small_Logo.png Graphic file (type png)
  <use Small_Logo.png>
-Package pdftex.def Info: Small_Logo.png used on input line 139.
+Package pdftex.def Info: Small_Logo.png used on input line 93.
 (pdftex.def)             Requested size: 37.29333pt x 36.98866pt.
  [5]
 No file main.bbl.
 File: Small_Logo.png Graphic file (type png)
 <use Small_Logo.png>
-Package pdftex.def Info: Small_Logo.png used on input line 159.
+Package pdftex.def Info: Small_Logo.png used on input line 113.
 (pdftex.def)             Requested size: 37.29333pt x 36.98866pt.
  [6
 
 ]
 
 Package natbib Warning: Citation `website:agile-process' on page 7 undefined on
- input line 166.
+ input line 120.
 
 
 Package natbib Warning: Citation `Xtreport:organisatie' on page 7 undefined on 
-input line 173.
+input line 127.
 
 
 Package natbib Warning: Citation `Xtreport:organisatie' on page 7 undefined on 
-input line 175.
+input line 129.
 
 
 Package natbib Warning: Citation `Xtreport:organisatie' on page 7 undefined on 
-input line 175.
+input line 129.
 
 File: Small_Logo.png Graphic file (type png)
 <use Small_Logo.png>
-Package pdftex.def Info: Small_Logo.png used on input line 190.
+Package pdftex.def Info: Small_Logo.png used on input line 144.
 (pdftex.def)             Requested size: 37.29333pt x 36.98866pt.
  [7
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 192--194
+Underfull \hbox (badness 10000) in paragraph at lines 146--148
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 192--194
+Underfull \hbox (badness 10000) in paragraph at lines 146--148
 
  []
 
 <gantt_cropped.png, id=57, 1213.53375pt x 281.05pt>
 File: gantt_cropped.png Graphic file (type png)
  <use gantt_cropped.png>
-Package pdftex.def Info: gantt_cropped.png used on input line 196.
+Package pdftex.def Info: gantt_cropped.png used on input line 150.
 (pdftex.def)             Requested size: 426.79134pt x 98.84499pt.
 
-Overfull \hbox (81.79134pt too wide) in paragraph at lines 196--197
+Overfull \hbox (81.79134pt too wide) in paragraph at lines 150--151
 [][] 
  []
 
 
-Overfull \hbox (77.41496pt too wide) in paragraph at lines 203--220
+Overfull \hbox (67.91728pt too wide) in paragraph at lines 157--173
  [] 
  []
 
 File: Small_Logo.png Graphic file (type png)
 <use Small_Logo.png>
-Package pdftex.def Info: Small_Logo.png used on input line 226.
+Package pdftex.def Info: Small_Logo.png used on input line 184.
 (pdftex.def)             Requested size: 37.29333pt x 36.98866pt.
  [8 <./gantt_cropped.png>]
 File: Small_Logo.png Graphic file (type png)
  <use Small_Logo.png>
-Package pdftex.def Info: Small_Logo.png used on input line 270.
+Package pdftex.def Info: Small_Logo.png used on input line 229.
 (pdftex.def)             Requested size: 37.29333pt x 36.98866pt.
  [9]
-Underfull \hbox (badness 10000) in paragraph at lines 303--304
+Underfull \hbox (badness 10000) in paragraph at lines 256--257
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 305--306
+Underfull \hbox (badness 10000) in paragraph at lines 258--259
 
  []
 
 File: Small_Logo.png Graphic file (type png)
 <use Small_Logo.png>
-Package pdftex.def Info: Small_Logo.png used on input line 309.
+Package pdftex.def Info: Small_Logo.png used on input line 262.
 (pdftex.def)             Requested size: 37.29333pt x 36.98866pt.
  [10]
-Underfull \hbox (badness 10000) in paragraph at lines 381--382
+Underfull \hbox (badness 10000) in paragraph at lines 334--335
 
  []
 
@@ -661,45 +660,45 @@ File: Small_Logo.png Graphic file (type png)
 Package pdftex.def Info: Small_Logo.png used on input line 38.
 (pdftex.def)             Requested size: 37.29333pt x 36.98866pt.
  [12])
-Underfull \hbox (badness 10000) in paragraph at lines 389--394
+Underfull \hbox (badness 10000) in paragraph at lines 342--347
 
  []
 
 
-Overfull \hbox (1.69925pt too wide) in paragraph at lines 395--396
+Overfull \hbox (1.69925pt too wide) in paragraph at lines 348--349
 []\T1/cmr/m/n/10 micropresentaties (be-lich-ten de as-pec-ten van het ont-wik-k
 e-lings-pro-ces waar-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 416--417
+Underfull \hbox (badness 10000) in paragraph at lines 367--368
 
  []
 
 File: Small_Logo.png Graphic file (type png)
 <use Small_Logo.png>
-Package pdftex.def Info: Small_Logo.png used on input line 419.
+Package pdftex.def Info: Small_Logo.png used on input line 370.
 (pdftex.def)             Requested size: 37.29333pt x 36.98866pt.
  [13] <slack.png, id=80, 464.4853pt x 313.17pt>
 File: slack.png Graphic file (type png)
 
 <use slack.png>
-Package pdftex.def Info: slack.png used on input line 423.
+Package pdftex.def Info: slack.png used on input line 374.
 (pdftex.def)             Requested size: 142.26378pt x 95.92049pt.
 File: Small_Logo.png Graphic file (type png)
  <use Small_Logo.png>
-Package pdftex.def Info: Small_Logo.png used on input line 429.
+Package pdftex.def Info: Small_Logo.png used on input line 380.
 (pdftex.def)             Requested size: 37.29333pt x 36.98866pt.
  [14 <./slack.png>]
 <trello_logo.png, id=84, 301.125pt x 175.65625pt>
 File: trello_logo.png Graphic file (type png)
  <use trello_logo.png>
-Package pdftex.def Info: trello_logo.png used on input line 435.
+Package pdftex.def Info: trello_logo.png used on input line 386.
 (pdftex.def)             Requested size: 142.26378pt x 82.98996pt.
 File: Small_Logo.png Graphic file (type png)
 
 <use Small_Logo.png>
-Package pdftex.def Info: Small_Logo.png used on input line 442.
+Package pdftex.def Info: Small_Logo.png used on input line 393.
 (pdftex.def)             Requested size: 37.29333pt x 36.98866pt.
  [15
 
@@ -707,49 +706,44 @@ Package pdftex.def Info: Small_Logo.png used on input line 442.
 <google_drive.jpg, id=89, 1204.5pt x 1204.5pt>
 File: google_drive.jpg Graphic file (type jpg)
  <use google_drive.jpg>
-Package pdftex.def Info: google_drive.jpg used on input line 448.
+Package pdftex.def Info: google_drive.jpg used on input line 399.
 (pdftex.def)             Requested size: 142.26378pt x 142.25475pt.
 
 <codeClimate.jpg, id=90, 412.54124pt x 123.46124pt>
 File: codeClimate.jpg Graphic file (type jpg)
  <use codeClimate.jpg>
-Package pdftex.def Info: codeClimate.jpg used on input line 459.
+Package pdftex.def Info: codeClimate.jpg used on input line 410.
 (pdftex.def)             Requested size: 142.26378pt x 42.57532pt.
 File: Small_Logo.png Graphic file (type png)
 
 <use Small_Logo.png>
-Package pdftex.def Info: Small_Logo.png used on input line 465.
+Package pdftex.def Info: Small_Logo.png used on input line 416.
 (pdftex.def)             Requested size: 37.29333pt x 36.98866pt.
  [16
 
  <./google_drive.jpg> <./codeClimate.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 474--482
+Underfull \hbox (badness 10000) in paragraph at lines 425--433
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 474--482
+Underfull \hbox (badness 10000) in paragraph at lines 425--433
 
  []
 
 File: Small_Logo.png Graphic file (type png)
 <use Small_Logo.png>
-Package pdftex.def Info: Small_Logo.png used on input line 492.
+Package pdftex.def Info: Small_Logo.png used on input line 443.
 (pdftex.def)             Requested size: 37.29333pt x 36.98866pt.
  [17
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 496--499
+Underfull \hbox (badness 10000) in paragraph at lines 447--448
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 496--499
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 511--515
+Underfull \hbox (badness 10000) in paragraph at lines 460--464
 
  []
 
@@ -757,10 +751,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 511--515
 File: Gantt_S1_19nov.png Graphic file (type png)
 
 <use Gantt_S1_19nov.png>
-Package pdftex.def Info: Gantt_S1_19nov.png used on input line 525.
+Package pdftex.def Info: Gantt_S1_19nov.png used on input line 474.
 (pdftex.def)             Requested size: 478.17802pt x 213.19272pt.
 
-Overfull \hbox (133.17802pt too wide) in paragraph at lines 525--526
+Overfull \hbox (133.17802pt too wide) in paragraph at lines 474--475
  [][] 
  []
 
@@ -769,7 +763,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 File: Small_Logo.png Graphic file (type png)
 <use Small_Logo.png>
-Package pdftex.def Info: Small_Logo.png used on input line 534.
+Package pdftex.def Info: Small_Logo.png used on input line 484.
 (pdftex.def)             Requested size: 37.29333pt x 36.98866pt.
  [18
 
@@ -778,10 +772,10 @@ Package pdftex.def Info: Small_Logo.png used on input line 534.
 File: Gantt_S2_20nov.jpg Graphic file (type jpg)
 
 <use Gantt_S2_20nov.jpg>
-Package pdftex.def Info: Gantt_S2_20nov.jpg used on input line 541.
+Package pdftex.def Info: Gantt_S2_20nov.jpg used on input line 490.
 (pdftex.def)             Requested size: 446.86159pt x 207.57182pt.
 
-Overfull \hbox (101.86159pt too wide) in paragraph at lines 541--542
+Overfull \hbox (101.86159pt too wide) in paragraph at lines 490--491
  [][] 
  []
 
@@ -792,10 +786,10 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 File: Gantt_S2_15dec.png Graphic file (type png)
 
 <use Gantt_S2_15dec.png>
-Package pdftex.def Info: Gantt_S2_15dec.png used on input line 550.
+Package pdftex.def Info: Gantt_S2_15dec.png used on input line 499.
 (pdftex.def)             Requested size: 448.46756pt x 198.73897pt.
 
-Overfull \hbox (103.46756pt too wide) in paragraph at lines 550--551
+Overfull \hbox (103.46756pt too wide) in paragraph at lines 499--500
  [][] 
  []
 
@@ -804,52 +798,52 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 File: Small_Logo.png Graphic file (type png)
 <use Small_Logo.png>
-Package pdftex.def Info: Small_Logo.png used on input line 555.
+Package pdftex.def Info: Small_Logo.png used on input line 504.
 (pdftex.def)             Requested size: 37.29333pt x 36.98866pt.
  [19 <./Gantt_S1_19nov.png>]
 File: Small_Logo.png Graphic file (type png)
  <use Small_Logo.png>
-Package pdftex.def Info: Small_Logo.png used on input line 555.
+Package pdftex.def Info: Small_Logo.png used on input line 504.
 (pdftex.def)             Requested size: 37.29333pt x 36.98866pt.
  [20 <./Gantt_S2_20nov.jpg> <./Gantt_S2_15dec.png>]
 <Gantt_S3_2maart.png, id=112, 1110.1475pt x 505.89pt>
 File: Gantt_S3_2maart.png Graphic file (type png)
 
 <use Gantt_S3_2maart.png>
-Package pdftex.def Info: Gantt_S3_2maart.png used on input line 562.
+Package pdftex.def Info: Gantt_S3_2maart.png used on input line 511.
 (pdftex.def)             Requested size: 444.05113pt x 202.3524pt.
 
-Overfull \hbox (99.05113pt too wide) in paragraph at lines 562--563
+Overfull \hbox (99.05113pt too wide) in paragraph at lines 511--512
  [][] 
  []
 
 
-Underfull \hbox (badness 1127) in paragraph at lines 571--572
+Underfull \hbox (badness 1127) in paragraph at lines 520--521
 []|\T1/cmr/bx/n/10 Reële duur aan
  []
 
 
-Underfull \hbox (badness 2521) in paragraph at lines 573--573
+Underfull \hbox (badness 2521) in paragraph at lines 522--522
 []|\T1/cmr/m/n/10 Taken al-ge-meen: plan-
  []
 
 
-Underfull \hbox (badness 1694) in paragraph at lines 579--579
+Underfull \hbox (badness 1694) in paragraph at lines 528--528
 []|\T1/cmr/m/n/10 2u per een-heid *
  []
 
 
-Underfull \hbox (badness 5175) in paragraph at lines 579--579
+Underfull \hbox (badness 5175) in paragraph at lines 528--528
 \T1/cmr/m/n/10 aan-tal toe-ge-we-zen
  []
 
 
-Underfull \hbox (badness 1668) in paragraph at lines 579--580
+Underfull \hbox (badness 1668) in paragraph at lines 528--529
 []|$\OMS/cmsy/m/n/10 ^^F\OT1/cmr/m/n/10 100$\T1/cmr/m/n/10 u (im-ple-men-
  []
 
 
-Overfull \hbox (74.88577pt too wide) in paragraph at lines 569--584
+Overfull \hbox (74.88577pt too wide) in paragraph at lines 518--533
  [] 
  []
 
@@ -859,7 +853,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 <Toggl_Pie_S3.png, id=113, 357.335pt x 432.61626pt>
 File: Toggl_Pie_S3.png Graphic file (type png)
  <use Toggl_Pie_S3.png>
-Package pdftex.def Info: Toggl_Pie_S3.png used on input line 591.
+Package pdftex.def Info: Toggl_Pie_S3.png used on input line 540.
 (pdftex.def)             Requested size: 214.40265pt x 259.57176pt.
 
 
@@ -867,28 +861,28 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 File: Small_Logo.png Graphic file (type png)
 <use Small_Logo.png>
-Package pdftex.def Info: Small_Logo.png used on input line 597.
+Package pdftex.def Info: Small_Logo.png used on input line 546.
 (pdftex.def)             Requested size: 37.29333pt x 36.98866pt.
  [21
 
  <./Gantt_S3_2maart.png>]
 File: Small_Logo.png Graphic file (type png)
  <use Small_Logo.png>
-Package pdftex.def Info: Small_Logo.png used on input line 597.
+Package pdftex.def Info: Small_Logo.png used on input line 546.
 (pdftex.def)             Requested size: 37.29333pt x 36.98866pt.
  [22 <./Toggl_Pie_S3.png>]
-Underfull \hbox (badness 1354) in paragraph at lines 770--770
+Underfull \hbox (badness 1354) in paragraph at lines 719--719
 []\T1/cmr/m/n/10 Verdiepen be-staande func-ti-o-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 770--770
+Underfull \hbox (badness 10000) in paragraph at lines 719--719
 []\T1/cmr/m/n/10 verdiepen func-ti-o-na-li-tei-ten:
  []
 
 File: Small_Logo.png Graphic file (type png)
 <use Small_Logo.png>
-Package pdftex.def Info: Small_Logo.png used on input line 771.
+Package pdftex.def Info: Small_Logo.png used on input line 720.
 (pdftex.def)             Requested size: 37.29333pt x 36.98866pt.
  [23
 
@@ -898,7 +892,7 @@ Overfull \vbox (51.82837pt too high) has occurred while \output is active []
 File: Small_Logo.png Graphic file (type png)
 
 <use Small_Logo.png>
-Package pdftex.def Info: Small_Logo.png used on input line 771.
+Package pdftex.def Info: Small_Logo.png used on input line 720.
 (pdftex.def)             Requested size: 37.29333pt x 36.98866pt.
  [24]
 Overfull \vbox (78.14456pt too high) has occurred while \output is active []
@@ -906,10 +900,10 @@ Overfull \vbox (78.14456pt too high) has occurred while \output is active []
 File: Small_Logo.png Graphic file (type png)
 
 <use Small_Logo.png>
-Package pdftex.def Info: Small_Logo.png used on input line 937.
+Package pdftex.def Info: Small_Logo.png used on input line 886.
 (pdftex.def)             Requested size: 37.29333pt x 36.98866pt.
  [25]
-Underfull \hbox (badness 10000) in paragraph at lines 1025--1027
+Underfull \hbox (badness 10000) in paragraph at lines 974--976
 
  []
 
@@ -917,11 +911,103 @@ Underfull \hbox (badness 10000) in paragraph at lines 1025--1027
 File: Toggl_screenshot_iteratie3.pdf Graphic file (type pdf)
 
 <use Toggl_screenshot_iteratie3.pdf>
-Package pdftex.def Info: Toggl_screenshot_iteratie3.pdf used on input line 1031
-.
+Package pdftex.def Info: Toggl_screenshot_iteratie3.pdf used on input line 980.
+
 (pdftex.def)             Requested size: 455.24408pt x 287.90099pt.
 
-Overfull \hbox (110.24408pt too wide) in paragraph at lines 1031--1033
+Overfull \hbox (110.24408pt too wide) in paragraph at lines 980--982
+ [][] 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+File: Small_Logo.png Graphic file (type png)
+<use Small_Logo.png>
+Package pdftex.def Info: Small_Logo.png used on input line 989.
+(pdftex.def)             Requested size: 37.29333pt x 36.98866pt.
+ [26]
+File: Small_Logo.png Graphic file (type png)
+ <use Small_Logo.png>
+Package pdftex.def Info: Small_Logo.png used on input line 989.
+(pdftex.def)             Requested size: 37.29333pt x 36.98866pt.
+ [27 <./Toggl_screenshot_iteratie3.pdf>] <Gantt_S6_15mei.png, id=147, 821.0675p
+t x 364.36125pt>
+File: Gantt_S6_15mei.png Graphic file (type png)
+
+<use Gantt_S6_15mei.png>
+Package pdftex.def Info: Gantt_S6_15mei.png used on input line 995.
+(pdftex.def)             Requested size: 426.79134pt x 189.3911pt.
+
+Overfull \hbox (81.79134pt too wide) in paragraph at lines 995--997
+ [][] 
+ []
+
+
+Underfull \hbox (badness 2547) in paragraph at lines 1161--1161
+[]|\T1/cmr/m/n/12 Research, do-cu-men-ten, al-ge-
+ []
+
+
+Underfull \hbox (badness 4048) in paragraph at lines 1161--1161
+[]\T1/cmr/m/n/12 overlopen do-cu-men-ten :
+ []
+
+
+Underfull \hbox (badness 2547) in paragraph at lines 1161--1161
+[]|\T1/cmr/m/n/12 Research, do-cu-men-ten, al-ge-
+ []
+
+File: Small_Logo.png Graphic file (type png)
+<use Small_Logo.png>
+Package pdftex.def Info: Small_Logo.png used on input line 1162.
+(pdftex.def)             Requested size: 37.29333pt x 36.98866pt.
+ [28
+
+ <./Gantt_S6_15mei.png>]
+Overfull \vbox (83.91296pt too high) has occurred while \output is active []
+
+File: Small_Logo.png Graphic file (type png)
+
+<use Small_Logo.png>
+Package pdftex.def Info: Small_Logo.png used on input line 1162.
+(pdftex.def)             Requested size: 37.29333pt x 36.98866pt.
+ [29]
+Underfull \hbox (badness 2547) in paragraph at lines 1322--1322
+[]|\T1/cmr/m/n/12 Research, do-cu-men-ten, al-ge-
+ []
+
+
+Underfull \hbox (badness 2547) in paragraph at lines 1322--1322
+[]|\T1/cmr/m/n/12 Research, do-cu-men-ten, al-ge-
+ []
+
+
+Overfull \vbox (86.34341pt too high) has occurred while \output is active []
+
+File: Small_Logo.png Graphic file (type png)
+
+<use Small_Logo.png>
+Package pdftex.def Info: Small_Logo.png used on input line 1323.
+(pdftex.def)             Requested size: 37.29333pt x 36.98866pt.
+ [30]
+Underfull \hbox (badness 2547) in paragraph at lines 1406--1406
+[]|\T1/cmr/m/n/12 Research, do-cu-men-ten, al-ge-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1410--1412
+
+ []
+
+<toggl_tweede_semester.pdf, id=159, 1126.2075pt x 782.925pt>
+File: toggl_tweede_semester.pdf Graphic file (type pdf)
+
+<use toggl_tweede_semester.pdf>
+Package pdftex.def Info: toggl_tweede_semester.pdf used on input line 1421.
+(pdftex.def)             Requested size: 450.47502pt x 313.16446pt.
+
+Overfull \hbox (105.47502pt too wide) in paragraph at lines 1421--1422
  [][] 
  []
 
@@ -935,48 +1021,48 @@ Package natbib Warning: There were undefined citations.
 AED: lastpage setting LastPage
 File: Small_Logo.png Graphic file (type png)
 <use Small_Logo.png>
-Package pdftex.def Info: Small_Logo.png used on input line 1041.
+Package pdftex.def Info: Small_Logo.png used on input line 1439.
 (pdftex.def)             Requested size: 37.29333pt x 36.98866pt.
- [26]
+ [31]
 File: Small_Logo.png Graphic file (type png)
  <use Small_Logo.png>
-Package pdftex.def Info: Small_Logo.png used on input line 1041.
+Package pdftex.def Info: Small_Logo.png used on input line 1439.
 (pdftex.def)             Requested size: 37.29333pt x 36.98866pt.
- [27 <./Toggl_screenshot_iteratie3.pdf>] (./main.aux) ) 
+ [32 <./toggl_tweede_semester.pdf>] (./main.aux) ) 
 Here is how much of TeX's memory you used:
- 4147 strings out of 493117
- 54162 string characters out of 6135433
- 236414 words of memory out of 5000000
- 7498 multiletter control sequences out of 15000+600000
- 20379 words of font info for 40 fonts, out of 8000000 for 9000
+ 4165 strings out of 493117
+ 54517 string characters out of 6135433
+ 235435 words of memory out of 5000000
+ 7512 multiletter control sequences out of 15000+600000
+ 21292 words of font info for 43 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  41i,15n,43p,1432b,452s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2014
-/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/local/texlive/2014/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2014/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2014/texm
-f-dist/fonts/type1/public/cm-super/sfbx0700.pfb></usr/local/texlive/2014/texmf-
-dist/fonts/type1/public/cm-super/sfbx1000.pfb></usr/local/texlive/2014/texmf-di
-st/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2014/texmf-dist
-/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/2014/texmf-dist/f
-onts/type1/public/cm-super/sfbx2074.pfb></usr/local/texlive/2014/texmf-dist/fon
-ts/type1/public/cm-super/sfcc1200.pfb></usr/local/texlive/2014/texmf-dist/fonts
-/type1/public/cm-super/sfcc1728.pfb></usr/local/texlive/2014/texmf-dist/fonts/t
-ype1/public/cm-super/sfrm0600.pfb></usr/local/texlive/2014/texmf-dist/fonts/typ
-e1/public/cm-super/sfrm0700.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1
-/public/cm-super/sfrm0800.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/p
-ublic/cm-super/sfrm0900.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/pub
-lic/cm-super/sfrm1000.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/publi
-c/cm-super/sfrm1200.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/
-cm-super/sfrm1440.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/cm
--super/sfsl1000.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/cm-s
-uper/sfti0900.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/cm-sup
-er/sfti1000.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/cm-super
-/sfti1440.pfb>
-Output written on main.pdf (29 pages, 952686 bytes).
+{/usr/local/texlive/2014/texm
+f-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/local/texlive/2014/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2014/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2014/texmf-dis
+t/fonts/type1/public/cm-super/sfbx0700.pfb></usr/local/texlive/2014/texmf-dist/
+fonts/type1/public/cm-super/sfbx1000.pfb></usr/local/texlive/2014/texmf-dist/fo
+nts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2014/texmf-dist/font
+s/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/2014/texmf-dist/fonts/
+type1/public/cm-super/sfbx2074.pfb></usr/local/texlive/2014/texmf-dist/fonts/ty
+pe1/public/cm-super/sfcc1200.pfb></usr/local/texlive/2014/texmf-dist/fonts/type
+1/public/cm-super/sfcc1728.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/
+public/cm-super/sfrm0600.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/pu
+blic/cm-super/sfrm0700.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/publ
+ic/cm-super/sfrm0800.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public
+/cm-super/sfrm0900.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/c
+m-super/sfrm1000.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/cm-
+super/sfrm1200.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/cm-su
+per/sfrm1440.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/cm-supe
+r/sfsl1000.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/cm-super/
+sfti0900.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/cm-super/sf
+ti1000.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/cm-super/sfti
+1440.pfb>
+Output written on main.pdf (34 pages, 1040405 bytes).
 PDF statistics:
- 212 PDF objects out of 1000 (max. 8388607)
- 134 compressed objects within 2 object streams
+ 238 PDF objects out of 1000 (max. 8388607)
+ 150 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 76 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 86 words of extra memory for PDF output out of 10000 (max. 10000000)
 

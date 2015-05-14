@@ -24,3 +24,5 @@
 \contentsline {subsection}{\numberline {5.2}Sprint 2: Publicatie uploaden}{18}
 \contentsline {subsection}{\numberline {5.3}Sprint 3: Bibliotheek}{21}
 \contentsline {subsection}{\numberline {5.4}Sprint 4+5: Remedi\"ering en basis auteursnetwerk}{23}
+\contentsline {subsection}{\numberline {5.5}Sprint 6: interactieve graaf en suggesties}{28}
+\contentsline {subsection}{\numberline {5.6}Overzicht tweede semester}{31}
